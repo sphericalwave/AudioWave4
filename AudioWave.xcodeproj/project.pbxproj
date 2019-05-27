@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF015D192294D6F4004BBED4 /* MainScreen.swift */; };
+		AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */; };
+		AF95F8232294B70400C81959 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8222294B70400C81959 /* MainScreen.xib */; };
+		AFA7BF101F6AA6A10087D1EA /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB821721F69B4D000E394BE /* MusicPlayer.storyboard */; };
+		AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB821731F69B6BE00E394BE /* Icons.xcassets */; };
+		AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */; };
+		AFCE09821F57311500A1D0EE /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09811F57311500A1D0EE /* AudioSessionManager.swift */; };
+		AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09871F57321800A1D0EE /* AudioBookDetailVC.swift */; };
+		AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */; };
+		AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */; };
+		AFCE09931F5732DC00A1D0EE /* LibaryAcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098F1F5732DB00A1D0EE /* LibaryAcessor.swift */; };
+		AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */; };
+		AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09911F5732DC00A1D0EE /* Memento.swift */; };
+		AFCE09A31F57332A00A1D0EE /* SWPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09971F57332800A1D0EE /* SWPlayerState.swift */; };
+		AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09981F57332800A1D0EE /* PlaylistCell.swift */; };
+		AFCE09A51F57332A00A1D0EE /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09991F57332800A1D0EE /* Notification+Extension.swift */; };
+		AFCE09A61F57332A00A1D0EE /* PlaylistDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099A1F57332900A1D0EE /* PlaylistDetailsVC.swift */; };
+		AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */; };
+		AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */; };
+		AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099D1F57332900A1D0EE /* SpeedButton.swift */; };
+		AFCE09AA1F57332A00A1D0EE /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099F1F57332A00A1D0EE /* SwiftyTimer.swift */; };
+		AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */; };
+		AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */; };
+		AFCE09B31F57352600A1D0EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */; };
+		AFCE09B41F57359500A1D0EE /* SWCrossFaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09AF1F57336600A1D0EE /* SWCrossFaderVC.swift */; };
+		AFCE09B91F57365900A1D0EE /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09961F57332800A1D0EE /* PlaylistCell.xib */; };
+		AFCE09BA1F57365900A1D0EE /* SWCrossFaderVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09B51F57359F00A1D0EE /* SWCrossFaderVC.storyboard */; };
+		AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF015D192294D6F4004BBED4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaybackScreen.xib; sourceTree = "<group>"; };
+		AF95F8222294B70400C81959 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
+		AFB821721F69B4D000E394BE /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MusicPlayer.storyboard; path = ../../../audioWave1.0/AudioWave/SWPlayerVC/MusicPlayer.storyboard; sourceTree = "<group>"; };
+		AFB821731F69B6BE00E394BE /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		AFCE09691F57308C00A1D0EE /* AudioWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFCE09811F57311500A1D0EE /* AudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
+		AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFCE09871F57321800A1D0EE /* AudioBookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookDetailVC.swift; sourceTree = "<group>"; };
+		AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBooksVC.swift; sourceTree = "<group>"; };
+		AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaLoopButton.swift; sourceTree = "<group>"; };
+		AFCE098E1F5732C100A1D0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFCE098F1F5732DB00A1D0EE /* LibaryAcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibaryAcessor.swift; sourceTree = "<group>"; };
+		AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		AFCE09911F5732DC00A1D0EE /* Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memento.swift; sourceTree = "<group>"; };
+		AFCE09961F57332800A1D0EE /* PlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
+		AFCE09971F57332800A1D0EE /* SWPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlayerState.swift; sourceTree = "<group>"; };
+		AFCE09981F57332800A1D0EE /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
+		AFCE09991F57332800A1D0EE /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		AFCE099A1F57332900A1D0EE /* PlaylistDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsVC.swift; sourceTree = "<group>"; };
+		AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylistsVC.swift; sourceTree = "<group>"; };
+		AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackScreen.swift; sourceTree = "<group>"; };
+		AFCE099D1F57332900A1D0EE /* SpeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedButton.swift; sourceTree = "<group>"; };
+		AFCE099F1F57332A00A1D0EE /* SwiftyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioPlayer.swift; sourceTree = "<group>"; };
+		AFCE09AF1F57336600A1D0EE /* SWCrossFaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCrossFaderVC.swift; sourceTree = "<group>"; };
+		AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AFCE09B51F57359F00A1D0EE /* SWCrossFaderVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SWCrossFaderVC.storyboard; sourceTree = "<group>"; };
+		AFCE09B61F5735AD00A1D0EE /* AudioWave-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioWave-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFCE09661F57308C00A1D0EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFCE09B31F57352600A1D0EE /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFCE09601F57308C00A1D0EE = {
+			isa = PBXGroup;
+			children = (
+				AFCE096B1F57308C00A1D0EE /* AudioWave */,
+				AFCE096A1F57308C00A1D0EE /* Products */,
+				AFCE09B11F57352600A1D0EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFCE096A1F57308C00A1D0EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09691F57308C00A1D0EE /* AudioWave.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFCE096B1F57308C00A1D0EE /* AudioWave */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09831F57312D00A1D0EE /* AWLaunch */,
+				AFCE09BF1F57704200A1D0EE /* SWPlayerVC */,
+				AFCE09C21F57708600A1D0EE /* SWAudioPlayer */,
+				AFCE09BD1F576FEE00A1D0EE /* SWCrossFaderVC */,
+				AFCE098B1F57322000A1D0EE /* SWAudioBookVC */,
+				AFCE09BE1F57700E00A1D0EE /* SWMusicPlaylistsVC */,
+				AFCE09C11F57706800A1D0EE /* SWPlaylistCell */,
+				AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */,
+				AFCE09B61F5735AD00A1D0EE /* AudioWave-Bridging-Header.h */,
+				AFCE09811F57311500A1D0EE /* AudioSessionManager.swift */,
+				AFCE098F1F5732DB00A1D0EE /* LibaryAcessor.swift */,
+				AFB821731F69B6BE00E394BE /* Icons.xcassets */,
+				AFCE09991F57332800A1D0EE /* Notification+Extension.swift */,
+				AFCE098E1F5732C100A1D0EE /* Info.plist */,
+			);
+			path = AudioWave;
+			sourceTree = "<group>";
+		};
+		AFCE09831F57312D00A1D0EE /* AWLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */,
+				AF95F8222294B70400C81959 /* MainScreen.xib */,
+				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
+				AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */,
+			);
+			path = AWLaunch;
+			sourceTree = "<group>";
+		};
+		AFCE098B1F57322000A1D0EE /* SWAudioBookVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */,
+				AFCE09871F57321800A1D0EE /* AudioBookDetailVC.swift */,
+			);
+			path = SWAudioBookVC;
+			sourceTree = "<group>";
+		};
+		AFCE09B11F57352600A1D0EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFCE09BD1F576FEE00A1D0EE /* SWCrossFaderVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09AF1F57336600A1D0EE /* SWCrossFaderVC.swift */,
+				AFCE09B51F57359F00A1D0EE /* SWCrossFaderVC.storyboard */,
+			);
+			path = SWCrossFaderVC;
+			sourceTree = "<group>";
+		};
+		AFCE09BE1F57700E00A1D0EE /* SWMusicPlaylistsVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */,
+				AFCE099A1F57332900A1D0EE /* PlaylistDetailsVC.swift */,
+			);
+			path = SWMusicPlaylistsVC;
+			sourceTree = "<group>";
+		};
+		AFCE09BF1F57704200A1D0EE /* SWPlayerVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */,
+				AFB821721F69B4D000E394BE /* MusicPlayer.storyboard */,
+				AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */,
+				AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */,
+				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
+				AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */,
+			);
+			path = SWPlayerVC;
+			sourceTree = "<group>";
+		};
+		AFCE09C11F57706800A1D0EE /* SWPlaylistCell */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09981F57332800A1D0EE /* PlaylistCell.swift */,
+				AFCE09961F57332800A1D0EE /* PlaylistCell.xib */,
+			);
+			path = SWPlaylistCell;
+			sourceTree = "<group>";
+		};
+		AFCE09C21F57708600A1D0EE /* SWAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */,
+				AFCE099F1F57332A00A1D0EE /* SwiftyTimer.swift */,
+				AFCE09911F5732DC00A1D0EE /* Memento.swift */,
+				AFCE09971F57332800A1D0EE /* SWPlayerState.swift */,
+			);
+			path = SWAudioPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFCE09681F57308C00A1D0EE /* AudioWave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFCE097B1F57308C00A1D0EE /* Build configuration list for PBXNativeTarget "AudioWave" */;
+			buildPhases = (
+				AFCE09651F57308C00A1D0EE /* Sources */,
+				AFCE09661F57308C00A1D0EE /* Frameworks */,
+				AFCE09671F57308C00A1D0EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioWave;
+			productName = AudioWave;
+			productReference = AFCE09691F57308C00A1D0EE /* AudioWave.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFCE09611F57308C00A1D0EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = SphericalWave;
+				TargetAttributes = {
+					AFCE09681F57308C00A1D0EE = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AFCE09641F57308C00A1D0EE /* Build configuration list for PBXProject "AudioWave" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFCE09601F57308C00A1D0EE;
+			productRefGroup = AFCE096A1F57308C00A1D0EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFCE09681F57308C00A1D0EE /* AudioWave */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFCE09671F57308C00A1D0EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */,
+				AFA7BF101F6AA6A10087D1EA /* MusicPlayer.storyboard in Resources */,
+				AFCE09B91F57365900A1D0EE /* PlaylistCell.xib in Resources */,
+				AFCE09BA1F57365900A1D0EE /* SWCrossFaderVC.storyboard in Resources */,
+				AF95F8232294B70400C81959 /* MainScreen.xib in Resources */,
+				AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */,
+				AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFCE09651F57308C00A1D0EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFCE09A51F57332A00A1D0EE /* Notification+Extension.swift in Sources */,
+				AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */,
+				AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */,
+				AFCE09AA1F57332A00A1D0EE /* SwiftyTimer.swift in Sources */,
+				AFCE09A31F57332A00A1D0EE /* SWPlayerState.swift in Sources */,
+				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
+				AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */,
+				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
+				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
+				AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */,
+				AFCE09931F5732DC00A1D0EE /* LibaryAcessor.swift in Sources */,
+				AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */,
+				AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */,
+				AFCE09B41F57359500A1D0EE /* SWCrossFaderVC.swift in Sources */,
+				AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */,
+				AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */,
+				AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */,
+				AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */,
+				AFCE09821F57311500A1D0EE /* AudioSessionManager.swift in Sources */,
+				AFCE09A61F57332A00A1D0EE /* PlaylistDetailsVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AFCE09791F57308C00A1D0EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AFCE097A1F57308C00A1D0EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFCE097C1F57308C00A1D0EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = AudioWave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioWave/AudioWave-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFCE097D1F57308C00A1D0EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = AudioWave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioWave/AudioWave-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFCE09641F57308C00A1D0EE /* Build configuration list for PBXProject "AudioWave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFCE09791F57308C00A1D0EE /* Debug */,
+				AFCE097A1F57308C00A1D0EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFCE097B1F57308C00A1D0EE /* Build configuration list for PBXNativeTarget "AudioWave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFCE097C1F57308C00A1D0EE /* Debug */,
+				AFCE097D1F57308C00A1D0EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFCE09611F57308C00A1D0EE /* Project object */;
+}
