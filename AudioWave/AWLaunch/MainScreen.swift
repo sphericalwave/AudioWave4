@@ -37,6 +37,7 @@ class MainScreen: UIViewController {
     
     var pageViewController: UIPageViewController!
     
+    #warning("This needs work")
     lazy var musicPlayerVC: PlaybackScreen = {
         let playerStoryboard = UIStoryboard.init(name: "MusicPlayer", bundle: nil)
         let vc = playerStoryboard.instantiateInitialViewController() as! PlaybackScreen
@@ -57,6 +58,7 @@ class MainScreen: UIViewController {
         return vc
     }()
     
+    #warning("This needs work")
     var audioBookPlayerVC: PlaybackScreen = {
         let storyboard = UIStoryboard.init(name: "MusicPlayer", bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! PlaybackScreen
