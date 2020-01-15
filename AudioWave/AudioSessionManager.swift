@@ -19,13 +19,13 @@ class AudioSessionManager: NSObject {
     override init() {
         super.init()
         enableAudio()
-        NotificationCenter.default.addObserver(forName: .AVAudioSessionInterruption, object: AVAudioSession.sharedInstance(), queue: .main, using: handleInterruption)
+        NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance(), queue: .main, using: handleInterruption)
     }
     
     func handleInterruption(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
             let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
-            let type = AVAudioSessionInterruptionType(rawValue: typeValue) else {
+            let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
                 return
         }
         if type == .began {
@@ -35,7 +35,7 @@ class AudioSessionManager: NSObject {
         }
         else if type == .ended {
             if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
-                let options = AVAudioSessionInterruptionOptions(rawValue: optionsValue)
+                let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
                 if options.contains(.shouldResume) {
                     // Interruption Ended - playback should resume
                     let playNotification = Notification(name: .resumePlayers)
@@ -51,10 +51,15 @@ class AudioSessionManager: NSObject {
     func enableAudio() {
         do {
             let aSession = AVAudioSession.sharedInstance()
-            try aSession.setMode(AVAudioSessionModeDefault)
-            try aSession.setCategory(AVAudioSessionCategoryPlayback)
+            try aSession.setMode(AVAudioSession.Mode.default)
+            try aSession.setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.playback)))
             try aSession.setActive(true)
         }
         catch { print(error) }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

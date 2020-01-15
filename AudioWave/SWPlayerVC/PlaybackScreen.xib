@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaybackScreen" customModule="AudioWave" customModuleProvider="target">
             <connections>
-                <outlet property="artworkImageView" destination="4XY-qW-bPJ" id="fGz-X8-oTc"/>
                 <outlet property="containerView" destination="919-oq-uvN" id="yWP-c2-bCP"/>
-                <outlet property="descriptionLabel" destination="4gk-KL-JWd" id="ZeW-Rc-gwJ"/>
-                <outlet property="elapsedTimeLabel" destination="2cI-uI-yUm" id="Elr-qV-8y2"/>
-                <outlet property="loopButton" destination="DRz-lP-Mat" id="SvM-2f-mrF"/>
-                <outlet property="nextButton" destination="C5m-fZ-khy" id="nf1-dW-u3t"/>
-                <outlet property="playPauseButton" destination="L3Y-R5-EKm" id="xeG-Qt-TgX"/>
-                <outlet property="previousButton" destination="45u-Za-IPM" id="tVA-l3-9Z3"/>
-                <outlet property="remainingTimeLabel" destination="MoM-xT-5ad" id="v6d-SC-8X0"/>
-                <outlet property="slider" destination="JmO-aE-3cQ" id="4hc-pJ-Voe"/>
-                <outlet property="speedButton" destination="6Nr-Vj-mxh" id="Te9-Vy-8MH"/>
-                <outlet property="titleLabel" destination="Irt-LR-b0B" id="ONC-bB-qe6"/>
                 <outlet property="view" destination="0aG-m4-3Ga" id="kHg-Cu-jYS"/>
             </connections>
         </placeholder>

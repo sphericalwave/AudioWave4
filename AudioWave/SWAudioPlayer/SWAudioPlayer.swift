@@ -12,12 +12,10 @@ import MediaPlayer
 let SWAudioPlayerTrackChangedNotification = "SWAudioPlayerTrackChangedNotification"
 let SWAudioPlayerPlaybackStateChangedNotification = "SWAudioPlayerPlaybackStateChangedNotification"
 
-open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate {
-    
-    //MARK: - Vars
-    
+open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate
+{
     var audioPlayer: AVAudioPlayer?
-    var isMusicPlayer: Bool = true
+    var isMusicPlayer: Bool = true  //FIXME: Use a Concrete Subclass not a boolean this will make a mess
     var loopMode: IdeaMode = .repeatAll
     
     var speed: Float = 1 {
@@ -30,7 +28,7 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate {
     open var nextPlaybackItem: MPMediaItem? {
         guard let playbackItems = self.playbackItems, let currentPlaybackItem = self.currentPlaybackItem else { return nil }
         
-        let nextItemIndex = playbackItems.index(of: currentPlaybackItem)! + 1
+        let nextItemIndex = playbackItems.firstIndex(of: currentPlaybackItem)! + 1
         if nextItemIndex >= playbackItems.count { return nil }
         
         return playbackItems[nextItemIndex]
@@ -38,7 +36,7 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate {
     open var previousPlaybackItem: MPMediaItem? {
         guard let playbackItems = self.playbackItems, let currentPlaybackItem = self.currentPlaybackItem else { return nil }
         
-        let previousItemIndex = playbackItems.index(of: currentPlaybackItem)! - 1
+        let previousItemIndex = playbackItems.firstIndex(of: currentPlaybackItem)! - 1
         if previousItemIndex < 0 { return nil }
         
         return playbackItems[previousItemIndex]
@@ -79,7 +77,7 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     //MARK: - Dependencies
-    
+    #warning("fix me...optional properties")
     let audioSession: AVAudioSession!
     let commandCenter: MPRemoteCommandCenter!
     let nowPlayingInfoCenter: MPNowPlayingInfoCenter!
@@ -89,50 +87,51 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate {
     
     typealias SWAudioPlayerDependencies = (audioSession: AVAudioSession, commandCenter: MPRemoteCommandCenter, nowPlayingInfoCenter: MPNowPlayingInfoCenter, notificationCenter: NotificationCenter, isMusicPlayer: Bool)
     
+    #warning("fix me")
     init(audioSession: AVAudioSession, commandCenter: MPRemoteCommandCenter, nowPlayingInfoCenter: MPNowPlayingInfoCenter, notificationCenter: NotificationCenter, isMusicPlayer: Bool) {
         self.audioSession = audioSession
         self.commandCenter = commandCenter
         self.nowPlayingInfoCenter = nowPlayingInfoCenter
         self.notificationCenter = notificationCenter
         self.isMusicPlayer = isMusicPlayer
-        
-        super.init()
-        
-        try! self.audioSession.setCategory(AVAudioSessionCategoryPlayback)
-        try! self.audioSession.setActive(true)
-        
-        if isMusicPlayer {
-            self.configureCommandCenter()
-        }
-        
-        self.notificationCenter.addObserver(self, selector:#selector(save),
-                                            name: NSNotification.Name.UIApplicationWillTerminate, object:nil)
-        //restore()
-        //Check for Persistent Data
+//
+//        super.init()
+//
+//        try! self.audioSession.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback))
+//        try! self.audioSession.setActive(true)
+//
+//        if isMusicPlayer {
+//            self.configureCommandCenter()
+//        }
+//
+//        self.notificationCenter.addObserver(self, selector:#selector(save),
+//                                            name: UIApplication.willTerminateNotification, object:nil)
+//        //restore()
+//        //Check for Persistent Data
     }
     
     //TODO: Scrap this
-    init(dependencies: SWAudioPlayerDependencies) {
-        self.audioSession = dependencies.audioSession
-        self.commandCenter = dependencies.commandCenter
-        self.nowPlayingInfoCenter = dependencies.nowPlayingInfoCenter
-        self.notificationCenter = dependencies.notificationCenter
-        self.isMusicPlayer = dependencies.isMusicPlayer
-        
-        super.init()
-        
-        try! self.audioSession.setCategory(AVAudioSessionCategoryPlayback)
-        try! self.audioSession.setActive(true)
-        
-        if isMusicPlayer {
-            self.configureCommandCenter()
-        }
-        
-        self.notificationCenter.addObserver(self, selector:#selector(save),
-                                            name: NSNotification.Name.UIApplicationWillTerminate, object:nil)
-        //restore()
-        //Check for Persistent Data
-    }
+//    init(dependencies: SWAudioPlayerDependencies) {
+//        self.audioSession = dependencies.audioSession
+//        self.commandCenter = dependencies.commandCenter
+//        self.nowPlayingInfoCenter = dependencies.nowPlayingInfoCenter
+//        self.notificationCenter = dependencies.notificationCenter
+//        self.isMusicPlayer = dependencies.isMusicPlayer
+//
+//        super.init()
+//
+//        try! self.audioSession.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback))
+//        try! self.audioSession.setActive(true)
+//
+//        if isMusicPlayer {
+//            self.configureCommandCenter()
+//        }
+//
+//        self.notificationCenter.addObserver(self, selector:#selector(save),
+//                                            name: UIApplication.willTerminateNotification, object:nil)
+//        //restore()
+//        //Check for Persistent Data
+//    }
     
     //MARK: - Playback Commands
     
@@ -427,7 +426,7 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     open func audioPlayerEndInterruption(_ player: AVAudioPlayer, withOptions flags: Int) {
-        if AVAudioSessionInterruptionOptions(rawValue: UInt(flags)) == .shouldResume {
+        if AVAudioSession.InterruptionOptions(rawValue: UInt(flags)) == .shouldResume {
             self.play()
         }
     }
@@ -583,4 +582,9 @@ extension SWAudioPlayer {
         }
         return song
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

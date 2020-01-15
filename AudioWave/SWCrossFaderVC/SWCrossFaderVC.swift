@@ -27,55 +27,56 @@ class SWCrossFaderVC: UIViewController {
     
     var pageViewController: UIPageViewController!
     
-    lazy var musicPlayerVC: PlaybackScreen = {
-        let playerStoryboard = UIStoryboard.init(name: "MusicPlayer", bundle: nil)
-        let vc = playerStoryboard.instantiateInitialViewController() as! PlaybackScreen
-        
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        let commandCenter = MPRemoteCommandCenter.shared()
-        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
-        let notificationCenter = NotificationCenter.default
-        let musicPlayer = SWAudioPlayer(dependencies: (audioSession, commandCenter, nowPlayingInfoCenter, notificationCenter, true))
-        //musicPlayer.isMusicPlayer = true
-        musicPlayer.restore()
-        
-        vc.player = musicPlayer
-        vc.notificationCenter = notificationCenter
-        vc.title = "Background Music"
-        
-        return vc
-    }()
-    
-    var audioBookPlayerVC: PlaybackScreen = {
-        let storyboard = UIStoryboard.init(name: "MusicPlayer", bundle: nil)
-        let vc = storyboard.instantiateInitialViewController() as! PlaybackScreen
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        let commandCenter = MPRemoteCommandCenter.shared()
-        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
-        let notificationCenter = NotificationCenter.default
-        let musicPlayer = SWAudioPlayer(dependencies: (audioSession, commandCenter, nowPlayingInfoCenter, notificationCenter, false))
-        //musicPlayer.isMusicPlayer = false
-        musicPlayer.restore()
-        
-        vc.player = musicPlayer
-        vc.notificationCenter = notificationCenter
-        vc.title = "Audio Content"
-        
-        //let vc = nav.topViewController as! PlayerVC
-        //vc.isMusicPlayer = false
-
-//        let audioBookPlayer = AudioBookPlayer()
-//        audioBookPlayer.delegate = vc
-//        vc.player = audioBookPlayer
-        return vc
-    }()
+    #warning("unacceptable")
+//    lazy var musicPlayerVC: PlaybackScreen = {
+//        let playerStoryboard = UIStoryboard.init(name: "MusicPlayer", bundle: nil)
+//        let vc = playerStoryboard.instantiateInitialViewController() as! PlaybackScreen
+//
+//
+//        let audioSession = AVAudioSession.sharedInstance()
+//        let commandCenter = MPRemoteCommandCenter.shared()
+//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+//        let notificationCenter = NotificationCenter.default
+//        let musicPlayer = SWAudioPlayer(dependencies: (audioSession, commandCenter, nowPlayingInfoCenter, notificationCenter, true))
+//        //musicPlayer.isMusicPlayer = true
+//        musicPlayer.restore()
+//
+//        vc.player = musicPlayer
+//        vc.notificationCenter = notificationCenter
+//        vc.title = "Background Music"
+//
+//        return vc
+//    }()
+//
+//    var audioBookPlayerVC: PlaybackScreen = {
+//        let storyboard = UIStoryboard.init(name: "MusicPlayer", bundle: nil)
+//        let vc = storyboard.instantiateInitialViewController() as! PlaybackScreen
+//
+//        let audioSession = AVAudioSession.sharedInstance()
+//        let commandCenter = MPRemoteCommandCenter.shared()
+//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+//        let notificationCenter = NotificationCenter.default
+//        let musicPlayer = SWAudioPlayer(dependencies: (audioSession, commandCenter, nowPlayingInfoCenter, notificationCenter, false))
+//        //musicPlayer.isMusicPlayer = false
+//        musicPlayer.restore()
+//
+//        vc.player = musicPlayer
+//        vc.notificationCenter = notificationCenter
+//        vc.title = "Audio Content"
+//
+//        //let vc = nav.topViewController as! PlayerVC
+//        //vc.isMusicPlayer = false
+//
+////        let audioBookPlayer = AudioBookPlayer()
+////        audioBookPlayer.delegate = vc
+////        vc.player = audioBookPlayer
+//        return vc
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePageControl()
-        NotificationCenter.default.addObserver(forName: .UIApplicationWillTerminate, object: nil, queue: .main, using: save)
+        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: .main, using: save)
         restore()
         setupFader()
         self.title = "AudioWave"
@@ -86,40 +87,43 @@ class SWCrossFaderVC: UIViewController {
         configureCommandCenter()
     }
     
+    #warning("fix me")
     func configureCommandCenter() {
-        let commandCenter = MPRemoteCommandCenter.shared()
-        commandCenter.playCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            //guard let sself = self else { return .commandFailed }
-            self?.musicPlayerVC.player.play()
-            self?.audioBookPlayerVC.player.play()
-            return .success
-        })
-        
-        commandCenter.pauseCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            //guard let sself = self else { return .commandFailed }
-            self?.musicPlayerVC.player.pause()
-            self?.audioBookPlayerVC.player.pause()
-            return .success
-        })
+//        let commandCenter = MPRemoteCommandCenter.shared()
+//        commandCenter.playCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
+//            //guard let sself = self else { return .commandFailed }
+//            self?.musicPlayerVC.player.play()
+//            self?.audioBookPlayerVC.player.play()
+//            return .success
+//        })
+//
+//        commandCenter.pauseCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
+//            //guard let sself = self else { return .commandFailed }
+//            self?.musicPlayerVC.player.pause()
+//            self?.audioBookPlayerVC.player.pause()
+//            return .success
+//        })
     }
     
     //MARK: - Nav Buttons
+    #warning("fix me")
     @IBAction func repeaterButton(_ sender: Any) {
-        self.pageViewController.setViewControllers([audioBookPlayerVC], direction: .forward, animated: true, completion: nil)
-        let when = DispatchTime.now() + 0.3 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.audioBookPlayerVC.presentAudiobooksVC()
-        }
-        
+//        self.pageViewController.setViewControllers([audioBookPlayerVC], direction: .forward, animated: true, completion: nil)
+//        let when = DispatchTime.now() + 0.3 // change 2 to desired number of seconds
+//        DispatchQueue.main.asyncAfter(deadline: when) {
+//            self.audioBookPlayerVC.presentAudiobooksVC()
+//        }
+//
 
     }
     
+    #warning("fix me")
     @IBAction func soundtrackButton(_ sender: Any) {
-        self.pageViewController.setViewControllers([musicPlayerVC], direction: .forward, animated: true, completion: nil)
-        let when = DispatchTime.now() + 0.3 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.musicPlayerVC.presentMusicPlaylistVC()
-        }
+//        self.pageViewController.setViewControllers([musicPlayerVC], direction: .forward, animated: true, completion: nil)
+//        let when = DispatchTime.now() + 0.3 // change 2 to desired number of seconds
+//        DispatchQueue.main.asyncAfter(deadline: when) {
+//            self.musicPlayerVC.presentMusicPlaylistVC()
+//        }
 
     }
     
@@ -139,7 +143,7 @@ class SWCrossFaderVC: UIViewController {
     }
     
     
-    
+    #warning("fix me")
     @IBAction func faderChanged(_ sender: UISlider) {
         /*
          returns a float array with two indexes representing the volumes of the left (index 0) and right (index 1) channels
@@ -169,24 +173,25 @@ class SWCrossFaderVC: UIViewController {
             musicVol = 1
         }
         
-        audioBookPlayerVC.volume = contentVol
-        musicPlayerVC.volume = musicVol
+//        audioBookPlayerVC.volume = contentVol
+//        musicPlayerVC.volume = musicVol
     }
     
+    #warning("fix me...remove")
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        guard let identifier = segue.identifier.flatMap(SegueIdentifier.init) else {
-            return
-        }
-        switch identifier {
-        case .embed:
-            if let pageViewController = segue.destination as? UIPageViewController {
-                self.pageViewController = pageViewController
-                self.pageViewController.dataSource = self
-                self.pageViewController.delegate = self
-                self.pageViewController.setViewControllers([audioBookPlayerVC], direction: .forward, animated: false, completion: nil)
-            }
-        }
+//
+//        guard let identifier = segue.identifier.flatMap(SegueIdentifier.init) else {
+//            return
+//        }
+//        switch identifier {
+//        case .embed:
+//            if let pageViewController = segue.destination as? UIPageViewController {
+//                self.pageViewController = pageViewController
+//                self.pageViewController.dataSource = self
+//                self.pageViewController.delegate = self
+//                self.pageViewController.setViewControllers([audioBookPlayerVC], direction: .forward, animated: false, completion: nil)
+//            }
+//        }
     }
     
     // MARK: - Archiving
@@ -210,26 +215,33 @@ class SWCrossFaderVC: UIViewController {
 extension SWCrossFaderVC: UIPageViewControllerDataSource {
     
     //Content Player VC
+    #warning("fix me")
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard viewController == musicPlayerVC else {
-            return nil
-        }
-        return self.audioBookPlayerVC
+//        guard viewController == musicPlayerVC else {
+//            return nil
+//        }
+//        return self.audioBookPlayerVC
+        return UIViewController()
     }
     
     //MusicPlayer VC
+    #warning("fix me")
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard viewController == audioBookPlayerVC else {
-            return nil
-        }
-        return self.musicPlayerVC
+//        guard viewController == audioBookPlayerVC else {
+//            return nil
+//        }
+//        return self.musicPlayerVC
+    return UIViewController()
+
     }
 }
 
-extension SWCrossFaderVC: UIPageViewControllerDelegate {
+extension SWCrossFaderVC: UIPageViewControllerDelegate
+{
+    #warning("fix me")
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        pageControl.currentPage = (previousViewControllers[0] == audioBookPlayerVC) ? 1 : 0
+        //pageControl.currentPage = (previousViewControllers[0] == audioBookPlayerVC) ? 1 : 0
         
         //TODO: Put This In a More Relevant Place?
 //        switch pageControl.currentPage {

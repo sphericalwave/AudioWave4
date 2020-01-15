@@ -10,6 +10,7 @@ import Foundation
 import MediaPlayer
 
 extension String {
+    
     init(track: MPMediaItem) {
         var string = ""
         if let artist = track.artist {

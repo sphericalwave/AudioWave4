@@ -9,13 +9,14 @@
 import UIKit
 import MediaPlayer
 
+#warning("Refactor AppDelegate")
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var audioSessionManager: AudioSessionManager?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //let pageVC = PageVC(frame: UIScreen.main.bounds)
         
@@ -48,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         //TODO: Get Permission to Access Music Library in a proper way
+        #warning("fix me...LibraryAccessor is a bad name...maybe Library")
         _ = LibaryAcessor.audioBooks()
         
         // Initialize the Google Mobile Ads SDK.

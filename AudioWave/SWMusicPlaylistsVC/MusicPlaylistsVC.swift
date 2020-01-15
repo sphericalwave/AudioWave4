@@ -100,7 +100,7 @@ class MusicPlaylistsVC: UITableViewController {
 
     }
     
-    override init(style: UITableViewStyle) {
+    override init(style: UITableView.Style) {
         //fatalError("Don't use this initializer")
                 if let musicPlaylists = LibaryAcessor.musicPlaylists() {
                     self.playlists = musicPlaylists

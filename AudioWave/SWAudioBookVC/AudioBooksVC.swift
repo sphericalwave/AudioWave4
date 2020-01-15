@@ -38,7 +38,7 @@ class AudioBooksVC: UITableViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    override init(style: UITableViewStyle) {
+    override init(style: UITableView.Style) {
         if let audioBooks = LibaryAcessor.audioBooks() {
             self.audioBooks = audioBooks
         }

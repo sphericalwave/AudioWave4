@@ -58,7 +58,7 @@ class AudioBookDetailVC: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(style: UITableViewStyle) {
+    override init(style: UITableView.Style) {
         //fatalError("Don't use this initializer")
         super.init(style: style)
         self.tableView.register(UINib(nibName: "PlaylistCell", bundle: nil), forCellReuseIdentifier: PlaylistCell.reuseIdentifier)
