@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF015D192294D6F4004BBED4 /* MainScreen.swift */; };
+		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
+		AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerScreen.swift */; };
+		AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* PlayerScreen.xib */; };
+		AF5F5EC923D65964005589E3 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
+		AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
+		AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
 		AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */; };
 		AF95F8232294B70400C81959 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8222294B70400C81959 /* MainScreen.xib */; };
 		AFA009A223D08DE000026DB6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */; };
@@ -36,17 +42,23 @@
 		AFCE09B91F57365900A1D0EE /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09961F57332800A1D0EE /* PlaylistCell.xib */; };
 		AFCE09BA1F57365900A1D0EE /* SWCrossFaderVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09B51F57359F00A1D0EE /* SWCrossFaderVC.storyboard */; };
 		AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */; };
-		AFD8F36723CE69DC00BF6FE6 /* PlaybackProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36623CE69DC00BF6FE6 /* PlaybackProgress.swift */; };
-		AFD8F36923CE6A2900BF6FE6 /* PlaybackButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36823CE6A2900BF6FE6 /* PlaybackButtons.swift */; };
+		AFD8F36723CE69DC00BF6FE6 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36623CE69DC00BF6FE6 /* Progress.swift */; };
+		AFD8F36923CE6A2900BF6FE6 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */; };
 		AFD8F36B23CE6A5500BF6FE6 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */; };
 		AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */; };
-		AFD8F36F23CE6FAB00BF6FE6 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36E23CE6FAB00BF6FE6 /* Players.swift */; };
+		AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */; };
 		AFD8F37123CF3A5400BF6FE6 /* CrossFader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F37023CF3A5400BF6FE6 /* CrossFader.swift */; };
 		AFD8F37323CF3B1800BF6FE6 /* CommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F37223CF3B1800BF6FE6 /* CommandCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF015D192294D6F4004BBED4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
+		AF51159423D655FA005FFC34 /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
+		AF51159623D65670005FFC34 /* PlayerScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerScreen.xib; sourceTree = "<group>"; };
+		AF5F5EC823D65964005589E3 /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
+		AF62B1BD23D65E47002CD561 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
+		AF62B1C023D65FA0002CD561 /* Titles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Titles.xib; sourceTree = "<group>"; };
 		AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaybackScreen.xib; sourceTree = "<group>"; };
 		AF95F8222294B70400C81959 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -78,11 +90,11 @@
 		AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AFCE09B51F57359F00A1D0EE /* SWCrossFaderVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SWCrossFaderVC.storyboard; sourceTree = "<group>"; };
 		AFCE09B61F5735AD00A1D0EE /* AudioWave-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioWave-Bridging-Header.h"; sourceTree = "<group>"; };
-		AFD8F36623CE69DC00BF6FE6 /* PlaybackProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackProgress.swift; sourceTree = "<group>"; };
-		AFD8F36823CE6A2900BF6FE6 /* PlaybackButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButtons.swift; sourceTree = "<group>"; };
+		AFD8F36623CE69DC00BF6FE6 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
-		AFD8F36E23CE6FAB00BF6FE6 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroller.swift; sourceTree = "<group>"; };
 		AFD8F37023CF3A5400BF6FE6 /* CrossFader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFader.swift; sourceTree = "<group>"; };
 		AFD8F37223CF3B1800BF6FE6 /* CommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +111,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2490A823D65C5A00B66B70 /* CrossFader */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8F37023CF3A5400BF6FE6 /* CrossFader.swift */,
+				AFA009A323D08EC700026DB6 /* CrossFader.xib */,
+			);
+			path = CrossFader;
+			sourceTree = "<group>";
+		};
+		AF2490A923D65C6E00B66B70 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AF95F8222294B70400C81959 /* MainScreen.xib */,
+				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
+				AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */,
+				AF2490A823D65C5A00B66B70 /* CrossFader */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		AF5F5EC723D65931005589E3 /* PlayerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AF51159423D655FA005FFC34 /* PlayerScreen.swift */,
+				AF51159623D65670005FFC34 /* PlayerScreen.xib */,
+				AF62B1C223D65FA6002CD561 /* Titles */,
+				AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */,
+				AF62B1BF23D65E5A002CD561 /* Buttons */,
+				AF62B1BC23D65E36002CD561 /* Progress */,
+			);
+			path = PlayerScreen;
+			sourceTree = "<group>";
+		};
+		AF62B1BC23D65E36002CD561 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8F36623CE69DC00BF6FE6 /* Progress.swift */,
+				AF5F5EC823D65964005589E3 /* Progress.xib */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		AF62B1BF23D65E5A002CD561 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */,
+				AF62B1BD23D65E47002CD561 /* Buttons.xib */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AF62B1C223D65FA6002CD561 /* Titles */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */,
+				AF62B1C023D65FA0002CD561 /* Titles.xib */,
+			);
+			path = Titles;
+			sourceTree = "<group>";
+		};
 		AFCE09601F57308C00A1D0EE = {
 			isa = PBXGroup;
 			children = (
@@ -143,12 +215,9 @@
 			children = (
 				AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */,
 				AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */,
-				AF95F8222294B70400C81959 /* MainScreen.xib */,
-				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
+				AF2490A923D65C6E00B66B70 /* MainScreen */,
+				AF51159023D65385005FFC34 /* SWModalButton.swift */,
 				AFD8F37223CF3B1800BF6FE6 /* CommandCenter.swift */,
-				AFD8F37023CF3A5400BF6FE6 /* CrossFader.swift */,
-				AFA009A323D08EC700026DB6 /* CrossFader.xib */,
-				AFD8F36E23CE6FAB00BF6FE6 /* Players.swift */,
 			);
 			path = AWLaunch;
 			sourceTree = "<group>";
@@ -194,10 +263,7 @@
 				AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */,
 				AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */,
 				AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */,
-				AFD8F36623CE69DC00BF6FE6 /* PlaybackProgress.swift */,
-				AFD8F36823CE6A2900BF6FE6 /* PlaybackButtons.swift */,
-				AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */,
-				AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */,
+				AF5F5EC723D65931005589E3 /* PlayerScreen */,
 				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
 				AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */,
 			);
@@ -284,12 +350,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */,
 				AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */,
 				AFA009A423D08EC700026DB6 /* CrossFader.xib in Resources */,
 				AFCE09B91F57365900A1D0EE /* PlaylistCell.xib in Resources */,
+				AF5F5EC923D65964005589E3 /* Progress.xib in Resources */,
 				AFCE09BA1F57365900A1D0EE /* SWCrossFaderVC.storyboard in Resources */,
+				AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */,
 				AF95F8232294B70400C81959 /* MainScreen.xib in Resources */,
 				AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */,
+				AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */,
 				AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */,
 				AFCE09A51F57332A00A1D0EE /* Notification+Extension.swift in Sources */,
 				AFD8F37323CF3B1800BF6FE6 /* CommandCenter.swift in Sources */,
 				AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */,
@@ -308,6 +379,7 @@
 				AFCE09AA1F57332A00A1D0EE /* SwiftyTimer.swift in Sources */,
 				AFCE09A31F57332A00A1D0EE /* SWPlayerState.swift in Sources */,
 				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
+				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
 				AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */,
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
 				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
@@ -315,13 +387,13 @@
 				AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */,
 				AFCE09931F5732DC00A1D0EE /* LibaryAcessor.swift in Sources */,
 				AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */,
-				AFD8F36F23CE6FAB00BF6FE6 /* Players.swift in Sources */,
+				AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */,
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,
 				AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */,
 				AFCE09B41F57359500A1D0EE /* SWCrossFaderVC.swift in Sources */,
 				AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */,
-				AFD8F36723CE69DC00BF6FE6 /* PlaybackProgress.swift in Sources */,
-				AFD8F36923CE6A2900BF6FE6 /* PlaybackButtons.swift in Sources */,
+				AFD8F36723CE69DC00BF6FE6 /* Progress.swift in Sources */,
+				AFD8F36923CE6A2900BF6FE6 /* Buttons.swift in Sources */,
 				AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */,
 				AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */,
 				AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */,

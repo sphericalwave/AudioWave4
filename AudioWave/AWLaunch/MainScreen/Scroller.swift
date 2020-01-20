@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Players: UIPageViewController
+class Scroller: UIPageViewController
 {
     let playbackScreen1: UIViewController //PlaybackScreen
     let playbackScreen2: UIViewController //PlaybackScreen
@@ -26,22 +26,20 @@ class Players: UIPageViewController
     required init?(coder: NSCoder) { fatalError("Never Called") }
 }
 
-extension Players: UIPageViewControllerDataSource
+extension Scroller: UIPageViewControllerDataSource
 {
-    //Content Player VC
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-       // guard viewController == musicPlayerVC else { return nil }
+        guard viewController == playbackScreen2 else { return nil }
         return playbackScreen1
     }
 
-    //MusicPlayer VC
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-       // guard viewController == audioBookPlayerVC else { return nil }
+       guard viewController == playbackScreen1 else { return nil }
         return playbackScreen2
     }
 }
 
-extension Players: UIPageViewControllerDelegate
+extension Scroller: UIPageViewControllerDelegate
 {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 

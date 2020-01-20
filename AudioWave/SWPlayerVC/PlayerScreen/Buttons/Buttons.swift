@@ -8,14 +8,21 @@
 
 import UIKit
 
-#warning("PlaybackProgress isn't a good name")
-class PlaybackButtons: UIViewController
+class Buttons: UIViewController
 {
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var loopButton: IdeaLoopButton!
     @IBOutlet weak var speedButton: SpeedButton!
+    
+    init() {
+        super.init(nibName: "Buttons", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
     
     @IBAction func playPauseButtonAction(_ sender: AnyObject) {
        // self.player.togglePlayPause()

@@ -9,7 +9,6 @@
 import UIKit
 import MediaPlayer
 
-#warning("Refactor AppDelegate")
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -29,11 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let nowPlayingInfoCenter = MPNowPlayingInfoCenter()
 //        let notificationCenter = NotificationCenter()
         
-        let p1 = UIViewController()
+        let p1 = PlayerScreen() //UIViewController()
         let p2 = UIViewController()
-        p1.view.backgroundColor = .blue
+       // p1.view.backgroundColor = .blue
         p2.view.backgroundColor = .green
-        let sS = Players(playbackScreen1: p1, playbackScreen2: p2)
+        let sS = Scroller(playbackScreen1: p1, playbackScreen2: p2)
         let cF = CrossFader()
         let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF)
         let mainScreenNav = UINavigationController(rootViewController: mainScreen)
@@ -52,17 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //audioSessionManager = AudioSessionManager.sharedInstance    //TODO: This is hacky
         //NotificationCenter.default.addObserver(forName: .AVAudioSessionInterruption, object: self, queue: .main, using: handleInterruption)
-
         
         //TODO: Get Permission to Access Music Library in a proper way
         #warning("fix me...LibraryAccessor is a bad name...maybe Library")
         _ = LibaryAcessor.audioBooks()
-        
-        // Initialize the Google Mobile Ads SDK.
-        // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
-        //"ca-app-pub-3940256099942544/2934735716"
-        //AudioWave appID "ca-app-pub-5752720356168981~6412523758"
-        //GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544/6300978111" )
         
         //UIApplication.shared.statusBarStyle = .lightContent
         //setupNowPlayingInfoCenter()
