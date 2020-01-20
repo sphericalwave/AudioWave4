@@ -29,20 +29,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let nowPlayingInfoCenter = MPNowPlayingInfoCenter()
 //        let notificationCenter = NotificationCenter()
         
-        let mainScreen = MainScreen()
+        let p1 = UIViewController()
+        let p2 = UIViewController()
+        p1.view.backgroundColor = .blue
+        p2.view.backgroundColor = .green
+        let sS = Players(playbackScreen1: p1, playbackScreen2: p2)
+        let cF = CrossFader()
+        let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF)
         let mainScreenNav = UINavigationController(rootViewController: mainScreen)
         
-        let audioSession = AVAudioSession.sharedInstance()
-        let commandCenter = MPRemoteCommandCenter.shared()
-        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
-        let notificationCenter = NotificationCenter.default
-        let audioPlayer = SWAudioPlayer(audioSession: audioSession, commandCenter: commandCenter, nowPlayingInfoCenter: nowPlayingInfoCenter, notificationCenter: notificationCenter, isMusicPlayer: true)
-        let playbackScreen = PlaybackScreen(audioPlayer: audioPlayer, notificationCenter: notificationCenter)
-        let navController = UINavigationController(rootViewController: playbackScreen)
+//        let audioSession = AVAudioSession.sharedInstance()
+//        let commandCenter = MPRemoteCommandCenter.shared()
+//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+//        let notificationCenter = NotificationCenter.default
+//        let audioPlayer = SWAudioPlayer(audioSession: audioSession, commandCenter: commandCenter, nowPlayingInfoCenter: nowPlayingInfoCenter, notificationCenter: notificationCenter, isMusicPlayer: true)
+//        let playbackScreen = PlaybackScreen(audioPlayer: audioPlayer, notificationCenter: notificationCenter)
+//        let navController = UINavigationController(rootViewController: playbackScreen)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = mainScreenNav //navController //containerVC //pageVC
         window!.makeKeyAndVisible()
+        window!.rootViewController = mainScreenNav //navController //containerVC //pageVC
         
         //audioSessionManager = AudioSessionManager.sharedInstance    //TODO: This is hacky
         //NotificationCenter.default.addObserver(forName: .AVAudioSessionInterruption, object: self, queue: .main, using: handleInterruption)
@@ -64,21 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-
-    
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-    }
+    func applicationWillResignActive(_ application: UIApplication) { }
+    func applicationDidEnterBackground(_ application: UIApplication) { }
+    func applicationWillEnterForeground(_ application: UIApplication) { }
+    func applicationDidBecomeActive(_ application: UIApplication) { }
+    func applicationWillTerminate(_ application: UIApplication) { }
 }
 

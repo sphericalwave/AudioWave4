@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MasterScrollScreen: UIPageViewController
+class Players: UIPageViewController
 {
-    let playbackScreen1: PlaybackScreen
-    let playbackScreen2: PlaybackScreen
+    let playbackScreen1: UIViewController //PlaybackScreen
+    let playbackScreen2: UIViewController //PlaybackScreen
     
-    init(playbackScreen1: PlaybackScreen, playbackScreen2: PlaybackScreen) {
+    init(playbackScreen1: UIViewController, playbackScreen2: UIViewController) {
         self.playbackScreen1 = playbackScreen1
         self.playbackScreen2 = playbackScreen2
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -26,7 +26,7 @@ class MasterScrollScreen: UIPageViewController
     required init?(coder: NSCoder) { fatalError("Never Called") }
 }
 
-extension MasterScrollScreen: UIPageViewControllerDataSource
+extension Players: UIPageViewControllerDataSource
 {
     //Content Player VC
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -41,7 +41,7 @@ extension MasterScrollScreen: UIPageViewControllerDataSource
     }
 }
 
-extension MasterScrollScreen: UIPageViewControllerDelegate
+extension Players: UIPageViewControllerDelegate
 {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 
