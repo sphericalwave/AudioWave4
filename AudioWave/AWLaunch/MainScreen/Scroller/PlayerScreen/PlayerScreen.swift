@@ -24,7 +24,7 @@ class PlayerScreen: UIViewController
         super.viewDidLoad()
         //FIXME: Inject Dependencies
         artworkContainer.backgroundColor = .blue
-        self.embed(viewController: Progress(), inContainerView: artworkContainer)
+        //self.embed(viewController: Progress(), inContainerView: artworkContainer)
         self.embed(viewController: Progress(), inContainerView: progressContainer)
         self.embed(viewController: Titles(), inContainerView: textContainer)
         self.embed(viewController: Buttons(), inContainerView: buttonContainer)

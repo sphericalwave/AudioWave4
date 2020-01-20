@@ -125,7 +125,7 @@
 			children = (
 				AF95F8222294B70400C81959 /* MainScreen.xib */,
 				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
-				AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */,
+				AFF00CF423D662A0000BB3EB /* Scroller */,
 				AF2490A823D65C5A00B66B70 /* CrossFader */,
 			);
 			path = MainScreen;
@@ -263,7 +263,6 @@
 				AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */,
 				AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */,
 				AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */,
-				AF5F5EC723D65931005589E3 /* PlayerScreen */,
 				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
 				AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */,
 			);
@@ -288,6 +287,15 @@
 				AFCE09971F57332800A1D0EE /* SWPlayerState.swift */,
 			);
 			path = SWAudioPlayer;
+			sourceTree = "<group>";
+		};
+		AFF00CF423D662A0000BB3EB /* Scroller */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */,
+				AF5F5EC723D65931005589E3 /* PlayerScreen */,
+			);
+			path = Scroller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
