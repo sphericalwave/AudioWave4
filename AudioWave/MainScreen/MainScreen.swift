@@ -34,17 +34,22 @@ class MainScreen: UIViewController
         scrollPageContainer.backgroundColor = .black
         self.embed(viewController: crossFader, inContainerView: crossFaderContainer)
         self.embed(viewController: scrollScreen, inContainerView: scrollPageContainer)
-        let music = UIBarButtonItem(image: #imageLiteral(resourceName: "65-note"), style: .plain, target: nil, action: nil)
-        let audio = UIBarButtonItem(image: #imageLiteral(resourceName: "mediumBook"), style: .plain, target: nil, action: nil)
-        navigationItem.leftBarButtonItem = music
-        navigationItem.rightBarButtonItem = audio
+        //let music = UIBarButtonItem(image: UIImage(systemName: "music.note"), style: .plain, target: nil, action: nil)
+        let audio = UIBarButtonItem(image: UIImage(systemName: "book"), style: .plain, target: nil, action: nil)
 
-        //let musicBtn = SwModalButton(image: #imageLiteral(resourceName: "notePlaceholder"), destinationScreen: UIViewController(), parentScreen: self)
+
+        let music = MusicButton(parentScreen: self) //FIXME: Circular Ref?
+        //let musicBtn = SwModalButton(image: note, destinationScreen: playlistScreen, parentScreen: self)
+        
         //let booksButton = SwModalButton(image: #imageLiteral(resourceName: "notePlaceholder"), destinationScreen: UIViewController(), parentScreen: self)
         //self.navigationItem.rightBarButtonItem = musicBtn
         //self.navigationItem.leftBarButtonItem = booksButton
 //        self.booksButton.isEnabled = true
 //        self.musicButton.isEnabled = true
+        
+        navigationItem.leftBarButtonItem = music
+        navigationItem.rightBarButtonItem = audio
+
     }
 }
 

@@ -8,6 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF015D192294D6F4004BBED4 /* MainScreen.swift */; };
+		AF1D90F223DC862D0040E7CB /* MusicPlaylists.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D90F123DC862D0040E7CB /* MusicPlaylists.swift */; };
+		AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D90F323DC89290040E7CB /* SwDismissButton.swift */; };
+		AF319EB723DC823700CFDCEF /* MusicPlaylistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB623DC823700CFDCEF /* MusicPlaylistButton.swift */; };
+		AF319EB923DC825000CFDCEF /* MusicPlaylistScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB823DC825000CFDCEF /* MusicPlaylistScreen.swift */; };
+		AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */; };
+		AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBD23DC828A00CFDCEF /* SwStaticTable.swift */; };
+		AF319EE823DC828A00CFDCEF /* SwDynamicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBF23DC828A00CFDCEF /* SwDynamicTable.swift */; };
+		AF319EE923DC828A00CFDCEF /* SwDynamicTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EC023DC828A00CFDCEF /* SwDynamicTableData.swift */; };
+		AF319EEA23DC828A00CFDCEF /* SWEmptyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EC123DC828A00CFDCEF /* SWEmptyTable.swift */; };
+		AF319EF023DC828A00CFDCEF /* SwLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ECB23DC828A00CFDCEF /* SwLabelCell.xib */; };
+		AF319EF123DC828A00CFDCEF /* SwLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ECC23DC828A00CFDCEF /* SwLabelCell.swift */; };
+		AF319EF223DC828A00CFDCEF /* SWImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ECE23DC828A00CFDCEF /* SWImageCell.swift */; };
+		AF319EF323DC828A00CFDCEF /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ECF23DC828A00CFDCEF /* ImageCell.xib */; };
+		AF319EF623DC828A00CFDCEF /* SwTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ED423DC828A00CFDCEF /* SwTextFieldCell.swift */; };
+		AF319EF723DC828A00CFDCEF /* SwTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ED523DC828A00CFDCEF /* SwTextFieldCell.xib */; };
+		AF319EF823DC828A00CFDCEF /* SwImageLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ED723DC828A00CFDCEF /* SwImageLabelCell.swift */; };
+		AF319EF923DC828A00CFDCEF /* SwImageLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ED823DC828A00CFDCEF /* SwImageLabelCell.xib */; };
+		AF319EFA23DC828A00CFDCEF /* VendorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EDA23DC828A00CFDCEF /* VendorCell.xib */; };
+		AF319EFB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift */; };
+		AF319EFC23DC828A00CFDCEF /* SwQuadLabelImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EDD23DC828A00CFDCEF /* SwQuadLabelImageCell.xib */; };
+		AF319EFD23DC828A00CFDCEF /* SwQuadLabelImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDE23DC828A00CFDCEF /* SwQuadLabelImageCell.swift */; };
+		AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDF23DC828A00CFDCEF /* SwCell.swift */; };
+		AF319F0123DC828A00CFDCEF /* SWDualLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EE423DC828A00CFDCEF /* SWDualLabelCell.xib */; };
+		AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */; };
 		AF50C96323D914A300B49F74 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50C96223D914A300B49F74 /* Player.swift */; };
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerScreen.swift */; };
@@ -54,6 +78,30 @@
 
 /* Begin PBXFileReference section */
 		AF015D192294D6F4004BBED4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		AF1D90F123DC862D0040E7CB /* MusicPlaylists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylists.swift; sourceTree = "<group>"; };
+		AF1D90F323DC89290040E7CB /* SwDismissButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwDismissButton.swift; sourceTree = "<group>"; };
+		AF319EB623DC823700CFDCEF /* MusicPlaylistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylistButton.swift; sourceTree = "<group>"; };
+		AF319EB823DC825000CFDCEF /* MusicPlaylistScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylistScreen.swift; sourceTree = "<group>"; };
+		AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwStaticTableData.swift; sourceTree = "<group>"; };
+		AF319EBD23DC828A00CFDCEF /* SwStaticTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwStaticTable.swift; sourceTree = "<group>"; };
+		AF319EBF23DC828A00CFDCEF /* SwDynamicTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwDynamicTable.swift; sourceTree = "<group>"; };
+		AF319EC023DC828A00CFDCEF /* SwDynamicTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwDynamicTableData.swift; sourceTree = "<group>"; };
+		AF319EC123DC828A00CFDCEF /* SWEmptyTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWEmptyTable.swift; sourceTree = "<group>"; };
+		AF319ECB23DC828A00CFDCEF /* SwLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwLabelCell.xib; sourceTree = "<group>"; };
+		AF319ECC23DC828A00CFDCEF /* SwLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwLabelCell.swift; sourceTree = "<group>"; };
+		AF319ECE23DC828A00CFDCEF /* SWImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWImageCell.swift; sourceTree = "<group>"; };
+		AF319ECF23DC828A00CFDCEF /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		AF319ED423DC828A00CFDCEF /* SwTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwTextFieldCell.swift; sourceTree = "<group>"; };
+		AF319ED523DC828A00CFDCEF /* SwTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwTextFieldCell.xib; sourceTree = "<group>"; };
+		AF319ED723DC828A00CFDCEF /* SwImageLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwImageLabelCell.swift; sourceTree = "<group>"; };
+		AF319ED823DC828A00CFDCEF /* SwImageLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwImageLabelCell.xib; sourceTree = "<group>"; };
+		AF319EDA23DC828A00CFDCEF /* VendorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VendorCell.xib; sourceTree = "<group>"; };
+		AF319EDB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLabelTextFieldCell.swift; sourceTree = "<group>"; };
+		AF319EDD23DC828A00CFDCEF /* SwQuadLabelImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwQuadLabelImageCell.xib; sourceTree = "<group>"; };
+		AF319EDE23DC828A00CFDCEF /* SwQuadLabelImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwQuadLabelImageCell.swift; sourceTree = "<group>"; };
+		AF319EDF23DC828A00CFDCEF /* SwCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwCell.swift; sourceTree = "<group>"; };
+		AF319EE423DC828A00CFDCEF /* SWDualLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWDualLabelCell.xib; sourceTree = "<group>"; };
+		AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWDualLabelCell.swift; sourceTree = "<group>"; };
 		AF50C96223D914A300B49F74 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
@@ -131,6 +179,112 @@
 				AFF00CF423D662A0000BB3EB /* Scroller */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		AF319EBA23DC828A00CFDCEF /* SwTables */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EBB23DC828A00CFDCEF /* SwStaticTable */,
+				AF319EBE23DC828A00CFDCEF /* SwDynamicTable */,
+				AF319EC123DC828A00CFDCEF /* SWEmptyTable.swift */,
+			);
+			path = SwTables;
+			sourceTree = "<group>";
+		};
+		AF319EBB23DC828A00CFDCEF /* SwStaticTable */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */,
+				AF319EBD23DC828A00CFDCEF /* SwStaticTable.swift */,
+			);
+			path = SwStaticTable;
+			sourceTree = "<group>";
+		};
+		AF319EBE23DC828A00CFDCEF /* SwDynamicTable */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EBF23DC828A00CFDCEF /* SwDynamicTable.swift */,
+				AF319EC023DC828A00CFDCEF /* SwDynamicTableData.swift */,
+			);
+			path = SwDynamicTable;
+			sourceTree = "<group>";
+		};
+		AF319EC223DC828A00CFDCEF /* SwCells */ = {
+			isa = PBXGroup;
+			children = (
+				AF319ECA23DC828A00CFDCEF /* SwLabelCell */,
+				AF319ECD23DC828A00CFDCEF /* ImageCell */,
+				AF319ED323DC828A00CFDCEF /* SwTextFieldCell */,
+				AF319ED623DC828A00CFDCEF /* SwImageLabelCell */,
+				AF319ED923DC828A00CFDCEF /* SWLabelTextFieldCell */,
+				AF319EDC23DC828A00CFDCEF /* SwQuadLabelImageCell */,
+				AF319EDF23DC828A00CFDCEF /* SwCell.swift */,
+				AF319EE323DC828A00CFDCEF /* SWDualLabelCell */,
+			);
+			path = SwCells;
+			sourceTree = "<group>";
+		};
+		AF319ECA23DC828A00CFDCEF /* SwLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319ECB23DC828A00CFDCEF /* SwLabelCell.xib */,
+				AF319ECC23DC828A00CFDCEF /* SwLabelCell.swift */,
+			);
+			path = SwLabelCell;
+			sourceTree = "<group>";
+		};
+		AF319ECD23DC828A00CFDCEF /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319ECE23DC828A00CFDCEF /* SWImageCell.swift */,
+				AF319ECF23DC828A00CFDCEF /* ImageCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		AF319ED323DC828A00CFDCEF /* SwTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319ED423DC828A00CFDCEF /* SwTextFieldCell.swift */,
+				AF319ED523DC828A00CFDCEF /* SwTextFieldCell.xib */,
+			);
+			path = SwTextFieldCell;
+			sourceTree = "<group>";
+		};
+		AF319ED623DC828A00CFDCEF /* SwImageLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319ED723DC828A00CFDCEF /* SwImageLabelCell.swift */,
+				AF319ED823DC828A00CFDCEF /* SwImageLabelCell.xib */,
+			);
+			path = SwImageLabelCell;
+			sourceTree = "<group>";
+		};
+		AF319ED923DC828A00CFDCEF /* SWLabelTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EDA23DC828A00CFDCEF /* VendorCell.xib */,
+				AF319EDB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift */,
+			);
+			path = SWLabelTextFieldCell;
+			sourceTree = "<group>";
+		};
+		AF319EDC23DC828A00CFDCEF /* SwQuadLabelImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EDD23DC828A00CFDCEF /* SwQuadLabelImageCell.xib */,
+				AF319EDE23DC828A00CFDCEF /* SwQuadLabelImageCell.swift */,
+			);
+			path = SwQuadLabelImageCell;
+			sourceTree = "<group>";
+		};
+		AF319EE323DC828A00CFDCEF /* SWDualLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EE423DC828A00CFDCEF /* SWDualLabelCell.xib */,
+				AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */,
+			);
+			path = SWDualLabelCell;
 			sourceTree = "<group>";
 		};
 		AF50C96423D9217100B49F74 /* Extensions */ = {
@@ -216,6 +370,12 @@
 				AF50C96423D9217100B49F74 /* Extensions */,
 				AFCE09811F57311500A1D0EE /* AudioSessionManager.swift */,
 				AF51159023D65385005FFC34 /* SWModalButton.swift */,
+				AF1D90F323DC89290040E7CB /* SwDismissButton.swift */,
+				AF319EB623DC823700CFDCEF /* MusicPlaylistButton.swift */,
+				AF319EB823DC825000CFDCEF /* MusicPlaylistScreen.swift */,
+				AF1D90F123DC862D0040E7CB /* MusicPlaylists.swift */,
+				AF319EC223DC828A00CFDCEF /* SwCells */,
+				AF319EBA23DC828A00CFDCEF /* SwTables */,
 				AFD8F37223CF3B1800BF6FE6 /* CommandCenter.swift */,
 				AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */,
 				AFB821731F69B6BE00E394BE /* Icons.xcassets */,
@@ -367,17 +527,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF319EFA23DC828A00CFDCEF /* VendorCell.xib in Resources */,
 				AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */,
 				AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */,
 				AFA009A423D08EC700026DB6 /* CrossFader.xib in Resources */,
+				AF319EF323DC828A00CFDCEF /* ImageCell.xib in Resources */,
 				AFCE09B91F57365900A1D0EE /* PlaylistCell.xib in Resources */,
 				AF5F5EC923D65964005589E3 /* Progress.xib in Resources */,
 				AFCE09BA1F57365900A1D0EE /* SWCrossFaderVC.storyboard in Resources */,
 				AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */,
 				AF95F8232294B70400C81959 /* MainScreen.xib in Resources */,
+				AF319EF023DC828A00CFDCEF /* SwLabelCell.xib in Resources */,
 				AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */,
+				AF319EF923DC828A00CFDCEF /* SwImageLabelCell.xib in Resources */,
 				AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */,
+				AF319F0123DC828A00CFDCEF /* SWDualLabelCell.xib in Resources */,
 				AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */,
+				AF319EFC23DC828A00CFDCEF /* SwQuadLabelImageCell.xib in Resources */,
+				AF319EF723DC828A00CFDCEF /* SwTextFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,33 +557,50 @@
 			files = (
 				AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */,
 				AFCE09A51F57332A00A1D0EE /* Notification+Extension.swift in Sources */,
+				AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */,
 				AFD8F37323CF3B1800BF6FE6 /* CommandCenter.swift in Sources */,
+				AF319EB723DC823700CFDCEF /* MusicPlaylistButton.swift in Sources */,
 				AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */,
 				AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */,
+				AF319EE823DC828A00CFDCEF /* SwDynamicTable.swift in Sources */,
+				AF319EF623DC828A00CFDCEF /* SwTextFieldCell.swift in Sources */,
 				AFCE09AA1F57332A00A1D0EE /* Timer+Extensions.swift in Sources */,
+				AF319EE923DC828A00CFDCEF /* SwDynamicTableData.swift in Sources */,
+				AF319EFB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift in Sources */,
 				AFCE09A31F57332A00A1D0EE /* SWPlayerState.swift in Sources */,
 				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
 				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
 				AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */,
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
+				AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */,
 				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
 				AFD8F37123CF3A5400BF6FE6 /* CrossFader.swift in Sources */,
+				AF319EB923DC825000CFDCEF /* MusicPlaylistScreen.swift in Sources */,
+				AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */,
 				AF50C96323D914A300B49F74 /* Player.swift in Sources */,
 				AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */,
+				AF319EF123DC828A00CFDCEF /* SwLabelCell.swift in Sources */,
 				AFCE09931F5732DC00A1D0EE /* AudioLibrary.swift in Sources */,
+				AF319EF223DC828A00CFDCEF /* SWImageCell.swift in Sources */,
 				AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */,
 				AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */,
+				AF319EF823DC828A00CFDCEF /* SwImageLabelCell.swift in Sources */,
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,
 				AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */,
 				AFCE09B41F57359500A1D0EE /* SWCrossFaderVC.swift in Sources */,
 				AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */,
 				AFD8F36723CE69DC00BF6FE6 /* Progress.swift in Sources */,
+				AF319EEA23DC828A00CFDCEF /* SWEmptyTable.swift in Sources */,
 				AFD8F36923CE6A2900BF6FE6 /* Buttons.swift in Sources */,
+				AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */,
 				AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */,
 				AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */,
+				AF1D90F223DC862D0040E7CB /* MusicPlaylists.swift in Sources */,
+				AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */,
 				AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */,
 				AFA009A223D08DE000026DB6 /* UIViewController+Extensions.swift in Sources */,
 				AFD8F36B23CE6A5500BF6FE6 /* Artwork.swift in Sources */,
+				AF319EFD23DC828A00CFDCEF /* SwQuadLabelImageCell.swift in Sources */,
 				AFCE09821F57311500A1D0EE /* AudioSessionManager.swift in Sources */,
 				AFCE09A61F57332A00A1D0EE /* PlaylistDetailsVC.swift in Sources */,
 			);
@@ -475,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -529,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -546,7 +730,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AudioWave/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,7 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AudioWave/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";

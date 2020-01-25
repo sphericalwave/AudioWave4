@@ -11,7 +11,7 @@ import UIKit
 class SwModalButton: UIBarButtonItem
 {
     let destinationScreen: UIViewController
-    let parentScreen: UIViewController
+    let parentScreen: UIViewController  //FIXME: Confirm abscence of circular refference
     
     init(image: UIImage, destinationScreen: UIViewController, parentScreen: UIViewController) {
         self.destinationScreen = destinationScreen
@@ -30,3 +30,5 @@ class SwModalButton: UIBarButtonItem
     
     required init?(coder aDecoder: NSCoder) { fatalError() }
 }
+
+

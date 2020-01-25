@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwImageLabelCell" customModule="FitWrench" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="r34-bG-f3q" id="0mN-aR-Lrw"/>
+                <outlet property="labelOne" destination="Y7R-d3-PLO" id="C3w-RV-Fxm"/>
+                <outlet property="labelThree" destination="xxS-MU-mED" id="Irv-Ps-OO0"/>
+                <outlet property="labelTwo" destination="N66-R4-5I2" id="7c7-Jx-k7s"/>
+                <outlet property="view" destination="ZP8-Nf-f41" id="zgp-mO-0lf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZP8-Nf-f41">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fu7-vm-9h9">
+                    <rect key="frame" x="9" y="9" width="357" height="45"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlmondButter" translatesAutoresizingMaskIntoConstraints="NO" id="r34-bG-f3q">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="r34-bG-f3q" secondAttribute="height" multiplier="1:1" id="bKh-vl-wlW"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FwB-3G-US6">
+                            <rect key="frame" x="54" y="0.0" width="258.5" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almond Butter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7R-d3-PLO">
+                                    <rect key="frame" x="0.0" y="0.0" width="110.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="100g = 500cal, P:10g, F:26g, C:10g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N66-R4-5I2">
+                                    <rect key="frame" x="0.0" y="28.5" width="227.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxS-MU-mED">
+                            <rect key="frame" x="321.5" y="12.5" width="35.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uv9-F3-z6x" firstAttribute="trailing" secondItem="fu7-vm-9h9" secondAttribute="trailing" constant="9" id="57z-Y5-ZPC"/>
+                <constraint firstItem="uv9-F3-z6x" firstAttribute="bottom" secondItem="fu7-vm-9h9" secondAttribute="bottom" constant="9" id="C2v-zk-Q5W"/>
+                <constraint firstItem="fu7-vm-9h9" firstAttribute="leading" secondItem="uv9-F3-z6x" secondAttribute="leading" constant="9" id="JuS-2x-rCe"/>
+                <constraint firstItem="fu7-vm-9h9" firstAttribute="top" secondItem="uv9-F3-z6x" secondAttribute="top" constant="9" id="RxM-XM-e3Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="uv9-F3-z6x"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AlmondButter" width="420" height="420"/>
+    </resources>
+</document>
