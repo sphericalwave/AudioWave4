@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         let cF = CrossFader()
         let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF)
         let mainScreenNav = UINavigationController(rootViewController: mainScreen)
-        mainScreenNav.navigationBar.barStyle = .blackOpaque
-        window = UIWindow(frame: UIScreen.main.bounds) //else { fatalError() }
+        mainScreenNav.navigationBar.barStyle = .black
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = mainScreenNav //navController //containerVC //pageVC
+        window?.rootViewController = mainScreenNav
         return true
     }
     
@@ -35,27 +35,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     func applicationDidBecomeActive(_ application: UIApplication) { }
     func applicationWillTerminate(_ application: UIApplication) { }
 }
-
-//audioSessionManager = AudioSessionManager.sharedInstance    //TODO: This is hacky
-//NotificationCenter.default.addObserver(forName: .AVAudioSessionInterruption, object: self, queue: .main, using: handleInterruption)
-
-//TODO: Get Permission to Access Music Library in a proper way
-//_ = AudioLibrary.audioBooks()
-
-//UIApplication.shared.statusBarStyle = .lightContent
-//setupNowPlayingInfoCenter()
-
-//        let audioSession = AVAudioSession.sharedInstance()
-//        let commandCenter = MPRemoteCommandCenter.shared()
-//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
-//        let notificationCenter = NotificationCenter.default
-//        let audioPlayer = SWAudioPlayer(audioSession: audioSession, commandCenter: commandCenter, nowPlayingInfoCenter: nowPlayingInfoCenter, notificationCenter: notificationCenter, isMusicPlayer: true)
-//        let playbackScreen = PlaybackScreen(audioPlayer: audioPlayer, notificationCenter: notificationCenter)
-//        let navController = UINavigationController(rootViewController: playbackScreen)
-        
-        //Construct playback screen and embed it in a navController
-//        let audioSession = AVAudioSession()
-//        let commandCenter = MPRemoteCommandCenter()
-//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter()
-//        let notificationCenter = NotificationCenter()
-        

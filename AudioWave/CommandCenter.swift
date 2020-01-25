@@ -28,3 +28,9 @@ class CommandCenter
     //        })
         }
 }
+
+        //Construct playback screen and embed it in a navController
+//        let audioSession = AVAudioSession()
+//        let commandCenter = MPRemoteCommandCenter()
+//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter()
+//        let notificationCenter = NotificationCenter()

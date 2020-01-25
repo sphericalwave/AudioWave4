@@ -11,10 +11,12 @@
 import Foundation
 import MediaPlayer
 
+//NotificationCenter.default.addObserver(forName: .AVAudioSessionInterruption, object: self, queue: .main, using: handleInterruption)
 
-class AudioSessionManager: NSObject {
+
+class SWAudioSession: NSObject {
     
-    static let sharedInstance = AudioSessionManager()
+    static let sharedInstance = SWAudioSession()
     
     override init() {
         super.init()
