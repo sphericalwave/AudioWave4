@@ -1,14 +1,14 @@
 //
-//  PlaylistCell.swift
-//  AudioWave2
+//  TrackCell.swift
+//  AudioWave
 //
-//  Created by Aaron Anthony on 2017-06-09.
-//  Copyright © 2017 SphericalWave. All rights reserved.
+//  Created by Aaron Anthony on 2020-01-25.
+//  Copyright © 2020 SphericalWave. All rights reserved.
 //
 
 import UIKit
 
-class PlaylistCell: SwCell
+class TrackCell: SwCell
 {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
@@ -23,7 +23,7 @@ class PlaylistCell: SwCell
         self.artist = artist
         self.art = art
         super.init(nibName: "PlaylistCell2", bundle: nil)
-        accessoryType = .disclosureIndicator
+        accessoryType = .none
         selectionStyle = .default
     }
     
@@ -41,12 +41,9 @@ class PlaylistCell: SwCell
     override func height() -> CGFloat { return 81 }
     
     override func didSelect() {
-        let playlist = Playlist()
-        let playlistScreen = PlaylistScreen(playlist: playlist)
-        navigationController?.pushViewController(playlistScreen, animated: true)
+        //Play the Track
     }
 
-    
     func updateArt() {
         //TODO:
         musicArt.image = art

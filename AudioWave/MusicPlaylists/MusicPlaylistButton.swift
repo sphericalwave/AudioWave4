@@ -13,8 +13,8 @@ class MusicButton: SwModalButton
     convenience init?(parentScreen: UIViewController) {
         //FIXME: Inject
         let audioLibrary = AudioLibrary()
-        let mp = MusicPlaylists(audioLibrary: audioLibrary)
-        let playlistScreen = MusicPlaylistScreen(musicPlaylists: mp)
+        let mp = Playlists(audioLibrary: audioLibrary)
+        let playlistScreen = MusicPlaylistsScreen(musicPlaylists: mp)
         self.init(destinationScreen: playlistScreen, parentScreen: parentScreen)
     }
     

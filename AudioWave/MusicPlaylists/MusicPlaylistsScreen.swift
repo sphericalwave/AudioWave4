@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MusicPlaylistScreen: SwStaticTable
+class MusicPlaylistsScreen: SwStaticTable
 {
-    let musicPlaylists: MusicPlaylists
+    let musicPlaylists: Playlists
     
-    init(musicPlaylists: MusicPlaylists) {
+    init(musicPlaylists: Playlists) {
         self.musicPlaylists = musicPlaylists
         let playlist1 = musicPlaylists.playlist(at: 0)
-        let cell3 = PlaylistCell(name: playlist1.title(), artist: playlist1.artist(), art: playlist1.art())
+        let cell3 = PlaylistCell(name: playlist1.name(), artist: "Fake", art: playlist1.art())
         let data = SwStaticTableData(sections: [[cell3]])
         super.init(data: data, hideBottomBar: false)
         self.title = "Music"

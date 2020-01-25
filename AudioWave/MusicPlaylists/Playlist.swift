@@ -1,5 +1,5 @@
 //
-//  MusicPlaylists.swift
+//  Playlist.swift
 //  AudioWave
 //
 //  Created by Aaron Anthony on 2020-01-25.
@@ -8,25 +8,27 @@
 
 import UIKit
 
-class MusicPlaylists
+class Playlist
 {
-    let audioLibrary: AudioLibrary
-    
-    init(audioLibrary: AudioLibrary) {
-        self.audioLibrary = audioLibrary
+    func name() -> String {
+        return "GyroBlaster"
     }
     
-    func playlist(at index: Int) -> MusicPlaylist {
+    func track(at index: Int) -> Track {
         //TODO: return audioLibrary.playlist(at index: index)
-        return MusicPlaylist()
+        return Track()
     }
     
-    func count() -> Int {
-        return 3
+    func art() -> UIImage {
+        return #imageLiteral(resourceName: "NoteSpace2")
+    }
+    
+    func artist() -> String {
+        return "SphericalWave"
     }
 }
 
-class MusicPlaylist
+class Track
 {
     func art() -> UIImage {
         return #imageLiteral(resourceName: "NoteSpace2")
