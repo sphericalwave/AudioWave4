@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
-import MediaPlayer
-
 
 class MainScreen: UIViewController
 {
@@ -34,7 +31,7 @@ class MainScreen: UIViewController
         scrollPageContainer.backgroundColor = .black
         self.embed(viewController: crossFader, inContainerView: crossFaderContainer)
         self.embed(viewController: scrollScreen, inContainerView: scrollPageContainer)
-        let audio = UIBarButtonItem(image: UIImage(systemName: "book"), style: .plain, target: nil, action: nil)
+        let audio = ContentButton(parentScreen: self)
         let music = MusicButton(parentScreen: self) //FIXME: Circular Ref?
         navigationItem.leftBarButtonItem = music
         navigationItem.rightBarButtonItem = audio

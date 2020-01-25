@@ -11,8 +11,12 @@ import UIKit
 class CrossFader: UIViewController
 {
     @IBOutlet weak var slider: UISlider!
+    let player1: Player
+    let player2: Player
     
-    init() {
+    init(player1: Player, player2: Player) {
+        self.player1 = player1
+        self.player2 = player2
         super.init(nibName: "CrossFader", bundle: nil)
         view.backgroundColor = .black
     }
@@ -27,6 +31,8 @@ class CrossFader: UIViewController
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
+        
+        //TODO: Change Player1 and PLayer2 Volumes
         /*
          returns a float array with two indexes representing the volumes of the left (index 0) and right (index 1) channels
          when t is -1, volumes[0] = 0, volumes[1] = 1

@@ -16,10 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
-        let p1 = PlayerScreen()
-        let p2 = PlayerScreen()
+        let audioHardware = AudioHardware()
+        let notifications = Notifications()
+        let t = Titles()
+        let p = Progress()
+        let b = Buttons()
+        let a = Artwork(art: #imageLiteral(resourceName: "NoteSpace"))
+        let player1 = Player(titles: t, buttons: b, progress: p, artwork: a) //FIXME: Add player2
+        b.delegate = player1    //TODO: Implement Guards
+        p.delegate = player1
+        let nowPlaying = NowPlaying(musicPlayer: player1, audioPlayer: player1)
+        let p1 = PlayerScreen(player: player1, titles: t, buttons: b, progress: p, artwork: a)
+        let p2 = PlayerScreen(player: player1, titles: t, buttons: b, progress: p, artwork: a)
         let sS = Scroller(playbackScreen1: p1, playbackScreen2: p2)
-        let cF = CrossFader()
+        let cF = CrossFader(player1: player1, player2: player1)
         let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF)
         let mainScreenNav = UINavigationController(rootViewController: mainScreen)
         mainScreenNav.navigationBar.barStyle = .black

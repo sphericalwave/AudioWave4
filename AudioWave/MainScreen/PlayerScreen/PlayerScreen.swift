@@ -21,19 +21,19 @@ class PlayerScreen: UIViewController
     let buttons: Buttons
 
     //FIXME: Inject Everything
-    init() {
-        let t = Titles()
-        let p = Progress()
-        let b = Buttons()
-        let a = Artwork(art: #imageLiteral(resourceName: "NoteSpace"))
-        let pl = Player(titles: t, buttons: b, progress: p, artwork: a)
-        b.delegate = pl
-        p.delegate = pl
-        self.titles = t
-        self.progress = p
-        self.artwork = a
-        self.buttons = b
-        self.player = pl
+    init(player: Player, titles: Titles, buttons: Buttons, progress: Progress, artwork: Artwork) {
+//        let t = Titles()
+//        let p = Progress()
+//        let b = Buttons()
+//        let a = Artwork(art: #imageLiteral(resourceName: "NoteSpace"))
+//        let pl = Player(titles: t, buttons: b, progress: p, artwork: a)
+//        b.delegate = pl
+//        p.delegate = pl
+        self.titles = titles
+        self.progress = progress
+        self.artwork = artwork
+        self.buttons = buttons
+        self.player = player
         super.init(nibName: "PlayerScreen", bundle: nil)
         view.backgroundColor = .white
         view.layer.cornerRadius = 10.0
