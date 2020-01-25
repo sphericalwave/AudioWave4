@@ -14,6 +14,7 @@ class CrossFader: UIViewController
     
     init() {
         super.init(nibName: "CrossFader", bundle: nil)
+        view.backgroundColor = .clear
     }
     
     required init?(coder: NSCoder) { fatalError("Not used") }

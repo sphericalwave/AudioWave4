@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol ButtonDelegate: AnyObject {
+    func play()
+    func next()
+    func previous()
+    func loop()
+    func speed(rate: Float)
+}
+
 class Buttons: UIViewController
 {
     @IBOutlet weak var playPauseButton: UIButton!
@@ -15,25 +23,27 @@ class Buttons: UIViewController
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var loopButton: IdeaLoopButton!
     @IBOutlet weak var speedButton: SpeedButton!
+    weak var delegate: ButtonDelegate?
     
-    init() {
-        super.init(nibName: "Buttons", bundle: nil)
-    }
+    init() { super.init(nibName: "Buttons", bundle: nil) }
     
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
+    required init?(coder: NSCoder) { fatalError() }
     
-    @IBAction func playPauseButtonAction(_ sender: AnyObject) {
+    @IBAction func play(_ sender: AnyObject) {
        // self.player.togglePlayPause()
+        //update UI
+        //player.play() or pause
+        delegate?.play()
     }
     
-    @IBAction func previousButtonAction(_ sender: AnyObject) {
+    @IBAction func previous(_ sender: AnyObject) {
         //self.player.previousTrack()
+        delegate?.previous()
     }
     
-    @IBAction func nextButtonAction(_ sender: AnyObject) {
+    @IBAction func next(_ sender: AnyObject) {
        // self.player.nextTrack()
+        delegate?.next()
     }
     
     func updateControls() {

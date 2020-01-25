@@ -23,14 +23,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mox-MN-4hH">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="542"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPX-BR-Mkg">
-                            <rect key="frame" x="0.0" y="563" width="375" height="60"/>
+                            <rect key="frame" x="0.0" y="542" width="375" height="81"/>
                             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="P87-J1-Tsz"/>
+                                <constraint firstAttribute="height" constant="81" id="P87-J1-Tsz"/>
                             </constraints>
                         </view>
                     </subviews>

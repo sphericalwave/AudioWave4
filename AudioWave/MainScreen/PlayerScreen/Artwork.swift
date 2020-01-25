@@ -10,14 +10,33 @@ import UIKit
 
 class Artwork: UIViewController
 {
-    @IBOutlet weak var artworkImageView: UIImageView!
-
+    let artwork: UIImageView!
+    
+    init(art: UIImage) {
+        let a = UIImageView()
+        a.image = art
+        self.artwork = a
+        super.init(nibName: nil, bundle: nil)
+        view.backgroundColor = .blue
+        artwork.bounds = self.view.bounds
+        artwork.contentMode = .scaleToFill //FIXME: art is wrong
+        artwork.layer.cornerRadius = 10.0
+        artwork.clipsToBounds = true
+        self.view.layer.cornerRadius = 10.0
+        self.view.clipsToBounds = true
+    }
+    
+    required init?(coder: NSCoder) { fatalError() }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.layer.cornerRadius = 10.0
-        //self.view.clipsToBounds = true
-        artworkImageView.layer.cornerRadius = 10.0
-        artworkImageView.clipsToBounds = true
+        view.addSubview(artwork)
+    }
+    
+    func update(art: UIImage) {
+        //TODO: Connect Up
+        print("Update Art")
+        artwork.image = art
     }
     
     func updateArtworkImageView() {

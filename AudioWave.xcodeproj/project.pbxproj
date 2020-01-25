@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF015D192294D6F4004BBED4 /* MainScreen.swift */; };
+		AF50C96323D914A300B49F74 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50C96223D914A300B49F74 /* Player.swift */; };
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerScreen.swift */; };
 		AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* PlayerScreen.xib */; };
@@ -24,7 +25,7 @@
 		AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09871F57321800A1D0EE /* AudioBookDetailVC.swift */; };
 		AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */; };
 		AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */; };
-		AFCE09931F5732DC00A1D0EE /* LibaryAcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098F1F5732DB00A1D0EE /* LibaryAcessor.swift */; };
+		AFCE09931F5732DC00A1D0EE /* AudioLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */; };
 		AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */; };
 		AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09911F5732DC00A1D0EE /* Memento.swift */; };
 		AFCE09A31F57332A00A1D0EE /* SWPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09971F57332800A1D0EE /* SWPlayerState.swift */; };
@@ -34,7 +35,7 @@
 		AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */; };
 		AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */; };
 		AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099D1F57332900A1D0EE /* SpeedButton.swift */; };
-		AFCE09AA1F57332A00A1D0EE /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099F1F57332A00A1D0EE /* SwiftyTimer.swift */; };
+		AFCE09AA1F57332A00A1D0EE /* Timer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099F1F57332A00A1D0EE /* Timer+Extensions.swift */; };
 		AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */; };
 		AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */; };
 		AFCE09B31F57352600A1D0EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		AF015D192294D6F4004BBED4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		AF50C96223D914A300B49F74 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
 		AF51159623D65670005FFC34 /* PlayerScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerScreen.xib; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 		AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBooksVC.swift; sourceTree = "<group>"; };
 		AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaLoopButton.swift; sourceTree = "<group>"; };
 		AFCE098E1F5732C100A1D0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFCE098F1F5732DB00A1D0EE /* LibaryAcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibaryAcessor.swift; sourceTree = "<group>"; };
+		AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLibrary.swift; sourceTree = "<group>"; };
 		AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
 		AFCE09911F5732DC00A1D0EE /* Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memento.swift; sourceTree = "<group>"; };
 		AFCE09961F57332800A1D0EE /* PlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
@@ -83,13 +85,12 @@
 		AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylistsVC.swift; sourceTree = "<group>"; };
 		AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackScreen.swift; sourceTree = "<group>"; };
 		AFCE099D1F57332900A1D0EE /* SpeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedButton.swift; sourceTree = "<group>"; };
-		AFCE099F1F57332A00A1D0EE /* SwiftyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		AFCE099F1F57332A00A1D0EE /* Timer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+Extensions.swift"; sourceTree = "<group>"; };
 		AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioPlayer.swift; sourceTree = "<group>"; };
 		AFCE09AF1F57336600A1D0EE /* SWCrossFaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCrossFaderVC.swift; sourceTree = "<group>"; };
 		AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AFCE09B51F57359F00A1D0EE /* SWCrossFaderVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SWCrossFaderVC.storyboard; sourceTree = "<group>"; };
-		AFCE09B61F5735AD00A1D0EE /* AudioWave-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioWave-Bridging-Header.h"; sourceTree = "<group>"; };
 		AFD8F36623CE69DC00BF6FE6 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
@@ -125,10 +126,22 @@
 			children = (
 				AF95F8222294B70400C81959 /* MainScreen.xib */,
 				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
-				AFF00CF423D662A0000BB3EB /* Scroller */,
+				AF5F5EC723D65931005589E3 /* PlayerScreen */,
 				AF2490A823D65C5A00B66B70 /* CrossFader */,
+				AFF00CF423D662A0000BB3EB /* Scroller */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		AF50C96423D9217100B49F74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE09991F57332800A1D0EE /* Notification+Extension.swift */,
+				AFCE099F1F57332A00A1D0EE /* Timer+Extensions.swift */,
+				AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */,
+				AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AF5F5EC723D65931005589E3 /* PlayerScreen */ = {
@@ -136,6 +149,7 @@
 			children = (
 				AF51159423D655FA005FFC34 /* PlayerScreen.swift */,
 				AF51159623D65670005FFC34 /* PlayerScreen.xib */,
+				AF50C96223D914A300B49F74 /* Player.swift */,
 				AF62B1C223D65FA6002CD561 /* Titles */,
 				AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */,
 				AF62B1BF23D65E5A002CD561 /* Buttons */,
@@ -192,19 +206,19 @@
 			isa = PBXGroup;
 			children = (
 				AFCE09831F57312D00A1D0EE /* AWLaunch */,
+				AF2490A923D65C6E00B66B70 /* MainScreen */,
 				AFCE09BF1F57704200A1D0EE /* SWPlayerVC */,
 				AFCE09C21F57708600A1D0EE /* SWAudioPlayer */,
 				AFCE09BD1F576FEE00A1D0EE /* SWCrossFaderVC */,
 				AFCE098B1F57322000A1D0EE /* SWAudioBookVC */,
 				AFCE09BE1F57700E00A1D0EE /* SWMusicPlaylistsVC */,
 				AFCE09C11F57706800A1D0EE /* SWPlaylistCell */,
-				AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */,
-				AFCE09B61F5735AD00A1D0EE /* AudioWave-Bridging-Header.h */,
+				AF50C96423D9217100B49F74 /* Extensions */,
 				AFCE09811F57311500A1D0EE /* AudioSessionManager.swift */,
-				AFCE098F1F5732DB00A1D0EE /* LibaryAcessor.swift */,
+				AF51159023D65385005FFC34 /* SWModalButton.swift */,
+				AFD8F37223CF3B1800BF6FE6 /* CommandCenter.swift */,
+				AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */,
 				AFB821731F69B6BE00E394BE /* Icons.xcassets */,
-				AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */,
-				AFCE09991F57332800A1D0EE /* Notification+Extension.swift */,
 				AFCE098E1F5732C100A1D0EE /* Info.plist */,
 			);
 			path = AudioWave;
@@ -215,9 +229,6 @@
 			children = (
 				AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */,
 				AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */,
-				AF2490A923D65C6E00B66B70 /* MainScreen */,
-				AF51159023D65385005FFC34 /* SWModalButton.swift */,
-				AFD8F37223CF3B1800BF6FE6 /* CommandCenter.swift */,
 			);
 			path = AWLaunch;
 			sourceTree = "<group>";
@@ -282,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */,
-				AFCE099F1F57332A00A1D0EE /* SwiftyTimer.swift */,
 				AFCE09911F5732DC00A1D0EE /* Memento.swift */,
 				AFCE09971F57332800A1D0EE /* SWPlayerState.swift */,
 			);
@@ -293,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */,
-				AF5F5EC723D65931005589E3 /* PlayerScreen */,
 			);
 			path = Scroller;
 			sourceTree = "<group>";
@@ -325,7 +334,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = SphericalWave;
 				TargetAttributes = {
 					AFCE09681F57308C00A1D0EE = {
@@ -384,7 +393,7 @@
 				AFD8F37323CF3B1800BF6FE6 /* CommandCenter.swift in Sources */,
 				AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */,
 				AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */,
-				AFCE09AA1F57332A00A1D0EE /* SwiftyTimer.swift in Sources */,
+				AFCE09AA1F57332A00A1D0EE /* Timer+Extensions.swift in Sources */,
 				AFCE09A31F57332A00A1D0EE /* SWPlayerState.swift in Sources */,
 				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
 				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
@@ -392,8 +401,9 @@
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
 				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
 				AFD8F37123CF3A5400BF6FE6 /* CrossFader.swift in Sources */,
+				AF50C96323D914A300B49F74 /* Player.swift in Sources */,
 				AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */,
-				AFCE09931F5732DC00A1D0EE /* LibaryAcessor.swift in Sources */,
+				AFCE09931F5732DC00A1D0EE /* AudioLibrary.swift in Sources */,
 				AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */,
 				AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */,
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,
@@ -429,6 +439,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -436,6 +447,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -487,6 +499,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -494,6 +507,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -536,7 +550,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioWave/AudioWave-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
@@ -556,7 +569,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioWave/AudioWave-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

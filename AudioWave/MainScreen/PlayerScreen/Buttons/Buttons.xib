@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,51 +8,65 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Buttons" customModule="AudioWave" customModuleProvider="target">
             <connections>
+                <outlet property="loopButton" destination="2Mr-es-4Ts" id="eD1-Ur-ZFG"/>
+                <outlet property="nextButton" destination="8Oh-af-Srw" id="b9j-t3-bex"/>
+                <outlet property="playPauseButton" destination="i9K-dE-Kgn" id="y8A-zv-rs0"/>
+                <outlet property="previousButton" destination="v6h-La-VCs" id="SXu-zO-uxx"/>
+                <outlet property="speedButton" destination="oSh-9f-8HR" id="cVc-hl-T6e"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Qea-5d-g1e"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ILz-gz-mU2">
-                    <rect key="frame" x="9" y="53" width="396" height="86"/>
+                    <rect key="frame" x="9" y="9" width="396" height="63"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-9f-8HR" customClass="SpeedButton" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="25" width="30" height="36"/>
+                            <rect key="frame" x="0.0" y="13.5" width="30" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="1x">
                                 <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-La-VCs">
-                            <rect key="frame" x="77" y="20.5" width="45" height="45"/>
+                            <rect key="frame" x="66" y="9" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="9lM-bY-iM2"/>
                                 <constraint firstAttribute="width" constant="45" id="VTk-XS-m0S"/>
                             </constraints>
                             <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="previous:" destination="-1" eventType="touchUpInside" id="psc-eC-36j"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-dE-Kgn">
-                            <rect key="frame" x="168.5" y="20.5" width="45" height="45"/>
+                            <rect key="frame" x="146.5" y="9" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="G14-ql-LyY"/>
                                 <constraint firstAttribute="width" constant="45" id="dxS-yx-hUi"/>
                             </constraints>
                             <state key="normal" image="play"/>
                             <state key="selected" image="pause"/>
+                            <connections>
+                                <action selector="play:" destination="-1" eventType="touchUpInside" id="xwv-GG-p4Z"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-af-Srw">
-                            <rect key="frame" x="260.5" y="20.5" width="45" height="45"/>
+                            <rect key="frame" x="227.5" y="9" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="aNy-Ri-o9S"/>
                                 <constraint firstAttribute="height" constant="45" id="sPN-L7-t4R"/>
                             </constraints>
                             <state key="normal" image="forward"/>
+                            <connections>
+                                <action selector="next:" destination="-1" eventType="touchUpInside" id="avz-qz-g9Z"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-es-4Ts" customClass="IdeaLoopButton" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="352" y="26.5" width="44" height="33"/>
+                            <rect key="frame" x="308" y="0.0" width="88" height="63"/>
                             <state key="normal" image="Loop All"/>
                         </button>
                     </subviews>
@@ -62,14 +74,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ILz-gz-mU2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="7YX-nc-h29"/>
                 <constraint firstItem="ILz-gz-mU2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="Ush-1U-arm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ILz-gz-mU2" secondAttribute="bottom" constant="9" id="V39-0T-dm9"/>
-                <constraint firstItem="ILz-gz-mU2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="9" id="cmh-2X-Xqw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ILz-gz-mU2" secondAttribute="trailing" constant="9" id="yeb-0s-j2X"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="152.00892857142856"/>
+            <point key="canvasLocation" x="137.68115942028987" y="166.74107142857142"/>
         </view>
     </objects>
     <resources>

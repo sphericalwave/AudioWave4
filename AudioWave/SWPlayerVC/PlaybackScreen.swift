@@ -128,39 +128,39 @@ class PlaybackScreen: UIViewController
     }
     
     func presentMusicPlaylistVC() {
-        //Storyboard Init
-        //let storyboard = UIStoryboard.init(name: "MusicPlaylists", bundle: nil)
-        //let nav = storyboard.instantiateInitialViewController() as! UINavigationController
-        //let musicPlaylists = nav.topViewController as! MusicPlayerContainerVC
-        let musicPlaylistsVC = MusicPlaylistsVC(style: .plain)
-        musicPlaylistsVC.player = player
-        let nav = UINavigationController(rootViewController: musicPlaylistsVC)
-        //nav.navigationBar.barStyle = .blackOpaque
-        
-        //Initialize Properties
-        //            musicPlaylists.didSelectPlayable = { playableItem, index in
-        //                self.load(playable: playableItem, at: index)
-        //                self.play()
-        //            }
-        self.present(nav, animated: true, completion: nil)
+//        //Storyboard Init
+//        //let storyboard = UIStoryboard.init(name: "MusicPlaylists", bundle: nil)
+//        //let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+//        //let musicPlaylists = nav.topViewController as! MusicPlayerContainerVC
+//        let musicPlaylistsVC = MusicPlaylistsVC(style: .plain)
+//        musicPlaylistsVC.player = player
+//        let nav = UINavigationController(rootViewController: musicPlaylistsVC)
+//        //nav.navigationBar.barStyle = .blackOpaque
+//        
+//        //Initialize Properties
+//        //            musicPlaylists.didSelectPlayable = { playableItem, index in
+//        //                self.load(playable: playableItem, at: index)
+//        //                self.play()
+//        //            }
+//        self.present(nav, animated: true, completion: nil)
     }
     
     func presentAudiobooksVC() {
-        //Storyboard Init
-        //let storyboard = UIStoryboard.init(name: "MusicPlaylists", bundle: nil)
-        //let nav = storyboard.instantiateInitialViewController() as! UINavigationController
-        //let musicPlaylists = nav.topViewController as! MusicPlayerContainerVC
-        let audioBooksVC = AudioBooksVC(style: .plain)
-        audioBooksVC.player = player
-        let nav = UINavigationController(rootViewController: audioBooksVC)
-        //nav.navigationBar.barStyle = .blac
-        
-        //Initialize Properties
-        //            musicPlaylists.didSelectPlayable = { playableItem, index in
-        //                self.load(playable: playableItem, at: index)
-        //                self.play()
-        //            }
-        self.present(nav, animated: true, completion: nil)
+//        //Storyboard Init
+//        //let storyboard = UIStoryboard.init(name: "MusicPlaylists", bundle: nil)
+//        //let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+//        //let musicPlaylists = nav.topViewController as! MusicPlayerContainerVC
+//        let audioBooksVC = AudioBooksVC(style: .plain)
+//        audioBooksVC.player = player
+//        let nav = UINavigationController(rootViewController: audioBooksVC)
+//        //nav.navigationBar.barStyle = .blac
+//        
+//        //Initialize Properties
+//        //            musicPlaylists.didSelectPlayable = { playableItem, index in
+//        //                self.load(playable: playableItem, at: index)
+//        //                self.play()
+//        //            }
+//        self.present(nav, animated: true, completion: nil)
     }
 }
 
