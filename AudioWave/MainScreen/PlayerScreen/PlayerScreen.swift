@@ -29,20 +29,20 @@ class PlayerScreen: UIViewController
         let pl = Player(titles: t, buttons: b, progress: p, artwork: a)
         b.delegate = pl
         p.delegate = pl
-       // t.delegate = pl
         self.titles = t
         self.progress = p
         self.artwork = a
         self.buttons = b
         self.player = pl
         super.init(nibName: "PlayerScreen", bundle: nil)
-        self.view.backgroundColor = .gray
-        artworkContainer.backgroundColor = .clear
-        view.backgroundColor = .clear
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 10.0
+        view.clipsToBounds = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        artworkContainer.backgroundColor = .clear
         self.embed(viewController: artwork, inContainerView: artworkContainer)
         self.embed(viewController: progress, inContainerView: progressContainer)
         self.embed(viewController: titles, inContainerView: textContainer)

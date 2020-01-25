@@ -16,7 +16,8 @@ class Scroller: UIPageViewController
     init(playbackScreen1: UIViewController, playbackScreen2: UIViewController) {
         self.playbackScreen1 = playbackScreen1
         self.playbackScreen2 = playbackScreen2
-        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        let options = [UIPageViewController.OptionsKey.interPageSpacing : 20]
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: options)
         self.setViewControllers([playbackScreen1], direction: .forward, animated: true, completion: nil)
         self.delegate = self
         self.dataSource = self

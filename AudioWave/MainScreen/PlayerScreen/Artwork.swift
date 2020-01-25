@@ -18,18 +18,19 @@ class Artwork: UIViewController
         self.artwork = a
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .blue
-        artwork.bounds = self.view.bounds
-        artwork.contentMode = .scaleToFill //FIXME: art is wrong
+        view.layer.cornerRadius = 10.0
+        view.clipsToBounds = true
+        artwork.contentMode = .scaleAspectFill
         artwork.layer.cornerRadius = 10.0
         artwork.clipsToBounds = true
-        self.view.layer.cornerRadius = 10.0
-        self.view.clipsToBounds = true
     }
     
     required init?(coder: NSCoder) { fatalError() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        artwork.frame = view.frame
+        artwork.backgroundColor = .green
         view.addSubview(artwork)
     }
     

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         let cF = CrossFader()
         let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF)
         let mainScreenNav = UINavigationController(rootViewController: mainScreen)
+        mainScreenNav.navigationBar.barStyle = .blackOpaque
         window = UIWindow(frame: UIScreen.main.bounds) //else { fatalError() }
         window?.makeKeyAndVisible()
         window?.rootViewController = mainScreenNav //navController //containerVC //pageVC

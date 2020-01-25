@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CrossFader" customModule="AudioWave" customModuleProvider="target">
             <connections>
+                <outlet property="slider" destination="QUU-Lv-YG3" id="Evz-sd-dfu"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lSB-QE-KcI"/>
             </connections>
         </placeholder>

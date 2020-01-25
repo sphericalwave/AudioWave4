@@ -24,7 +24,6 @@ class MainScreen: UIViewController
         super.init(nibName: "MainScreen", bundle: nil)
         self.title = "AudioWave"
         edgesForExtendedLayout = [] //no content under nav bar
-
     }
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
@@ -32,7 +31,7 @@ class MainScreen: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         crossFaderContainer.backgroundColor = .gray
-        scrollPageContainer.backgroundColor = .white
+        scrollPageContainer.backgroundColor = .black
         self.embed(viewController: crossFader, inContainerView: crossFaderContainer)
         self.embed(viewController: scrollScreen, inContainerView: scrollPageContainer)
         let music = UIBarButtonItem(image: #imageLiteral(resourceName: "65-note"), style: .plain, target: nil, action: nil)
