@@ -15,8 +15,8 @@ class MusicPlaylistScreen: SwStaticTable
     init(musicPlaylists: MusicPlaylists) {
         self.musicPlaylists = musicPlaylists
         let playlist1 = musicPlaylists.playlist(at: 0)
-        let cell = SwLabelCell(text: playlist1.title(), image: playlist1.art())
-        let data = SwStaticTableData(sections: [[cell]])
+        let cell3 = PlaylistCell(name: playlist1.title(), artist: playlist1.artist(), art: playlist1.art())
+        let data = SwStaticTableData(sections: [[cell3]])
         super.init(data: data, hideBottomBar: false)
         self.title = "Music"
         navigationItem.leftBarButtonItem = SwDismissButton(parentScreen: self)
