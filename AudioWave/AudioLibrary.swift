@@ -11,8 +11,8 @@
 import Foundation
 import MediaPlayer
 
-class AudioLibrary {
-    
+class AudioLibrary
+{    
     func musicPlaylists() -> [MPMediaPlaylist]? {
         
         let query = MPMediaQuery.playlists()
