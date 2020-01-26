@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,7 +11,7 @@
             <connections>
                 <outlet property="loopButton" destination="2Mr-es-4Ts" id="eD1-Ur-ZFG"/>
                 <outlet property="nextButton" destination="8Oh-af-Srw" id="b9j-t3-bex"/>
-                <outlet property="playPauseButton" destination="i9K-dE-Kgn" id="y8A-zv-rs0"/>
+                <outlet property="playButton" destination="i9K-dE-Kgn" id="3sT-5A-hFi"/>
                 <outlet property="previousButton" destination="v6h-La-VCs" id="SXu-zO-uxx"/>
                 <outlet property="speedButton" destination="oSh-9f-8HR" id="cVc-hl-T6e"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Qea-5d-g1e"/>
@@ -32,7 +33,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-La-VCs">
-                            <rect key="frame" x="66" y="9" width="45" height="45"/>
+                            <rect key="frame" x="77" y="9" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="9lM-bY-iM2"/>
                                 <constraint firstAttribute="width" constant="45" id="VTk-XS-m0S"/>
@@ -42,20 +43,17 @@
                                 <action selector="previous:" destination="-1" eventType="touchUpInside" id="psc-eC-36j"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-dE-Kgn">
-                            <rect key="frame" x="146.5" y="9" width="45" height="45"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-dE-Kgn" customClass="PlayButton" customModule="AudioWave" customModuleProvider="target">
+                            <rect key="frame" x="168.5" y="9" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="G14-ql-LyY"/>
                                 <constraint firstAttribute="width" constant="45" id="dxS-yx-hUi"/>
                             </constraints>
                             <state key="normal" image="play"/>
                             <state key="selected" image="pause"/>
-                            <connections>
-                                <action selector="play:" destination="-1" eventType="touchUpInside" id="xwv-GG-p4Z"/>
-                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-af-Srw">
-                            <rect key="frame" x="227.5" y="9" width="45" height="45"/>
+                            <rect key="frame" x="260.5" y="9" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="aNy-Ri-o9S"/>
                                 <constraint firstAttribute="height" constant="45" id="sPN-L7-t4R"/>
@@ -66,7 +64,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-es-4Ts" customClass="LoopButton" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="308" y="0.0" width="88" height="63"/>
+                            <rect key="frame" x="352" y="15" width="44" height="33"/>
                             <state key="normal" image="Loop All"/>
                         </button>
                     </subviews>
@@ -82,7 +80,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="166.74107142857142"/>
+            <point key="canvasLocation" x="38" y="162"/>
         </view>
     </objects>
     <resources>

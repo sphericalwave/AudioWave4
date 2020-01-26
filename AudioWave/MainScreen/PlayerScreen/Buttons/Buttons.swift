@@ -18,7 +18,7 @@ protocol ButtonDelegate: AnyObject {
 
 class Buttons: UIViewController
 {
-    @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var playButton: PlayButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var loopButton: LoopButton!
@@ -33,37 +33,19 @@ class Buttons: UIViewController
         super.viewDidLoad()
         speedButton.delegate = self
         loopButton.delegate = self
+        playButton.delegate = self
         guard delegate != nil else { fatalError() }
     }
     
-    @IBAction func play(_ sender: AnyObject) {
-       // self.player.togglePlayPause()
-        //update UI
-        //player.play() or pause
-        delegate?.play()
-    }
+    @IBAction func previous(_ sender: AnyObject) { delegate?.previous() }
     
-    @IBAction func previous(_ sender: AnyObject) {
-        //self.player.previousTrack()
-        delegate?.previous()
-    }
+    @IBAction func next(_ sender: AnyObject) { delegate?.next() }
     
-    @IBAction func next(_ sender: AnyObject) {
-       // self.player.nextTrack()
-        delegate?.next()
-    }
-    
-    func updateControls() {
+    func enableButtons() {
 //        self.playPauseButton.isSelected = self.player.isPlaying
 //        self.nextButton.isEnabled = self.player.nextPlaybackItem != nil
 //        self.previousButton.isEnabled = self.player.previousPlaybackItem != nil
     }
-    
-    //TODO: Encapsulate in buttons
-//    @IBAction func loopButtonTap(_ sender: IdeaLoopButton) {
-//        self.player.loopMode = sender.nextState()
-//    }
-
 }
 
 extension Buttons: SpeedButtonDelegate
@@ -77,5 +59,13 @@ extension Buttons: LoopButtonDelegate
 {
     func update(mode: IdeaMode) {
         print("Update the Player's speed!")
+    }
+}
+
+extension Buttons: PlayButtonDelegate
+{
+    func update(mode: PlayMode) {
+        delegate?.play() //FIXME: This is not right
+        //pause or resume playback
     }
 }
