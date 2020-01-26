@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-tF-lmy">
-                    <rect key="frame" x="20" y="20" width="335" height="470"/>
+                    <rect key="frame" x="20" y="20" width="335" height="491"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uxr-OT-KcF">
                             <rect key="frame" x="0.0" y="0.0" width="335" height="372"/>
@@ -78,7 +76,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W5F-1q-29i">
-                            <rect key="frame" x="0.0" y="372" width="335" height="98"/>
+                            <rect key="frame" x="0.0" y="372" width="335" height="119"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-Ud-2S3">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="53"/>
@@ -108,17 +106,17 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DHB-cE-esL">
-                                    <rect key="frame" x="10" y="53" width="315" height="45"/>
+                                    <rect key="frame" x="10" y="53" width="315" height="66"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nr-Vj-mxh" customClass="SpeedButton" customModule="AudioWave" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="4.5" width="30" height="36"/>
+                                            <rect key="frame" x="0.0" y="15" width="30" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="1x">
                                                 <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45u-Za-IPM">
-                                            <rect key="frame" x="56.5" y="0.0" width="45" height="45"/>
+                                            <rect key="frame" x="45.5" y="10.5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="5RJ-Mc-cfL"/>
                                                 <constraint firstAttribute="width" constant="45" id="EYf-lg-5uH"/>
@@ -126,7 +124,7 @@
                                             <state key="normal" image="back"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-R5-EKm">
-                                            <rect key="frame" x="128" y="0.0" width="45" height="45"/>
+                                            <rect key="frame" x="106" y="10.5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="CzG-sH-afe"/>
                                                 <constraint firstAttribute="width" constant="45" id="TJn-vf-79T"/>
@@ -135,15 +133,15 @@
                                             <state key="selected" image="pause"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5m-fZ-khy">
-                                            <rect key="frame" x="199.5" y="0.0" width="45" height="45"/>
+                                            <rect key="frame" x="166.5" y="10.5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="b0X-VE-KOj"/>
                                                 <constraint firstAttribute="height" constant="45" id="esh-uR-fPe"/>
                                             </constraints>
                                             <state key="normal" image="forward"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-lP-Mat" customClass="IdeaLoopButton" customModule="AudioWave" customModuleProvider="target">
-                                            <rect key="frame" x="271" y="6" width="44" height="33"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-lP-Mat" customClass="LoopButton" customModule="AudioWave" customModuleProvider="target">
+                                            <rect key="frame" x="227" y="0.0" width="88" height="66"/>
                                             <state key="normal" image="Loop All"/>
                                         </button>
                                     </subviews>

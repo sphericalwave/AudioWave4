@@ -54,7 +54,7 @@
 		AFCE09821F57311500A1D0EE /* AudioHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09811F57311500A1D0EE /* AudioHardware.swift */; };
 		AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09871F57321800A1D0EE /* AudioBookDetailVC.swift */; };
 		AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */; };
-		AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */; };
+		AFCE098D1F57328300A1D0EE /* LoopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098C1F57328300A1D0EE /* LoopButton.swift */; };
 		AFCE09931F5732DC00A1D0EE /* AudioLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */; };
 		AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */; };
 		AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09911F5732DC00A1D0EE /* Memento.swift */; };
@@ -127,7 +127,7 @@
 		AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFCE09871F57321800A1D0EE /* AudioBookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookDetailVC.swift; sourceTree = "<group>"; };
 		AFCE09881F57321800A1D0EE /* AudioBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBooksVC.swift; sourceTree = "<group>"; };
-		AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaLoopButton.swift; sourceTree = "<group>"; };
+		AFCE098C1F57328300A1D0EE /* LoopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopButton.swift; sourceTree = "<group>"; };
 		AFCE098E1F5732C100A1D0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLibrary.swift; sourceTree = "<group>"; };
 		AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
@@ -337,6 +337,8 @@
 		AF62B1BF23D65E5A002CD561 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
+				AFCE098C1F57328300A1D0EE /* LoopButton.swift */,
 				AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */,
 				AF62B1BD23D65E47002CD561 /* Buttons.xib */,
 			);
@@ -346,6 +348,7 @@
 		AF62B1C223D65FA6002CD561 /* Titles */ = {
 			isa = PBXGroup;
 			children = (
+				AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */,
 				AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */,
 				AF62B1C023D65FA0002CD561 /* Titles.xib */,
 			);
@@ -433,11 +436,8 @@
 		AFCE09BF1F57704200A1D0EE /* SWPlayerVC */ = {
 			isa = PBXGroup;
 			children = (
-				AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */,
 				AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */,
 				AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */,
-				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
-				AFCE098C1F57328300A1D0EE /* IdeaLoopButton.swift */,
 			);
 			path = SWPlayerVC;
 			sourceTree = "<group>";
@@ -587,7 +587,7 @@
 				AFCE09931F5732DC00A1D0EE /* AudioLibrary.swift in Sources */,
 				AF319EF223DC828A00CFDCEF /* SWImageCell.swift in Sources */,
 				AF8809C723DCF8570081C400 /* Notifications.swift in Sources */,
-				AFCE098D1F57328300A1D0EE /* IdeaLoopButton.swift in Sources */,
+				AFCE098D1F57328300A1D0EE /* LoopButton.swift in Sources */,
 				AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */,
 				AF319EF823DC828A00CFDCEF /* SwImageLabelCell.swift in Sources */,
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,

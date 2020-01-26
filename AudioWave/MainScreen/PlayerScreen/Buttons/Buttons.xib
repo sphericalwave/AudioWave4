@@ -65,7 +65,7 @@
                                 <action selector="next:" destination="-1" eventType="touchUpInside" id="avz-qz-g9Z"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-es-4Ts" customClass="IdeaLoopButton" customModule="AudioWave" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-es-4Ts" customClass="LoopButton" customModule="AudioWave" customModuleProvider="target">
                             <rect key="frame" x="308" y="0.0" width="88" height="63"/>
                             <state key="normal" image="Loop All"/>
                         </button>
