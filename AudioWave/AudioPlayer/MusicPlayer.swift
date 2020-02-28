@@ -22,6 +22,12 @@ class MusicPlayer: AudioPlayer
         setupRemoteControl()
         //let player = try AVAudioPlayer(contentsOf: <#T##URL#>)
     }
+    
+    func play(_ mediaItem: MPMediaItem) {
+        self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
+        player.prepareToPlay()
+        player.play()
+    }
 
     func play() {
        // queuePlayer.play()

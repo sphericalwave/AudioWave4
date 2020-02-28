@@ -11,10 +11,7 @@ import MediaPlayer
 
 class ContentPlaylistsScreen: SwStaticTable
 {
-    let contentPlayer: ContentPlayer
-    
-    init(data: SwStaticTableData, contentPlayer: ContentPlayer) {
-        self.contentPlayer = contentPlayer
+    init(data: SwStaticTableData) {
         super.init(data: data, hideBottomBar: false)
         self.title = "Content Playlists"
         navigationItem.leftBarButtonItem = SwDismissButton(parentScreen: self)
@@ -24,10 +21,13 @@ class ContentPlaylistsScreen: SwStaticTable
 
 class ContentPlaylistsScreenData: SwStaticTableData
 {
-    init(contentPlaylists: [MPMediaItemCollection]) {   //FIXME: Code in Constructor
+    let contentPlayer: ContentPlayer
+
+    init(contentPlaylists: [MPMediaItemCollection], contentPlayer: ContentPlayer) {   //FIXME: Code in Constructor
+        self.contentPlayer = contentPlayer
         var cells = [SwCell]()
         for playlist in contentPlaylists {
-            let playlistCell = ContentPlaylistCell(playlist: playlist)  //FIXME: Naming
+            let playlistCell = ContentPlaylistCell(playlist: playlist, contentPlayer: contentPlayer)  //FIXME: Naming
             cells.append(playlistCell)
         }
         super.init(sections: [cells])

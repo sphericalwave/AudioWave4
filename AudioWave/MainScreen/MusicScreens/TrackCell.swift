@@ -16,9 +16,11 @@ class TrackCell: SwCell
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
     let mediaItem: MPMediaItem
+    let musicPlayer: MusicPlayer
     
-    init(mediaItem: MPMediaItem) {
+    init(mediaItem: MPMediaItem, musicPlayer: MusicPlayer) {
         self.mediaItem = mediaItem
+        self.musicPlayer = musicPlayer
         super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Remove XIB
         accessoryType = .none
         selectionStyle = .default
@@ -38,6 +40,7 @@ class TrackCell: SwCell
     
     override func didSelect() {
         //Play the Track
+        musicPlayer.play(mediaItem)
     }
 
     func updateArt() {

@@ -7,16 +7,25 @@
 //
 
 import Foundation
+import MediaPlayer
+import AVFoundation
 
 class ContentPlayer: AudioPlayer
 {
     let state: AudioPlayerState
+    var player: AVAudioPlayer!
     
     init(state: AudioPlayerState) {
         self.state = state
         //observeAudioSession()
         //setupRemoteControl()
         //let player = try AVAudioPlayer(contentsOf: T##URL)
+    }
+    
+    func play(_ mediaItem: MPMediaItem) {
+        self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
+        player.prepareToPlay()
+        player.play()
     }
     
     func play() {

@@ -16,9 +16,11 @@ class ContentPlaylistCell: SwCell
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
     let playlist: MPMediaItemCollection
+    let contentPlayer: ContentPlayer //FIXME:
     
-    init(playlist: MPMediaItemCollection) {
+    init(playlist: MPMediaItemCollection, contentPlayer: ContentPlayer) {
         self.playlist = playlist
+        self.contentPlayer = contentPlayer
         super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Scrap XIB
     }
     required init?(coder: NSCoder) { fatalError() }
@@ -35,7 +37,7 @@ class ContentPlaylistCell: SwCell
     override func height() -> CGFloat { return 81 }
     
     override func didSelect() {
-        let data = ContentPlaylistScreenData(playlist: playlist)
+        let data = ContentPlaylistScreenData(playlist: playlist, contentPlayer: contentPlayer)
         let contentScreen = ContentPlaylistScreen(data: data)
         navigationController?.pushViewController(contentScreen, animated: true)
     }

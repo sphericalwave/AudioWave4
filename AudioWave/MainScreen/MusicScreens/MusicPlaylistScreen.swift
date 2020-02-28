@@ -24,11 +24,11 @@ class MusicPlaylistScreenData: SwStaticTableData
 {
     let playlist: MPMediaPlaylist
     
-    init(playlist: MPMediaPlaylist) {
+    init(playlist: MPMediaPlaylist, musicPlayer: MusicPlayer) {
         self.playlist = playlist
         var trackCells = [TrackCell]()
         for track in playlist.items {
-            let trackCell = TrackCell(mediaItem: track)
+            let trackCell = TrackCell(mediaItem: track, musicPlayer: musicPlayer)
             trackCells.append(trackCell)
         }
         super.init(sections: [trackCells])

@@ -24,10 +24,10 @@ class MusicPlaylistsScreen: SwStaticTable
 
 class MusicPlaylistsScreenData: SwStaticTableData
 {
-    init(musicPlaylists: [MPMediaPlaylist]) {   //FIXME: Code in Constructor
+    init(musicPlaylists: [MPMediaPlaylist], musicPlayer: MusicPlayer) {   //FIXME: Code in Constructor
         var cells = [SwCell]()
         for playlist in musicPlaylists {
-            let playlistCell = PlaylistCell(playlist: playlist)
+            let playlistCell = PlaylistCell(playlist: playlist, musicPlayer: musicPlayer)
             cells.append(playlistCell)
         }
         super.init(sections: [cells])
