@@ -20,7 +20,6 @@ class Artwork: UIViewController
         view.backgroundColor = .blue
         view.layer.cornerRadius = 10.0
         view.clipsToBounds = true
-        artwork.contentMode = .scaleAspectFill
         artwork.layer.cornerRadius = 10.0
         artwork.clipsToBounds = true
     }
@@ -31,6 +30,7 @@ class Artwork: UIViewController
         super.viewDidLoad()
         artwork.frame = view.frame
         artwork.backgroundColor = .green
+        artwork.contentMode = .scaleAspectFill
         view.addSubview(artwork)
     }
     

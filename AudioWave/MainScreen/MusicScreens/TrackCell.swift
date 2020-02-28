@@ -15,7 +15,6 @@ class TrackCell: SwCell
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
-    
     let mediaItem: MPMediaItem
     
     init(mediaItem: MPMediaItem) {

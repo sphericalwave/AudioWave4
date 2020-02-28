@@ -19,7 +19,8 @@ class AudioWave: UINavigationController
         let t = Titles()
         let p = Progress()
         let b = Buttons()
-        let a = Artwork(art: #imageLiteral(resourceName: "NoteSpace"))
+        guard let note = UIImage(systemName: "music.note") else { fatalError() }
+        let a = Artwork(art: note)
         let musicPlayer = MusicPlayer(state: mPS)
         let p1 = PlayerScreen(player: musicPlayer, titles: t, buttons: b, progress: p, artwork: a)
         
@@ -27,7 +28,8 @@ class AudioWave: UINavigationController
         let t2 = Titles()
         let p2 = Progress()
         let b2 = Buttons()
-        let a2 = Artwork(art: #imageLiteral(resourceName: "NoteSpace"))
+        guard let book = UIImage(systemName: "book") else { fatalError() }
+        let a2 = Artwork(art: book)
         let contentPlayer = ContentPlayer(state: aPS)
         let p22 = PlayerScreen(player: contentPlayer, titles: t2, buttons: b2, progress: p2, artwork: a2)
         
