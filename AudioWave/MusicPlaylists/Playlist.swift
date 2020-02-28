@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import MediaPlayer
 
-class Playlist
+class Playlist //: Codable
 {
+    let playlist: MPMediaPlaylist
+    
+    init(playlist: MPMediaPlaylist) {
+        self.playlist = playlist
+    }
+    
     func name() -> String {
-        return "GyroBlaster"
+        playlist.persistentID
+        return playlist.name ?? "Unnamed"
     }
     
     func track(at index: Int) -> Track {
@@ -42,3 +50,5 @@ class Track
         return "Gyroblaster"
     }
 }
+
+

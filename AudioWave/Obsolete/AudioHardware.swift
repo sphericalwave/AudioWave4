@@ -63,6 +63,33 @@ class AudioHardware
         }
     }
     
+    func setupNotifications() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
+    }
+
+    @objc func handleInterruption(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+            let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
+                return
+        }
+        if type == .began {
+            // Interruption began, take appropriate actions
+        }
+        else if type == .ended {
+            if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
+                let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+                if options.contains(.shouldResume) {
+                    // Interruption Ended - playback should resume
+                } else {
+                    // Interruption Ended - playback should NOT resume
+                }
+            }
+        }
+    }
+
+    
 
 }
 
@@ -70,3 +97,5 @@ class AudioHardware
 //fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
 //	return input.rawValue
 //}
+
+

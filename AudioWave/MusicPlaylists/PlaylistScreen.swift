@@ -10,17 +10,29 @@ import UIKit
 
 class PlaylistScreen: SwStaticTable
 {
-    let playlist: Playlist
-    
-    init(playlist: Playlist) {
-        self.playlist = playlist
-        let track1 = playlist.track(at: 0)
-        let cell3 = TrackCell(name: track1.title(), artist: track1.artist(), art: track1.art())
-        let data = SwStaticTableData(sections: [[cell3]])
+    init(data: PlaylistScreenData) {
         super.init(data: data, hideBottomBar: false)
-        self.title = playlist.name()
+        self.title = data.name()
         navigationItem.rightBarButtonItem = SwDismissButton(parentScreen: self)
     }
-    
     required init?(coder aDecoder: NSCoder) { fatalError() }
+}
+
+import MediaPlayer
+
+class PlaylistScreenData: SwStaticTableData
+{
+    let playlist: MPMediaPlaylist
+    
+    init(playlist: MPMediaPlaylist) {
+        self.playlist = playlist
+        var trackCells = [TrackCell]()
+        for track in playlist.items {
+            let trackCell = TrackCell(mediaItem: track)
+            trackCells.append(trackCell)
+        }
+        super.init(sections: [trackCells])
+    }
+    
+    func name() -> String { return playlist.name ?? "FIXME" }
 }

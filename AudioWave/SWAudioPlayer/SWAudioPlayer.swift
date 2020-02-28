@@ -488,103 +488,61 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate
     
     func restore() {
         
-        let fileManager = FileManager.default
-        let documentsDirectory = try! fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
-        
-        if isMusicPlayer {
-            print("Restore MusicPlayer State")
-            let musicPlayerURL = URL(fileURLWithPath: "music", relativeTo: documentsDirectory)
-            guard let playerState = NSKeyedUnarchiver.unarchiveObject(withFile: musicPlayerURL.path) as? SWPlayerState else {
-                print("No Persistent MusicPlayer State Available")
-                return
-            }
-            self.lastTime = playerState.playbackTime
-            self.currentPlaybackItem = findSongWithPersistentID(id: playerState.currentItemID)
-            var playbackItems = [MPMediaItem]()
-            for itemID in playerState.playbackItemIDs {
-                if let mediaItem = findSongWithPersistentID(id: itemID) {
-                    playbackItems.append(mediaItem)
-                }
-            }
-            self.speed = playerState.speed
-            self.playbackItems = playbackItems
-            //self.playItems(playbackItems, firstItem: currentPlaybackItem)
-            
-            self.loadItem(self.currentPlaybackItem!)
-
-        }
-        if isMusicPlayer == false {
-            print("Restore AudioPlayer State")
-            let audioPlayerURL = URL(fileURLWithPath: "books", relativeTo: documentsDirectory)
-            guard let playerState = NSKeyedUnarchiver.unarchiveObject(withFile: audioPlayerURL.path) as? SWPlayerState else {
-                print("No Persistent MusicPlayer State Available")
-                return
-            }
-            self.lastTime = playerState.playbackTime
-            self.currentPlaybackItem = findSongWithPersistentID(id: playerState.currentItemID)
-            var playbackItems = [MPMediaItem]()
-            for itemID in playerState.playbackItemIDs {
-                if let mediaItem = findSongWithPersistentID(id: itemID) {
-                    playbackItems.append(mediaItem)
-                }
-            }
-            self.speed = playerState.speed
-            self.playbackItems = playbackItems
-            
-            
-            self.loadItem(self.currentPlaybackItem!)
-
-            //self.playItems(playbackItems, firstItem: currentPlaybackItem)
-        }
+//        let fileManager = FileManager.default
+//        let documentsDirectory = try! fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+//        
+//        if isMusicPlayer {
+//            print("Restore MusicPlayer State")
+//            let musicPlayerURL = URL(fileURLWithPath: "music", relativeTo: documentsDirectory)
+//            guard let playerState = NSKeyedUnarchiver.unarchiveObject(withFile: musicPlayerURL.path) as? SWPlayerState else {
+//                print("No Persistent MusicPlayer State Available")
+//                return
+//            }
+//            self.lastTime = playerState.playbackTime
+//            self.currentPlaybackItem = findSongWithPersistentID(id: playerState.currentItemID)
+//            var playbackItems = [MPMediaItem]()
+//            for itemID in playerState.playbackItemIDs {
+//                if let mediaItem = findSongWithPersistentID(id: itemID) {
+//                    playbackItems.append(mediaItem)
+//                }
+//            }
+//            self.speed = playerState.speed
+//            self.playbackItems = playbackItems
+//            //self.playItems(playbackItems, firstItem: currentPlaybackItem)
+//
+//            self.loadItem(self.currentPlaybackItem!)
+//
+//        }
+//        if isMusicPlayer == false {
+//            print("Restore AudioPlayer State")
+//            let audioPlayerURL = URL(fileURLWithPath: "books", relativeTo: documentsDirectory)
+//            guard let playerState = NSKeyedUnarchiver.unarchiveObject(withFile: audioPlayerURL.path) as? SWPlayerState else {
+//                print("No Persistent MusicPlayer State Available")
+//                return
+//            }
+//            self.lastTime = playerState.playbackTime
+//            self.currentPlaybackItem = findSongWithPersistentID(id: playerState.currentItemID)
+//            var playbackItems = [MPMediaItem]()
+//            for itemID in playerState.playbackItemIDs {
+//                if let mediaItem = findSongWithPersistentID(id: itemID) {
+//                    playbackItems.append(mediaItem)
+//                }
+//            }
+//            self.speed = playerState.speed
+//            self.playbackItems = playbackItems
+//
+//
+//            self.loadItem(self.currentPlaybackItem!)
+//
+//            //self.playItems(playbackItems, firstItem: currentPlaybackItem)
+//        }
     }
     
 }
 
-extension SWAudioPlayer {
-    func musicPlaylists() -> [MPMediaPlaylist]? {
-        
-        let query = MPMediaQuery.playlists()
-        let predicate = MPMediaPropertyPredicate(value: MPMediaType.music.rawValue, forProperty: MPMediaItemPropertyMediaType)
-        query.addFilterPredicate(predicate)
-        
-        return query.collections as? [MPMediaPlaylist]
-    }
-    
-    func audioBooks() -> [MPMediaItemCollection]? {
-        let query = MPMediaQuery.audiobooks()
-        let audioBooks = query.collections
-        return audioBooks
-    }
-    
-    func findPlaylist(with ID: MPMediaEntityPersistentID) -> MPMediaPlaylist? {
-        let query = MPMediaQuery.playlists()
-        let predicate = MPMediaPropertyPredicate(value: MPMediaType.music.rawValue, forProperty: MPMediaItemPropertyMediaType)
-        query.addFilterPredicate(predicate)
-        return (query.collections as? [MPMediaPlaylist])?.filter({ $0.persistentID == ID }).first
-    }
-    
-    func findAudioBook(with ID: MPMediaEntityPersistentID) -> MPMediaItemCollection? {
-        let query = MPMediaQuery.audiobooks()
-        return query.collections?.filter({ $0.persistentID == ID }).first
-    }
-    
-    func findItem(with ID: MPMediaEntityPersistentID, queue: MPMediaItemCollection) -> MPMediaItem? {
-        return queue.items.filter({ $0.persistentID == ID }).first
-    }
-    
-    func findSongWithPersistentID(id: MPMediaEntityPersistentID) -> MPMediaItem? {
-        let predicate = MPMediaPropertyPredicate(value: id, forProperty: MPMediaItemPropertyPersistentID)
-        let query = MPMediaQuery()
-        query.addFilterPredicate(predicate)
-        var song: MPMediaItem?
-        if let items = query.items, items.count > 0 {
-            song = items[0]
-        }
-        return song
-    }
-}
 
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
-	return input.rawValue
-}
+//
+//// Helper function inserted by Swift 4.2 migrator.
+//fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+//	return input.rawValue
+//}

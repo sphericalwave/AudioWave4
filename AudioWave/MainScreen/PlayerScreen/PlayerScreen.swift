@@ -14,21 +14,13 @@ class PlayerScreen: UIViewController
     @IBOutlet weak var artworkContainer: UIView!
     @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var textContainer: UIView!
-    let player: Player
+    let player: AudioPlayer
     let titles: Titles
     let progress: Progress
     let artwork: Artwork
     let buttons: Buttons
 
-    //FIXME: Inject Everything
-    init(player: Player, titles: Titles, buttons: Buttons, progress: Progress, artwork: Artwork) {
-//        let t = Titles()
-//        let p = Progress()
-//        let b = Buttons()
-//        let a = Artwork(art: #imageLiteral(resourceName: "NoteSpace"))
-//        let pl = Player(titles: t, buttons: b, progress: p, artwork: a)
-//        b.delegate = pl
-//        p.delegate = pl
+    init(player: AudioPlayer, titles: Titles, buttons: Buttons, progress: Progress, artwork: Artwork) {
         self.titles = titles
         self.progress = progress
         self.artwork = artwork
@@ -39,6 +31,7 @@ class PlayerScreen: UIViewController
         view.layer.cornerRadius = 10.0
         view.clipsToBounds = true
     }
+    required init?(coder: NSCoder) { fatalError("Bad Monkey") }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +42,4 @@ class PlayerScreen: UIViewController
         self.embed(viewController: buttons, inContainerView: buttonContainer)
     }
     
-    required init?(coder: NSCoder) { fatalError() }
 }

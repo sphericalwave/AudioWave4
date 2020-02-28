@@ -22,20 +22,24 @@ class MainScreen: UIViewController
         self.title = "AudioWave"
         edgesForExtendedLayout = [] //no content under nav bar
     }
-
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
+    //FIXME: Hidden Dependencies
     override func viewDidLoad() {
         super.viewDidLoad()
         crossFaderContainer.backgroundColor = .gray
         scrollPageContainer.backgroundColor = .black
         self.embed(viewController: crossFader, inContainerView: crossFaderContainer)
         self.embed(viewController: scrollScreen, inContainerView: scrollPageContainer)
-        let audio = ContentButton(parentScreen: self)
-        let music = MusicButton(parentScreen: self) //FIXME: Circular Ref?
-        navigationItem.leftBarButtonItem = music
-        navigationItem.rightBarButtonItem = audio
+        //let audio = ContentButton(parentScreen: self)   //FIXME: Circular Ref?
+        
+//        let audioPlayer = SWAudioPlayer(audioSession: <#T##AVAudioSession#>, commandCenter: <#T##MPRemoteCommandCenter#>, nowPlayingInfoCenter: <#T##MPNowPlayingInfoCenter#>, notificationCenter: <#T##NotificationCenter#>, isMusicPlayer: <#T##Bool#>)
+//        let musicPlaylistsScreenData = MusicPlaylistsScreenData(musicPlaylists: <#T##[MPMediaPlaylist]#>)
+//        let musicPlaylistsScreen = MusicPlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: audioPlayer)
+//        
+//        guard let note = UIImage(systemName: "music.note") else { fatalError() }
+//        let musicPlaylistButton = SwModalButton(image: note, destinationScreen: musicPlaylistsScreen, parentScreen: self)
+//        navigationItem.leftBarButtonItem = musicPlaylistButton
+       // navigationItem.rightBarButtonItem = audio
     }
 }
-
-

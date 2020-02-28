@@ -10,12 +10,15 @@ import UIKit
 
 class Scroller: UIPageViewController
 {
-    let playbackScreen1: UIViewController //PlaybackScreen
-    let playbackScreen2: UIViewController //PlaybackScreen
+    let playbackScreen1: PlayerScreen
+    let playbackScreen2: PlayerScreen
+    let state: AudioWaveState
     
-    init(playbackScreen1: UIViewController, playbackScreen2: UIViewController) {
+    
+    init(playbackScreen1: PlayerScreen, playbackScreen2: PlayerScreen, state: AudioWaveState) {
         self.playbackScreen1 = playbackScreen1
         self.playbackScreen2 = playbackScreen2
+        self.state = state
         let options = [UIPageViewController.OptionsKey.interPageSpacing : 20]
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: options)
         self.setViewControllers([playbackScreen1], direction: .forward, animated: true, completion: nil)
@@ -23,7 +26,6 @@ class Scroller: UIPageViewController
         self.dataSource = self
         self.view.isUserInteractionEnabled = true
     }
-    
     required init?(coder: NSCoder) { fatalError("Never Called") }
 }
 

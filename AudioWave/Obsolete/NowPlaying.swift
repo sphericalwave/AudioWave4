@@ -32,13 +32,15 @@ class NowPlaying
         })
     }
     
-    func play() { musicPlayer.play() }
+    //FIXME: Add Skip and Rev on Music
     
-    func pause() { musicPlayer.pause() }
+    func play() {
+        musicPlayer.play()
+        audioPlayer.play()
+    }
+    
+    func pause() {
+        musicPlayer.pause()
+        audioPlayer.pause()
+    }
 }
-
-//Construct playback screen and embed it in a navController
-//        let audioSession = AVAudioSession()
-//        let commandCenter = MPRemoteCommandCenter()
-//        let nowPlayingInfoCenter = MPNowPlayingInfoCenter()
-//        let notificationCenter = NotificationCenter()

@@ -15,7 +15,7 @@ class Titles: UIViewController
     
     init() { super.init(nibName: "Titles", bundle: nil) }
     
-    required init?(coder: NSCoder) { fatalError() }
+    required init?(coder: NSCoder) { fatalError("Bad Monkey!") }
     
     func update(title: String, description: String) {
         titleLabel.text = title

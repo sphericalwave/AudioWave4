@@ -49,6 +49,10 @@
 		AFA009A223D08DE000026DB6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */; };
 		AFA009A423D08EC700026DB6 /* CrossFader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA009A323D08EC700026DB6 /* CrossFader.xib */; };
 		AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB821731F69B6BE00E394BE /* Icons.xcassets */; };
+		AFAAAA2C24059DD000544545 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA2B24059DD000544545 /* ContentButton.swift */; };
+		AFAAAA2F2405A9EC00544545 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */; };
+		AFAAAA312406F4F000544545 /* AudioPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA302406F4F000544545 /* AudioPlayerState.swift */; };
+		AFAAAA332406F5AF00544545 /* AudioWaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA322406F5AF00544545 /* AudioWaveState.swift */; };
 		AFCBDB0823DC90DC002F6060 /* PlaylistCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCBDB0723DC90DC002F6060 /* PlaylistCell2.xib */; };
 		AFCBDB0A23DC92B4002F6060 /* PlaylistScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCBDB0923DC92B4002F6060 /* PlaylistScreen.swift */; };
 		AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */; };
@@ -120,6 +124,10 @@
 		AF95F8222294B70400C81959 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		AFA009A323D08EC700026DB6 /* CrossFader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrossFader.xib; sourceTree = "<group>"; };
+		AFAAAA2B24059DD000544545 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
+		AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		AFAAAA302406F4F000544545 /* AudioPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerState.swift; sourceTree = "<group>"; };
+		AFAAAA322406F5AF00544545 /* AudioWaveState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWaveState.swift; sourceTree = "<group>"; };
 		AFB821731F69B6BE00E394BE /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		AFCBDB0723DC90DC002F6060 /* PlaylistCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell2.xib; sourceTree = "<group>"; };
 		AFCBDB0923DC92B4002F6060 /* PlaylistScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistScreen.swift; sourceTree = "<group>"; };
@@ -168,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				AFCE09C11F57706800A1D0EE /* SWPlaylistCell */,
-				AF319EB623DC823700CFDCEF /* MusicButton.swift */,
 				AF319EB823DC825000CFDCEF /* MusicPlaylistsScreen.swift */,
 				AF1D90F123DC862D0040E7CB /* Playlists.swift */,
 				AF8809C023DC948F0081C400 /* Playlist.swift */,
@@ -191,6 +198,8 @@
 			children = (
 				AF95F8222294B70400C81959 /* MainScreen.xib */,
 				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
+				AF319EB623DC823700CFDCEF /* MusicButton.swift */,
+				AFAAAA2B24059DD000544545 /* ContentButton.swift */,
 				AF5F5EC723D65931005589E3 /* PlayerScreen */,
 				AF2490A823D65C5A00B66B70 /* CrossFader */,
 				AFF00CF423D662A0000BB3EB /* Scroller */,
@@ -313,6 +322,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AF51E3AC24070B4A00FE81D9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAAA302406F4F000544545 /* AudioPlayerState.swift */,
+				AFAAAA322406F5AF00544545 /* AudioWaveState.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		AF5F5EC723D65931005589E3 /* PlayerScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +376,27 @@
 			path = Titles;
 			sourceTree = "<group>";
 		};
+		AFAAAA2D2405A90D00544545 /* SphericalWave */ = {
+			isa = PBXGroup;
+			children = (
+				AF319EC223DC828A00CFDCEF /* SwCells */,
+				AF319EBA23DC828A00CFDCEF /* SwTables */,
+				AF51159023D65385005FFC34 /* SWModalButton.swift */,
+				AF1D90F323DC89290040E7CB /* SwDismissButton.swift */,
+			);
+			path = SphericalWave;
+			sourceTree = "<group>";
+		};
+		AFAAAA342407022500544545 /* Obsolete */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8F37223CF3B1800BF6FE6 /* NowPlaying.swift */,
+				AFCE09811F57311500A1D0EE /* AudioHardware.swift */,
+				AF8809C623DCF8570081C400 /* Notifications.swift */,
+			);
+			path = Obsolete;
+			sourceTree = "<group>";
+		};
 		AFCE09601F57308C00A1D0EE = {
 			isa = PBXGroup;
 			children = (
@@ -386,14 +425,11 @@
 				AFCE09BE1F57700E00A1D0EE /* SWMusicPlaylistsVC */,
 				AF50C96423D9217100B49F74 /* Extensions */,
 				AF1D90F523DC8AF40040E7CB /* MusicPlaylists */,
-				AF319EC223DC828A00CFDCEF /* SwCells */,
-				AF319EBA23DC828A00CFDCEF /* SwTables */,
-				AF51159023D65385005FFC34 /* SWModalButton.swift */,
-				AF1D90F323DC89290040E7CB /* SwDismissButton.swift */,
-				AFD8F37223CF3B1800BF6FE6 /* NowPlaying.swift */,
-				AFCE09811F57311500A1D0EE /* AudioHardware.swift */,
-				AF8809C623DCF8570081C400 /* Notifications.swift */,
+				AFAAAA2D2405A90D00544545 /* SphericalWave */,
+				AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */,
+				AFAAAA342407022500544545 /* Obsolete */,
 				AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */,
+				AF51E3AC24070B4A00FE81D9 /* Data */,
 				AFB821731F69B6BE00E394BE /* Icons.xcassets */,
 				AFCE098E1F5732C100A1D0EE /* Info.plist */,
 			);
@@ -564,6 +600,7 @@
 				AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */,
 				AFD8F37323CF3B1800BF6FE6 /* NowPlaying.swift in Sources */,
 				AF319EB723DC823700CFDCEF /* MusicButton.swift in Sources */,
+				AFAAAA332406F5AF00544545 /* AudioWaveState.swift in Sources */,
 				AFCE09891F57321800A1D0EE /* AudioBookDetailVC.swift in Sources */,
 				AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */,
 				AF319EE823DC828A00CFDCEF /* SwDynamicTable.swift in Sources */,
@@ -577,6 +614,7 @@
 				AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */,
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
 				AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */,
+				AFAAAA2C24059DD000544545 /* ContentButton.swift in Sources */,
 				AF8809C123DC948F0081C400 /* Playlist.swift in Sources */,
 				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
 				AFD8F37123CF3A5400BF6FE6 /* CrossFader.swift in Sources */,
@@ -593,6 +631,7 @@
 				AF8809C723DCF8570081C400 /* Notifications.swift in Sources */,
 				AFCE098D1F57328300A1D0EE /* LoopButton.swift in Sources */,
 				AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */,
+				AFAAAA2F2405A9EC00544545 /* AudioPlayer.swift in Sources */,
 				AF319EF823DC828A00CFDCEF /* SwImageLabelCell.swift in Sources */,
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,
 				AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */,
@@ -603,6 +642,7 @@
 				AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */,
 				AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */,
 				AFCE09951F5732DC00A1D0EE /* Memento.swift in Sources */,
+				AFAAAA312406F4F000544545 /* AudioPlayerState.swift in Sources */,
 				AF1D90F223DC862D0040E7CB /* Playlists.swift in Sources */,
 				AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */,
 				AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */,
@@ -736,7 +776,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TPR24Z5M9G;
 				INFOPLIST_FILE = AudioWave/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -745,7 +785,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -755,7 +795,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TPR24Z5M9G;
 				INFOPLIST_FILE = AudioWave/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -763,7 +803,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

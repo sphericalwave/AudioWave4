@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class TrackCell: SwCell
 {
@@ -14,27 +15,23 @@ class TrackCell: SwCell
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
-    let name: String
-    let artist: String
-    let art: UIImage
     
-    init(name: String, artist: String, art: UIImage) {
-        self.name = name
-        self.artist = artist
-        self.art = art
-        super.init(nibName: "PlaylistCell2", bundle: nil)
+    let mediaItem: MPMediaItem
+    
+    init(mediaItem: MPMediaItem) {
+        self.mediaItem = mediaItem
+        super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Remove XIB
         accessoryType = .none
         selectionStyle = .default
     }
-    
     required init?(coder: NSCoder) { fatalError() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         musicArt.layer.cornerRadius = 10.0
         musicArt.clipsToBounds = true
-        titleLabel.text = name
-        detailLabel.text = artist
+        titleLabel.text = mediaItem.title ?? "FIXME"
+        detailLabel.text = mediaItem.artist ?? "FIXME"
         updateArt()
     }
     
@@ -45,13 +42,11 @@ class TrackCell: SwCell
     }
 
     func updateArt() {
-        //TODO:
-        musicArt.image = art
-//        let size = self.musicArt.bounds.size
-//        guard let sizedArt = art.image(at: size) else {
-//            self.musicArt.image = sizedArt
-//        } else {
-//            self.musicArt.image = track.mediaType == .music ? #imageLiteral(resourceName: "mediumNote") : #imageLiteral(resourceName: "mediumBook")
-//        }
+        let size = musicArt.bounds.size
+        guard let sizedArt = mediaItem.artwork?.image(at: size) else {
+            musicArt.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
+            return
+        }
+        musicArt.image = sizedArt
     }
 }

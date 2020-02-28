@@ -11,16 +11,15 @@ import UIKit
 class CrossFader: UIViewController
 {
     @IBOutlet weak var slider: UISlider!
-    let player1: Player
-    let player2: Player
+    let player1: AudioPlayer
+    let player2: AudioPlayer
     
-    init(player1: Player, player2: Player) {
+    init(player1: AudioPlayer, player2: AudioPlayer) {
         self.player1 = player1
         self.player2 = player2
         super.init(nibName: "CrossFader", bundle: nil)
         view.backgroundColor = .black
     }
-    
     required init?(coder: NSCoder) { fatalError() }
     
     override func viewDidLoad() {

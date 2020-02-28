@@ -34,7 +34,7 @@ class Buttons: UIViewController
         speedButton.delegate = self
         loopButton.delegate = self
         playButton.delegate = self
-        guard delegate != nil else { fatalError() }
+       // guard delegate != nil else { fatalError() }
     }
     
     @IBAction func previous(_ sender: AnyObject) { delegate?.previous() }

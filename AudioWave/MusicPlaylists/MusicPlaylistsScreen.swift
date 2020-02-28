@@ -7,20 +7,31 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class MusicPlaylistsScreen: SwStaticTable
 {
-    let musicPlaylists: Playlists
+    let audioPlayer: AudioPlayer
     
-    init(musicPlaylists: Playlists) {
-        self.musicPlaylists = musicPlaylists
-        let playlist1 = musicPlaylists.playlist(at: 0)
-        let cell3 = PlaylistCell(name: playlist1.name(), artist: "Fake", art: playlist1.art())
-        let data = SwStaticTableData(sections: [[cell3]])
+    init(data: SwStaticTableData, audioPlayer: AudioPlayer) {
+        self.audioPlayer = audioPlayer
         super.init(data: data, hideBottomBar: false)
-        self.title = "Music"
-        navigationItem.leftBarButtonItem = SwDismissButton(parentScreen: self)
+        self.title = "Music Playlists"
+        navigationItem.leftBarButtonItem = SwDismissButton(parentScreen: self) 
     }
-    
     required init?(coder aDecoder: NSCoder) { fatalError() }
+}
+
+class MusicPlaylistsScreenData: SwStaticTableData
+{
+    init(musicPlaylists: [MPMediaPlaylist]) {   //FIXME: Code in Constructor
+        var cells = [SwCell]()
+        for playlist in musicPlaylists {
+            //make a cell
+            guard let mediaItem = playlist.representativeItem else { fatalError() }
+            //        let mediaItem = playlist1.representativeItem
+            //        let art = mediaItem?.artwork?.image(at: artworkImageView.frame.size)
+        }
+        super.init(sections: [cells])
+    }
 }

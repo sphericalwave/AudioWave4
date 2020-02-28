@@ -6,24 +6,24 @@
 //  Copyright © 2020 SphericalWave. All rights reserved.
 //
 
-import UIKit
-
-class Playlists
-{
-    let audioLibrary: AudioLibrary
-    
-    init(audioLibrary: AudioLibrary) {
-        self.audioLibrary = audioLibrary
-    }
-    
-    func playlist(at index: Int) -> Playlist {
-        //TODO: return audioLibrary.playlist(at index: index)
-        return Playlist()
-    }
-    
-    func count() -> Int {
-        return 3
-    }
-}
+//import UIKit
+//
+//class Playlists
+//{
+//    let audioLibrary: AudioLibrary
+//    
+//    init(audioLibrary: AudioLibrary) {
+//        self.audioLibrary = audioLibrary
+//    }
+//    
+//    func playlist(at index: Int) -> Playlist {
+//        //TODO: return audioLibrary.playlist(at index: index)
+//        return Playlist()
+//    }
+//    
+//    func count() -> Int {
+//        return 3
+//    }
+//}
 
 
