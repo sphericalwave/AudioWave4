@@ -20,7 +20,6 @@ class MusicPlayer: AudioPlayer
         self.state = state
         observeAudioSession()
         setupRemoteControl()
-        //let player = try AVAudioPlayer(contentsOf: <#T##URL#>)
     }
     
     func play(_ mediaItem: MPMediaItem) {
