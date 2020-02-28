@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PlaylistScreen: SwStaticTable
+class MusicPlaylistScreen: SwStaticTable
 {
-    init(data: PlaylistScreenData) {
+    init(data: MusicPlaylistScreenData) {
         super.init(data: data, hideBottomBar: false)
         self.title = data.name()
         navigationItem.rightBarButtonItem = SwDismissButton(parentScreen: self)
@@ -20,7 +20,7 @@ class PlaylistScreen: SwStaticTable
 
 import MediaPlayer
 
-class PlaylistScreenData: SwStaticTableData
+class MusicPlaylistScreenData: SwStaticTableData
 {
     let playlist: MPMediaPlaylist
     

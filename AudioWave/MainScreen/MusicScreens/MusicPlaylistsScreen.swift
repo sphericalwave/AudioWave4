@@ -27,10 +27,8 @@ class MusicPlaylistsScreenData: SwStaticTableData
     init(musicPlaylists: [MPMediaPlaylist]) {   //FIXME: Code in Constructor
         var cells = [SwCell]()
         for playlist in musicPlaylists {
-            //make a cell
-            guard let mediaItem = playlist.representativeItem else { fatalError() }
-            //        let mediaItem = playlist1.representativeItem
-            //        let art = mediaItem?.artwork?.image(at: artworkImageView.frame.size)
+            let playlistCell = PlaylistCell(playlist: playlist)
+            cells.append(playlistCell)
         }
         super.init(sections: [cells])
     }

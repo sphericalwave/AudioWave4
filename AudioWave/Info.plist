@@ -40,5 +40,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>App relies on users audio</string>
 </dict>
 </plist>

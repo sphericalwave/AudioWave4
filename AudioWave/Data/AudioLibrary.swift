@@ -10,7 +10,16 @@ import Foundation
 import MediaPlayer
 
 class AudioLibrary
-{    
+{
+    
+    init() {
+        MPMediaLibrary.requestAuthorization() { status in   //FIXME: Fragile
+            if status != .authorized {
+                fatalError()
+            }
+        }
+    }
+    
     func musicPlaylists() -> [MPMediaPlaylist]? {
         let query = MPMediaQuery.playlists()
         let predicate = MPMediaPropertyPredicate(value: MPMediaType.music.rawValue, forProperty: MPMediaItemPropertyMediaType)

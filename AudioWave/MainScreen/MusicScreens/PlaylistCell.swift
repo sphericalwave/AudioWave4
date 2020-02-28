@@ -35,8 +35,8 @@ class PlaylistCell: SwCell
     override func height() -> CGFloat { return 81 }
     
     override func didSelect() {
-        let data = PlaylistScreenData(playlist: playlist)
-        let playlistScreen = PlaylistScreen(data: data)
+        let data = MusicPlaylistScreenData(playlist: playlist)
+        let playlistScreen = MusicPlaylistScreen(data: data)
         navigationController?.pushViewController(playlistScreen, animated: true)
     }
 
