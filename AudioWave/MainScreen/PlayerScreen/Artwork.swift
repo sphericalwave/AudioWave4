@@ -11,8 +11,11 @@ import UIKit
 class Artwork: UIViewController
 {
     let artwork: UIImageView!
-    
-    init(art: UIImage) {
+    let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
+    let player: AudioPlayer
+
+    init(art: UIImage, player: AudioPlayer) {
+        self.player = player
         let a = UIImageView()
         a.image = art
         self.artwork = a
@@ -22,15 +25,19 @@ class Artwork: UIViewController
         view.clipsToBounds = true
         artwork.layer.cornerRadius = 10.0
         artwork.clipsToBounds = true
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
     }
-    
     required init?(coder: NSCoder) { fatalError() }
+    
+    @objc func playerDidLoad(notification: Notification) {
+        //FIXME: Update the Art
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         artwork.frame = view.frame
         artwork.backgroundColor = .green
-        artwork.contentMode = .scaleAspectFill
+        artwork.contentMode = .scaleAspectFill  //FIXME: Scale is misbehaving
         view.addSubview(artwork)
     }
     

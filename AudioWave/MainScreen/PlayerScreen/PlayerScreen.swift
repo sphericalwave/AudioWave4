@@ -21,11 +21,11 @@ class PlayerScreen: UIViewController
     let buttons: Buttons
     
     convenience init(player: AudioPlayer) {
-        let t2 = Titles()
-        let p2 = Progress()
-        let b2 = Buttons()
+        let t2 = Titles(player: player)
+        let p2 = Progress(player: player)
+        let b2 = Buttons(player: player)
         guard let book = UIImage(systemName: "music.note") else { fatalError() }
-        let a2 = Artwork(art: book)
+        let a2 = Artwork(art: book, player: player)
         self.init(player: player, titles: t2, buttons: b2, progress: p2, artwork: a2)
     }
 

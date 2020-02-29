@@ -20,9 +20,12 @@ class Progress: UIViewController
     @IBOutlet weak var remainingTimeLabel: UILabel!
     weak var delegate: ProgressDelegate?
     var timer: Timer?   //FIXME: Inject This messes up the constructor
+    let player: AudioPlayer
     
-    init() { super.init(nibName: "Progress", bundle: nil) }
-    
+    init(player: AudioPlayer) {
+        self.player = player
+        super.init(nibName: "Progress", bundle: nil)
+    }
     required init?(coder: NSCoder) { fatalError() }
     
     override func viewDidLoad() {

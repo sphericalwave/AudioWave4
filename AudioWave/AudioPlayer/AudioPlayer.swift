@@ -15,6 +15,11 @@ protocol AudioPlayer: AnyObject
     func pause()
     func next()
     func previous()
+    func speed(_ speed: Float)
+    func track() -> String
+    func artist() -> String
+    func album() -> String
+    func playback(mode: PlayMode)
 }
 
 

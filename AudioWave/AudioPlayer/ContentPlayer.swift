@@ -12,6 +12,16 @@ import AVFoundation
 
 class ContentPlayer: AudioPlayer
 {
+    
+    func speed(_ speed: Float) {
+        //FIXME:
+        fatalError()
+    }
+    func track() -> String { return "FIXME" }
+    func artist() -> String { return "FIXME" }
+    func album() -> String { return "FIXME" }
+    func playback(mode: PlayMode) { fatalError() }
+    
     let state: AudioPlayerState
     var player: AVAudioPlayer!
     

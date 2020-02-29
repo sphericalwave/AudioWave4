@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,75 +19,106 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ILz-gz-mU2">
-                    <rect key="frame" x="9" y="9" width="396" height="63"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G48-NC-FKw">
+                    <rect key="frame" x="9" y="9" width="396" height="98"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-9f-8HR" customClass="SpeedButton" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="13.5" width="30" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="1x">
-                                <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-La-VCs">
-                            <rect key="frame" x="77" y="9" width="45" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="9lM-bY-iM2"/>
-                                <constraint firstAttribute="width" constant="45" id="VTk-XS-m0S"/>
-                            </constraints>
-                            <state key="normal" image="back"/>
-                            <connections>
-                                <action selector="previous:" destination="-1" eventType="touchUpInside" id="psc-eC-36j"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-dE-Kgn" customClass="PlayButton" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="168.5" y="9" width="45" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="G14-ql-LyY"/>
-                                <constraint firstAttribute="width" constant="45" id="dxS-yx-hUi"/>
-                            </constraints>
-                            <state key="normal" image="play"/>
-                            <state key="selected" image="pause"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-af-Srw">
-                            <rect key="frame" x="260.5" y="9" width="45" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="45" id="aNy-Ri-o9S"/>
-                                <constraint firstAttribute="height" constant="45" id="sPN-L7-t4R"/>
-                            </constraints>
-                            <state key="normal" image="forward"/>
-                            <connections>
-                                <action selector="next:" destination="-1" eventType="touchUpInside" id="avz-qz-g9Z"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-es-4Ts" customClass="LoopButton" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="352" y="15" width="44" height="33"/>
-                            <state key="normal" image="Loop All"/>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ILz-gz-mU2">
+                            <rect key="frame" x="121.5" y="0.0" width="153" height="53"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-La-VCs">
+                                    <rect key="frame" x="0.0" y="4" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="9lM-bY-iM2"/>
+                                        <constraint firstAttribute="width" constant="45" id="VTk-XS-m0S"/>
+                                    </constraints>
+                                    <state key="normal" image="backward.end.alt" catalog="system"/>
+                                    <connections>
+                                        <action selector="previous:" destination="-1" eventType="touchUpInside" id="psc-eC-36j"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-dE-Kgn" customClass="PlayButton" customModule="AudioWave" customModuleProvider="target">
+                                    <rect key="frame" x="54" y="4" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="G14-ql-LyY"/>
+                                        <constraint firstAttribute="width" constant="45" id="dxS-yx-hUi"/>
+                                    </constraints>
+                                    <state key="normal" image="play.circle" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                    </state>
+                                    <state key="selected" image="pause"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-af-Srw">
+                                    <rect key="frame" x="108" y="4" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="aNy-Ri-o9S"/>
+                                        <constraint firstAttribute="height" constant="45" id="sPN-L7-t4R"/>
+                                    </constraints>
+                                    <state key="normal" image="forward.end.alt" catalog="system"/>
+                                    <connections>
+                                        <action selector="next:" destination="-1" eventType="touchUpInside" id="avz-qz-g9Z"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-N0-AtS">
+                            <rect key="frame" x="0.5" y="53" width="395" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-9f-8HR" customClass="SpeedButton" customModule="AudioWave" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="ae9-Ag-hgW"/>
+                                        <constraint firstAttribute="width" constant="45" id="u95-uX-rVH"/>
+                                    </constraints>
+                                    <state key="normal" image="clock" catalog="system">
+                                        <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV2-DQ-0R1" customClass="SpeedButton" customModule="AudioWave" customModuleProvider="target">
+                                    <rect key="frame" x="175" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="fif-mC-E1r"/>
+                                        <constraint firstAttribute="height" constant="45" id="mNm-Eg-LQk"/>
+                                    </constraints>
+                                    <state key="normal" image="speedometer" catalog="system">
+                                        <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-es-4Ts" customClass="LoopButton" customModule="AudioWave" customModuleProvider="target">
+                                    <rect key="frame" x="350" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="RaC-p2-ssd"/>
+                                        <constraint firstAttribute="width" constant="45" id="m7U-fo-5fx"/>
+                                    </constraints>
+                                    <state key="normal" image="Loop One"/>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ILz-gz-mU2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="7YX-nc-h29"/>
-                <constraint firstItem="ILz-gz-mU2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="Ush-1U-arm"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ILz-gz-mU2" secondAttribute="bottom" constant="9" id="V39-0T-dm9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ILz-gz-mU2" secondAttribute="trailing" constant="9" id="yeb-0s-j2X"/>
+                <constraint firstItem="G48-NC-FKw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="BtS-3M-8et"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="G48-NC-FKw" secondAttribute="bottom" constant="9" id="ZMl-eZ-3HW"/>
+                <constraint firstItem="G48-NC-FKw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="fCb-0z-Tfz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="G48-NC-FKw" secondAttribute="trailing" constant="9" id="g7C-B9-6mF"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="38" y="162"/>
+            <point key="canvasLocation" x="37.681159420289859" y="173.4375"/>
         </view>
     </objects>
     <resources>
-        <image name="Loop All" width="44" height="33"/>
-        <image name="back" width="44" height="44"/>
-        <image name="forward" width="44" height="44"/>
+        <image name="Loop One" width="44" height="33"/>
+        <image name="backward.end.alt" catalog="system" width="64" height="34"/>
+        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="forward.end.alt" catalog="system" width="64" height="34"/>
         <image name="pause" width="44" height="44"/>
-        <image name="play" width="44" height="44"/>
+        <image name="play.circle" catalog="system" width="64" height="60"/>
+        <image name="speedometer" catalog="system" width="64" height="60"/>
     </resources>
 </document>

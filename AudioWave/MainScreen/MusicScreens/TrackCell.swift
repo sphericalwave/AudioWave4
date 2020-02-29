@@ -17,6 +17,7 @@ class TrackCell: SwCell
     @IBOutlet weak var indicator: UIImageView!
     let mediaItem: MPMediaItem
     let musicPlayer: MusicPlayer
+    override func height() -> CGFloat { return 81 }     //FIXME: What's the cleanest way to do this?
     
     init(mediaItem: MPMediaItem, musicPlayer: MusicPlayer) {
         self.mediaItem = mediaItem
@@ -36,11 +37,9 @@ class TrackCell: SwCell
         updateArt()
     }
     
-    override func height() -> CGFloat { return 81 }
-    
     override func didSelect() {
-        //Play the Track
-        musicPlayer.play(mediaItem)
+        musicPlayer.load(mediaItem)
+        musicPlayer.play()
     }
 
     func updateArt() {

@@ -12,15 +12,26 @@ class Titles: UIViewController
 {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
+    let player: AudioPlayer
     
-    init() { super.init(nibName: "Titles", bundle: nil) }
-    
-    required init?(coder: NSCoder) { fatalError("Bad Monkey!") }
-    
-    func update(title: String, description: String) {
-        titleLabel.text = title
-        descriptionLabel.text = description
+    init(player: AudioPlayer) {
+        self.player = player
+        super.init(nibName: "Titles", bundle: nil)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
     }
+    required init?(coder: NSCoder) { fatalError() }
+    
+    @objc func playerDidLoad(notification: Notification) {
+        //FIXME: Update Titles
+        titleLabel.text = player.track()
+        descriptionLabel.text = player.artist()
+    }
+    
+//    func update(title: String, description: String) {
+//        titleLabel.text = player.title()
+//        descriptionLabel.text = player.artist()
+//    }
 }
 
 

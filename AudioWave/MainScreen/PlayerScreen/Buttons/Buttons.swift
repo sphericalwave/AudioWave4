@@ -8,7 +8,8 @@
 
 import UIKit
 
-protocol ButtonDelegate: AnyObject {
+protocol ButtonDelegate: AnyObject
+{
     func play()
     func next()
     func previous()
@@ -18,40 +19,56 @@ protocol ButtonDelegate: AnyObject {
 
 class Buttons: UIViewController
 {
+    //FIXME: This Class is BIG
     @IBOutlet weak var playButton: PlayButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var loopButton: LoopButton!
     @IBOutlet weak var speedButton: SpeedButton!
-    weak var delegate: ButtonDelegate?
+    //weak var delegate: ButtonDelegate?
+    let player: AudioPlayer
+    let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init() { super.init(nibName: "Buttons", bundle: nil) }
-    
+    init(player: AudioPlayer) {
+        self.player = player
+        super.init(nibName: "Buttons", bundle: nil)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
+        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: nil)
+        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: nil)
+
+    }
     required init?(coder: NSCoder) { fatalError() }
+    
+    @objc func playerDidLoad(notification: Notification) {
+        //FIXME: enable buttons?
+    }
+    
+    @objc func playerDidPlay(notification: Notification) {
+        playButton.nextState()  //FIXME: Update playButton API
+    }
+    
+    @objc func playerDidPause(notification: Notification) {
+        playButton.nextState()  //FIXME: Update playButton API
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         speedButton.delegate = self
         loopButton.delegate = self
-        playButton.delegate = self
+        //playButton.delegate = self
        // guard delegate != nil else { fatalError() }
     }
     
-    @IBAction func previous(_ sender: AnyObject) { delegate?.previous() }
+    @IBAction func previous(_ sender: AnyObject) { player.previous() }
     
-    @IBAction func next(_ sender: AnyObject) { delegate?.next() }
-    
-    func enableButtons() {
-//        self.playPauseButton.isSelected = self.player.isPlaying
-//        self.nextButton.isEnabled = self.player.nextPlaybackItem != nil
-//        self.previousButton.isEnabled = self.player.previousPlaybackItem != nil
-    }
+    @IBAction func next(_ sender: AnyObject) { player.next() }
 }
 
 extension Buttons: SpeedButtonDelegate
 {
     func update(speed: Float) {
         print("Update the Player's speed!")
+        player.speed(speed) //FIXME: Weird Naming
     }
 }
 
@@ -62,10 +79,16 @@ extension Buttons: LoopButtonDelegate
     }
 }
 
-extension Buttons: PlayButtonDelegate
-{
-    func update(mode: PlayMode) {
-        delegate?.play() //FIXME: This is not right
-        //pause or resume playback
-    }
-}
+//extension Buttons: PlayButtonDelegate
+//{
+//    func update(mode: PlayMode) {
+//        if mode == .play {
+//            player.play()
+//            return
+//        }
+//        if mode == .pause {
+//            player.pause()
+//            return
+//        }
+//    }
+//}

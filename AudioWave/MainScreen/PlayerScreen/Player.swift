@@ -33,7 +33,7 @@ extension Player: ButtonDelegate
         print("player.play\n")
         //toggle button symbol
         //buttons.play or pause
-        titles.update(title: "AudioWave", description: "is Back!")
+        //titles.update(title: "AudioWave", description: "is Back!")
     }
     
     func pause() {

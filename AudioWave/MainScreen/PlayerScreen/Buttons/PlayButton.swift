@@ -39,7 +39,7 @@ class PlayButton: UIButton
             guard let play = UIImage(systemName: "play.fill") else { fatalError() } //FIXME: Fragile
             self.setImage(play, for: .normal)
         }
-        guard delegate != nil else { fatalError("Connect Delegate") }
-        delegate?.update(mode: mode)
+       // guard delegate != nil else { fatalError("Connect Delegate") }
+       // delegate?.update(mode: mode)
     }
 }

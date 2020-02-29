@@ -6,15 +6,25 @@
 //  Copyright © 2020 SphericalWave. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import AVFoundation
 import MediaPlayer
 
 class MusicPlayer: AudioPlayer
 {
+    func speed(_ speed: Float) {
+        //FIXME:
+        fatalError()
+    }
+    func track() -> String { return "FIXME" }
+    func artist() -> String { return "FIXME" }
+    func album() -> String { return "FIXME" }
+    func playback(mode: PlayMode) { fatalError() }
+    
     let commandCenter = MPRemoteCommandCenter.shared() //FIXME: Hidden Dependency
     var state: AudioPlayerState //FIXME: Be Immutable
-    var player: AVAudioPlayer!       //FIXME: Be Immutable / Hidden Dependency
+    var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
+    let notifications = NotificationCenter.default
     
     init(state: AudioPlayerState) {
         self.state = state
@@ -22,30 +32,38 @@ class MusicPlayer: AudioPlayer
         setupRemoteControl()
     }
     
-    func play(_ mediaItem: MPMediaItem) {
+    func load(_ mediaItem: MPMediaItem) {
         self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
-        player.prepareToPlay()
-        player.play()
+        player?.prepareToPlay()
+        notifications.post(name: .didLoad, object: nil)
     }
 
     func play() {
-       // queuePlayer.play()
+        player?.play()
+        notifications.post(name: .didPlay, object: nil)
     }
     
     func pause() {
-        // queuePlayer.pause()
+        player?.pause()
+        notifications.post(name: .didPause, object: nil)
     }
     
     func next() {
-        // queuePlayer.advanceToNextItem()
+        //FIXME: load the next one from the playlist
+        //FIXME: play if previously playing
+        notifications.post(name: .didSkip, object: nil)
     }
     
     func previous() {
-        fatalError()    //FIXME: Implement Previous Track
+        //FIXME: load the previous one from the playlist
+        //FIXME: play if previously playing
+        notifications.post(name: .didPrevious, object: nil)
     }
     
+    //FIXME: Volume
+    
     func observeAudioSession() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
+        notifications.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
     }
     
     func setupRemoteControl() {
