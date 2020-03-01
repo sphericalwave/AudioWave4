@@ -12,18 +12,9 @@ import AVFoundation
 
 class ContentPlayer: AudioPlayer
 {
-    
-    func speed(_ speed: Float) {
-        //FIXME:
-        fatalError()
-    }
-    func track() -> String { return "FIXME" }
-    func artist() -> String { return "FIXME" }
-    func album() -> String { return "FIXME" }
-    func playback(mode: PlayMode) { fatalError() }
-    
     let state: AudioPlayerState
     var player: AVAudioPlayer!
+    var mediaItem: MPMediaItem?
     
     init(state: AudioPlayerState) {
         self.state = state
@@ -52,5 +43,18 @@ class ContentPlayer: AudioPlayer
     
     func previous() {
         //
+    }
+    
+    func speed(_ speed: Float) {
+        //FIXME:
+        fatalError()
+    }
+    func track() -> String { return "FIXME" }
+    func artist() -> String { return "FIXME" }
+    func album() -> String { return "FIXME" }
+    func playback(mode: PlayMode) { fatalError() }
+    
+    func artwork() -> MPMediaItemArtwork? {
+        return mediaItem?.artwork
     }
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2020 SphericalWave. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
+import MediaPlayer
 
 protocol AudioPlayer: AnyObject
 {
@@ -20,6 +20,7 @@ protocol AudioPlayer: AnyObject
     func artist() -> String
     func album() -> String
     func playback(mode: PlayMode)
+    func artwork() -> MPMediaItemArtwork?
 }
 
 

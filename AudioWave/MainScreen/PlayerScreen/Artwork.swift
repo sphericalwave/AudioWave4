@@ -25,12 +25,17 @@ class Artwork: UIViewController
         view.clipsToBounds = true
         artwork.layer.cornerRadius = 10.0
         artwork.clipsToBounds = true
-        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
     }
     required init?(coder: NSCoder) { fatalError() }
     
     @objc func playerDidLoad(notification: Notification) {
-        //FIXME: Update the Art
+        let size = artwork.bounds.size
+        guard let sizedArt = player.artwork()?.image(at: size) else {
+            artwork.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
+            return
+        }
+        artwork.image = sizedArt
     }
     
     override func viewDidLoad() {
@@ -41,33 +46,9 @@ class Artwork: UIViewController
         view.addSubview(artwork)
     }
     
-    func update(art: UIImage) {
-        //TODO: Connect Up
-        print("Update Art")
-        artwork.image = art
-    }
-    
-    func updateArtworkImageView() {
-//        self.artworkImageView.image = self.player.currentPlaybackItem?.artwork?.image(at: artworkImageView.frame.size) //UIImage(named: self.player.currentPlaybackItem?.albumImageName ?? "")
-    }
-    
-//    @IBAction func swipeLeftAction(_ sender: AnyObject) {
-//        if self.player.nextPlaybackItem == nil {
-//            self.animateNoNextTrackBounce(self.artworkImageView.layer)
-//            return
-//        }
-//        
-//        self.animateContentChange(convertFromCATransitionSubtype(CATransitionSubtype.fromRight), layer: self.artworkImageView.layer)
-//        self.player.nextTrack()
-//    }
-//    
-//    @IBAction func swipeRightAction(_ sender: AnyObject) {
-//        if self.player.previousPlaybackItem == nil {
-//            self.animateNoPreviousTrackBounce(self.artworkImageView.layer)
-//            return
-//        }
-//        
-//        self.animateContentChange(convertFromCATransitionSubtype(CATransitionSubtype.fromLeft), layer: self.artworkImageView.layer)
-//        self.player.previousTrack()
+//    func update(art: UIImage) {
+//        //TODO: Connect Up
+//        print("Update Art")
+//        artwork.image = art
 //    }
 }

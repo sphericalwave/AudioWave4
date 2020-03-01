@@ -12,19 +12,12 @@ import MediaPlayer
 
 class MusicPlayer: AudioPlayer
 {
-    func speed(_ speed: Float) {
-        //FIXME:
-        fatalError()
-    }
-    func track() -> String { return "FIXME" }
-    func artist() -> String { return "FIXME" }
-    func album() -> String { return "FIXME" }
-    func playback(mode: PlayMode) { fatalError() }
-    
+
     let commandCenter = MPRemoteCommandCenter.shared() //FIXME: Hidden Dependency
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
+    var mediaItem: MPMediaItem?
     
     init(state: AudioPlayerState) {
         self.state = state
@@ -35,30 +28,45 @@ class MusicPlayer: AudioPlayer
     func load(_ mediaItem: MPMediaItem) {
         self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
         player?.prepareToPlay()
-        notifications.post(name: .didLoad, object: nil)
+        self.mediaItem = mediaItem
+        notifications.post(name: .didLoad, object: self)
     }
 
     func play() {
         player?.play()
-        notifications.post(name: .didPlay, object: nil)
+        notifications.post(name: .didPlay, object: self)
     }
     
     func pause() {
         player?.pause()
-        notifications.post(name: .didPause, object: nil)
+        notifications.post(name: .didPause, object: self)
     }
     
     func next() {
         //FIXME: load the next one from the playlist
         //FIXME: play if previously playing
-        notifications.post(name: .didSkip, object: nil)
+        notifications.post(name: .didSkip, object: self)
     }
     
     func previous() {
         //FIXME: load the previous one from the playlist
         //FIXME: play if previously playing
-        notifications.post(name: .didPrevious, object: nil)
+        notifications.post(name: .didPrevious, object: self)
     }
+    
+    func speed(_ speed: Float) {
+        //FIXME:
+        fatalError()
+    }
+    func track() -> String { return "FIXME" }
+    func artist() -> String { return "FIXME" }
+    func album() -> String { return "FIXME" }
+    func playback(mode: PlayMode) { fatalError() }
+    
+    func artwork() -> MPMediaItemArtwork? {
+        return mediaItem?.artwork
+    }
+    
     
     //FIXME: Volume
     

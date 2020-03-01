@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,6 +13,7 @@
                 <outlet property="artworkContainer" destination="Fj9-of-y4k" id="btl-Uc-uc1"/>
                 <outlet property="buttonContainer" destination="tNm-YN-Qb3" id="EEA-W7-AkJ"/>
                 <outlet property="progressContainer" destination="ODy-wG-ZuH" id="TBF-km-AZQ"/>
+                <outlet property="secondaryButtonContainer" destination="NVG-zl-dmb" id="SiW-Go-vyO"/>
                 <outlet property="textContainer" destination="tOL-uB-FTB" id="hXH-Gy-dA4"/>
                 <outlet property="view" destination="Kkf-oX-EWx" id="kwq-gR-qGb"/>
             </connections>
@@ -27,34 +27,41 @@
                     <rect key="frame" x="9" y="9" width="357" height="635"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fj9-of-y4k">
-                            <rect key="frame" x="0.0" y="0.0" width="357" height="357"/>
+                            <rect key="frame" x="0.0" y="0.0" width="357" height="279"/>
                             <color key="backgroundColor" red="0.81896320690000002" green="1" blue="0.80647660590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Fj9-of-y4k" secondAttribute="height" multiplier="1:1" id="53B-aY-4hQ"/>
-                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-wG-ZuH">
-                            <rect key="frame" x="0.0" y="368.5" width="357" height="81"/>
+                            <rect key="frame" x="0.0" y="287" width="357" height="81"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="81" id="7be-51-QbL"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOL-uB-FTB">
-                            <rect key="frame" x="0.0" y="461.5" width="357" height="81"/>
-                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="81" id="6LI-jP-twn"/>
-                            </constraints>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-YN-Qb3">
-                            <rect key="frame" x="0.0" y="554" width="357" height="81"/>
+                            <rect key="frame" x="0.0" y="376" width="357" height="81"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="81" id="CV4-Qk-Xyf"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOL-uB-FTB">
+                            <rect key="frame" x="0.0" y="465" width="357" height="81"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="81" id="6LI-jP-twn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVG-zl-dmb">
+                            <rect key="frame" x="0.0" y="554" width="357" height="81"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="81" id="UbC-6Z-O7w"/>
+                            </constraints>
+                        </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="ODy-wG-ZuH" firstAttribute="top" secondItem="Fj9-of-y4k" secondAttribute="bottom" constant="8" symbolic="YES" id="RPl-IT-cHM"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

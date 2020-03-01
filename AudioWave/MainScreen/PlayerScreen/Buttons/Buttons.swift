@@ -23,8 +23,7 @@ class Buttons: UIViewController
     @IBOutlet weak var playButton: PlayButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
-    @IBOutlet weak var loopButton: LoopButton!
-    @IBOutlet weak var speedButton: SpeedButton!
+
     //weak var delegate: ButtonDelegate?
     let player: AudioPlayer
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
@@ -32,9 +31,9 @@ class Buttons: UIViewController
     init(player: AudioPlayer) {
         self.player = player
         super.init(nibName: "Buttons", bundle: nil)
-        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
-        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: nil)
-        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: nil)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
+        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: player)
+        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: player)
 
     }
     required init?(coder: NSCoder) { fatalError() }
@@ -51,13 +50,13 @@ class Buttons: UIViewController
         playButton.nextState()  //FIXME: Update playButton API
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        speedButton.delegate = self
-        loopButton.delegate = self
-        //playButton.delegate = self
-       // guard delegate != nil else { fatalError() }
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        speedButton.delegate = self
+//        loopButton.delegate = self
+//        //playButton.delegate = self
+//       // guard delegate != nil else { fatalError() }
+//    }
     
     @IBAction func previous(_ sender: AnyObject) { player.previous() }
     

@@ -34,6 +34,8 @@
 		AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDF23DC828A00CFDCEF /* SwCell.swift */; };
 		AF319F0123DC828A00CFDCEF /* SWDualLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EE423DC828A00CFDCEF /* SWDualLabelCell.xib */; };
 		AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */; };
+		AF3EB1EE240B214E00E3DAC3 /* SecondaryButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */; };
+		AF3EB1F0240B217700E3DAC3 /* SecondaryButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */; };
 		AF50C96323D914A300B49F74 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50C96223D914A300B49F74 /* Player.swift */; };
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerScreen.swift */; };
@@ -116,6 +118,8 @@
 		AF319EDF23DC828A00CFDCEF /* SwCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwCell.swift; sourceTree = "<group>"; };
 		AF319EE423DC828A00CFDCEF /* SWDualLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWDualLabelCell.xib; sourceTree = "<group>"; };
 		AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWDualLabelCell.swift; sourceTree = "<group>"; };
+		AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtons.swift; sourceTree = "<group>"; };
+		AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryButtons.xib; sourceTree = "<group>"; };
 		AF50C96223D914A300B49F74 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
@@ -339,9 +343,10 @@
 			children = (
 				AF51159423D655FA005FFC34 /* PlayerScreen.swift */,
 				AF51159623D65670005FFC34 /* PlayerScreen.xib */,
-				AF50C96223D914A300B49F74 /* Player.swift */,
 				AF62B1C223D65FA6002CD561 /* Titles */,
 				AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */,
+				AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */,
+				AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */,
 				AF62B1BF23D65E5A002CD561 /* Buttons */,
 				AF62B1BC23D65E36002CD561 /* Progress */,
 			);
@@ -428,6 +433,7 @@
 		AFAAAA342407022500544545 /* Obsolete */ = {
 			isa = PBXGroup;
 			children = (
+				AF50C96223D914A300B49F74 /* Player.swift */,
 				AFCE09BF1F57704200A1D0EE /* PlayerInterface */,
 				AFCE098B1F57322000A1D0EE /* SWAudioBookVC */,
 				AFCE09C21F57708600A1D0EE /* SWAudioPlayer */,
@@ -587,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3EB1F0240B217700E3DAC3 /* SecondaryButtons.xib in Resources */,
 				AF319EFA23DC828A00CFDCEF /* VendorCell.xib in Resources */,
 				AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */,
 				AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */,
@@ -674,6 +681,7 @@
 				AF7513BF240988C9009242A2 /* MusicPlayer.swift in Sources */,
 				AF319EFD23DC828A00CFDCEF /* SwQuadLabelImageCell.swift in Sources */,
 				AFCE09821F57311500A1D0EE /* AudioHardware.swift in Sources */,
+				AF3EB1EE240B214E00E3DAC3 /* SecondaryButtons.swift in Sources */,
 				AFCE09A61F57332A00A1D0EE /* PlaylistDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
