@@ -65,5 +65,10 @@ class ContentPlayer: AudioPlayer
     func percentage() -> Float {
         return 0.5 //FIXME: 
     }
+    
+    func isPlaying() -> Bool {
+        fatalError()
+    }
+
 
 }

@@ -30,15 +30,16 @@ class Buttons: UIViewController
         //FIXME: enable buttons?
     }
     
-    @objc func playerDidPlay(notification: Notification) {
-        playButton.nextState()  //FIXME: Update playButton API
+    @objc func playerDidPlay(notification: Notification) { playButton.pause() }
+    
+    @objc func playerDidPause(notification: Notification) { playButton.play() }
+    
+    @IBAction func previous() { player.previous() }
+    
+    @IBAction func next() { player.next() }
+    
+    @IBAction func play() {
+        if player.isPlaying() { player.pause() }
+        else { player.play() }
     }
-    
-    @objc func playerDidPause(notification: Notification) {
-        playButton.nextState()  //FIXME: Update playButton API
-    }
-    
-    @IBAction func previous(_ sender: AnyObject) { player.previous() }
-    
-    @IBAction func next(_ sender: AnyObject) { player.next() }
 }

@@ -102,6 +102,8 @@ class MusicPlayer: AudioPlayer
         return Float( cT / dur )
     }
     
+    func isPlaying() -> Bool { return player?.isPlaying ?? false }
+    
     //FIXME: Volume
     
     func observeAudioSession() {

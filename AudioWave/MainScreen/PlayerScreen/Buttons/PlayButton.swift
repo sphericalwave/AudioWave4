@@ -13,33 +13,40 @@ enum PlayMode {
     case pause
 }
 
-protocol PlayButtonDelegate: AnyObject {
-    func update(mode: PlayMode)
-}
+//protocol PlayButtonDelegate: AnyObject {
+//    func update(mode: PlayMode)
+//}
 
 class PlayButton: UIButton
 {
     var mode: PlayMode //FIXME: Mutable State
-    weak var delegate: PlayButtonDelegate?
+    //weak var delegate: PlayButtonDelegate?
+    let pauseIcon: UIImage
+    let playIcon: UIImage
     
     required init?(coder: NSCoder) {
         self.mode = .play
+
+        guard let pause = UIImage(systemName: "pause.fill") else { fatalError() } //FIXME: Fragile
+        guard let play = UIImage(systemName: "play.fill") else { fatalError() } //FIXME: Fragile
+        self.pauseIcon = pause
+        self.playIcon = play
         super.init(coder: coder)
-        self.addTarget(self, action: #selector(nextState), for: .touchUpInside)
+        //self.addTarget(self, action: #selector(nextState), for: .touchUpInside)
     }
     
-    @objc func nextState() {
-        switch mode {
-        case .play:
-            mode = .pause
-            guard let pause = UIImage(systemName: "pause.fill") else { fatalError() } //FIXME: Fragile
-            self.setImage(pause, for: .normal)
-        case .pause:
-            mode = .play
-            guard let play = UIImage(systemName: "play.fill") else { fatalError() } //FIXME: Fragile
-            self.setImage(play, for: .normal)
-        }
-       // guard delegate != nil else { fatalError("Connect Delegate") }
-       // delegate?.update(mode: mode)
-    }
+    func play() { setImage(playIcon, for: .normal) }
+    
+    func pause() {  setImage(pauseIcon, for: .normal) }
+    
+//    @objc func nextState() {
+//        switch mode {
+//        case .play:
+//            mode = .pause
+//            self.setImage(pauseIcon, for: .normal)
+//        case .pause:
+//            mode = .play
+//            self.setImage(playIcon, for: .normal)
+//        }
+//    }
 }

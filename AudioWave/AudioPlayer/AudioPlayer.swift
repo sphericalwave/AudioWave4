@@ -25,6 +25,7 @@ protocol AudioPlayer: AnyObject
     func remainingTime() -> String
     func seekTo(percentage: Float)
     func percentage() -> Float
+    func isPlaying() -> Bool
 }
 
 

@@ -30,7 +30,7 @@
                             </constraints>
                             <state key="normal" image="backward.end.alt" catalog="system"/>
                             <connections>
-                                <action selector="previous:" destination="-1" eventType="touchUpInside" id="psc-eC-36j"/>
+                                <action selector="previous" destination="-1" eventType="touchUpInside" id="3Nt-FO-MnG"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-dE-Kgn" customClass="PlayButton" customModule="AudioWave" customModuleProvider="target">
@@ -41,6 +41,9 @@
                             <state key="normal" image="play" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </state>
+                            <connections>
+                                <action selector="play" destination="-1" eventType="touchUpInside" id="TBU-cL-2vM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-af-Srw">
                             <rect key="frame" x="270" y="0.0" width="126" height="45"/>
@@ -49,7 +52,7 @@
                             </constraints>
                             <state key="normal" image="forward.end.alt" catalog="system"/>
                             <connections>
-                                <action selector="next:" destination="-1" eventType="touchUpInside" id="avz-qz-g9Z"/>
+                                <action selector="next" destination="-1" eventType="touchUpInside" id="DYT-21-7jh"/>
                             </connections>
                         </button>
                     </subviews>
