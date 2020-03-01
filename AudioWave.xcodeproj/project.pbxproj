@@ -319,6 +319,15 @@
 			path = SWDualLabelCell;
 			sourceTree = "<group>";
 		};
+		AF3EB1F1240C5D8C00E3DAC3 /* SecondaryButtons */ = {
+			isa = PBXGroup;
+			children = (
+				AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */,
+				AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */,
+			);
+			path = SecondaryButtons;
+			sourceTree = "<group>";
+		};
 		AF50C96423D9217100B49F74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,8 +354,7 @@
 				AF51159623D65670005FFC34 /* PlayerScreen.xib */,
 				AF62B1C223D65FA6002CD561 /* Titles */,
 				AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */,
-				AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */,
-				AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */,
+				AF3EB1F1240C5D8C00E3DAC3 /* SecondaryButtons */,
 				AF62B1BF23D65E5A002CD561 /* Buttons */,
 				AF62B1BC23D65E36002CD561 /* Progress */,
 			);

@@ -58,8 +58,10 @@ class MusicPlayer: AudioPlayer
         //FIXME:
         fatalError()
     }
-    func track() -> String { return "FIXME" }
-    func artist() -> String { return "FIXME" }
+    func track() -> String { return mediaItem?.title ?? "No Track Name" }
+    
+    func artist() -> String { return mediaItem?.artist ?? "No Artist Name" }
+    
     func album() -> String { return "FIXME" }
     func playback(mode: PlayMode) { fatalError() }
     

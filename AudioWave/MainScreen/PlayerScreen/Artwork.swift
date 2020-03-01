@@ -42,13 +42,7 @@ class Artwork: UIViewController
         super.viewDidLoad()
         artwork.frame = view.frame
         artwork.backgroundColor = .green
-        artwork.contentMode = .scaleAspectFill  //FIXME: Scale is misbehaving
+        artwork.contentMode = .scaleAspectFit  //FIXME: Scale is misbehaving
         view.addSubview(artwork)
     }
-    
-//    func update(art: UIImage) {
-//        //TODO: Connect Up
-//        print("Update Art")
-//        artwork.image = art
-//    }
 }

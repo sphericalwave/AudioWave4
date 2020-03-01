@@ -18,20 +18,14 @@ class Titles: UIViewController
     init(player: AudioPlayer) {
         self.player = player
         super.init(nibName: "Titles", bundle: nil)
-        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
     }
     required init?(coder: NSCoder) { fatalError() }
     
     @objc func playerDidLoad(notification: Notification) {
-        //FIXME: Update Titles
         titleLabel.text = player.track()
         descriptionLabel.text = player.artist()
     }
-    
-//    func update(title: String, description: String) {
-//        titleLabel.text = player.title()
-//        descriptionLabel.text = player.artist()
-//    }
 }
 
 
