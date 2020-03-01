@@ -21,6 +21,10 @@ protocol AudioPlayer: AnyObject
     func album() -> String
     func playback(mode: PlayMode)
     func artwork() -> MPMediaItemArtwork?
+    func elapsedTime() -> String
+    func remainingTime() -> String
+    func seekTo(percentage: Float)
+    func percentage() -> Float
 }
 
 

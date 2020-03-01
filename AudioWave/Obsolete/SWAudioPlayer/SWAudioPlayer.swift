@@ -77,7 +77,6 @@ open class SWAudioPlayer: NSObject, AVAudioPlayerDelegate
     }
     
     //MARK: - Dependencies
-    #warning("fix me...optional properties")
     let audioSession: AVAudioSession!
     let commandCenter: MPRemoteCommandCenter!
     let nowPlayingInfoCenter: MPNowPlayingInfoCenter!

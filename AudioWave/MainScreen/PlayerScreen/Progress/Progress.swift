@@ -8,43 +8,46 @@
 
 import UIKit
 
-protocol ProgressDelegate: AnyObject {
-    func update() -> (percent: Float, remain: Float, elapsed: Float) //Send Remaining/Elapsed/Percent
-    func seekTo(percent: Float)
-}
-
 class Progress: UIViewController
 {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var remainingTimeLabel: UILabel!
-    weak var delegate: ProgressDelegate?
-    var timer: Timer?   //FIXME: Inject This messes up the constructor
+    var timer: Timer?   //FIXME: Nil & Hidden Dependency
     let player: AudioPlayer
+    let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
     init(player: AudioPlayer) {
         self.player = player
         super.init(nibName: "Progress", bundle: nil)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
+        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: player)
+        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: player)
     }
     required init?(coder: NSCoder) { fatalError() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.setThumbImage(#imageLiteral(resourceName: "ProgressSliderThumb"), for: .normal)
-        self.timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
-            guard let result = self.delegate?.update() else { return }
-            self.slider.value = result.percent
-            self.elapsedTimeLabel.text = String(result.elapsed) //FIXME: Optimize
-            self.remainingTimeLabel.text = String(result.remain)
+    }
+    
+    @objc func playerDidLoad(notification: Notification) { slider.value = 0 }
+    
+    @objc func playerDidPlay(notification: Notification) { startTimer() }
+    
+    @objc func playerDidPause(notification: Notification) { timer?.invalidate() }
+    
+    func startTimer() {
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.elapsedTimeLabel.text = self.player.elapsedTime()
+            self.remainingTimeLabel.text = self.player.remainingTime()
+            self.slider.value = self.player.percentage()
         }
     }
     
     @IBAction func sliderChanged(_ sender: AnyObject) {
-        delegate?.seekTo(percent: slider.value)
-    }
-    
-    func updateSlider() {
-        slider.minimumValue = 0
-        //slider.maximumValue = Float(self.player.duration ?? 0)
+        player.seekTo(percentage: slider.value)
     }
 }
+
+

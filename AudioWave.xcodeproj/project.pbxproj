@@ -36,7 +36,7 @@
 		AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */; };
 		AF3EB1EE240B214E00E3DAC3 /* SecondaryButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */; };
 		AF3EB1F0240B217700E3DAC3 /* SecondaryButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */; };
-		AF50C96323D914A300B49F74 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50C96223D914A300B49F74 /* Player.swift */; };
+		AF3EB1F3240C639800E3DAC3 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */; };
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerScreen.swift */; };
 		AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* PlayerScreen.xib */; };
@@ -52,7 +52,6 @@
 		AF8809C123DC948F0081C400 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C023DC948F0081C400 /* Playlist.swift */; };
 		AF8809C323DC95C80081C400 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C223DC95C80081C400 /* TrackCell.swift */; };
 		AF8809C723DCF8570081C400 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C623DCF8570081C400 /* Notifications.swift */; };
-		AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */; };
 		AF95F8232294B70400C81959 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8222294B70400C81959 /* MainScreen.xib */; };
 		AFA009A223D08DE000026DB6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */; };
 		AFA009A423D08EC700026DB6 /* CrossFader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA009A323D08EC700026DB6 /* CrossFader.xib */; };
@@ -75,7 +74,6 @@
 		AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09981F57332800A1D0EE /* PlaylistCell.swift */; };
 		AFCE09A61F57332A00A1D0EE /* PlaylistDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099A1F57332900A1D0EE /* PlaylistDetailsVC.swift */; };
 		AFCE09A71F57332A00A1D0EE /* MusicPlaylistsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */; };
-		AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */; };
 		AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099D1F57332900A1D0EE /* SpeedButton.swift */; };
 		AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */; };
 		AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */; };
@@ -120,7 +118,7 @@
 		AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWDualLabelCell.swift; sourceTree = "<group>"; };
 		AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtons.swift; sourceTree = "<group>"; };
 		AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryButtons.xib; sourceTree = "<group>"; };
-		AF50C96223D914A300B49F74 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
 		AF51159623D65670005FFC34 /* PlayerScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerScreen.xib; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		AF8809C023DC948F0081C400 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		AF8809C223DC95C80081C400 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		AF8809C623DCF8570081C400 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaybackScreen.xib; sourceTree = "<group>"; };
 		AF95F8222294B70400C81959 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		AFA009A323D08EC700026DB6 /* CrossFader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrossFader.xib; sourceTree = "<group>"; };
@@ -162,7 +159,6 @@
 		AFCE09981F57332800A1D0EE /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
 		AFCE099A1F57332900A1D0EE /* PlaylistDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsVC.swift; sourceTree = "<group>"; };
 		AFCE099B1F57332900A1D0EE /* MusicPlaylistsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylistsVC.swift; sourceTree = "<group>"; };
-		AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackScreen.swift; sourceTree = "<group>"; };
 		AFCE099D1F57332900A1D0EE /* SpeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedButton.swift; sourceTree = "<group>"; };
 		AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		AFCE09A11F57332A00A1D0EE /* SWAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioPlayer.swift; sourceTree = "<group>"; };
@@ -434,6 +430,7 @@
 				AF319EBA23DC828A00CFDCEF /* SwTables */,
 				AF51159023D65385005FFC34 /* SWModalButton.swift */,
 				AF1D90F323DC89290040E7CB /* SwDismissButton.swift */,
+				AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */,
 			);
 			path = SphericalWave;
 			sourceTree = "<group>";
@@ -441,8 +438,6 @@
 		AFAAAA342407022500544545 /* Obsolete */ = {
 			isa = PBXGroup;
 			children = (
-				AF50C96223D914A300B49F74 /* Player.swift */,
-				AFCE09BF1F57704200A1D0EE /* PlayerInterface */,
 				AFCE098B1F57322000A1D0EE /* SWAudioBookVC */,
 				AFCE09C21F57708600A1D0EE /* SWAudioPlayer */,
 				AFCE09BE1F57700E00A1D0EE /* SWMusicPlaylistsVC */,
@@ -512,15 +507,6 @@
 				AFCE099A1F57332900A1D0EE /* PlaylistDetailsVC.swift */,
 			);
 			path = SWMusicPlaylistsVC;
-			sourceTree = "<group>";
-		};
-		AFCE09BF1F57704200A1D0EE /* PlayerInterface */ = {
-			isa = PBXGroup;
-			children = (
-				AF95F8202294AA0C00C81959 /* PlaybackScreen.xib */,
-				AFCE099C1F57332900A1D0EE /* PlaybackScreen.swift */,
-			);
-			path = PlayerInterface;
 			sourceTree = "<group>";
 		};
 		AFCE09C21F57708600A1D0EE /* SWAudioPlayer */ = {
@@ -612,7 +598,6 @@
 				AFCBDB0823DC90DC002F6060 /* PlaylistCell2.xib in Resources */,
 				AF95F8232294B70400C81959 /* MainScreen.xib in Resources */,
 				AF319EF023DC828A00CFDCEF /* SwLabelCell.xib in Resources */,
-				AF95F8212294AA0C00C81959 /* PlaybackScreen.xib in Resources */,
 				AF319EF923DC828A00CFDCEF /* SwImageLabelCell.xib in Resources */,
 				AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */,
 				AF319F0123DC828A00CFDCEF /* SWDualLabelCell.xib in Resources */,
@@ -645,7 +630,6 @@
 				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
 				AF7513BD240988BD009242A2 /* ContentPlayer.swift in Sources */,
 				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
-				AFCE09A81F57332A00A1D0EE /* PlaybackScreen.swift in Sources */,
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
 				AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */,
 				AFAAAA2C24059DD000544545 /* ContentButton.swift in Sources */,
@@ -656,7 +640,6 @@
 				AF2C437E23DD053C0031CCF8 /* AudioWave.swift in Sources */,
 				AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */,
 				AF2BEF8D23DE4FB5008E4B64 /* PlayButton.swift in Sources */,
-				AF50C96323D914A300B49F74 /* Player.swift in Sources */,
 				AFCE09AC1F57332A00A1D0EE /* SWAudioPlayer.swift in Sources */,
 				AF8809C323DC95C80081C400 /* TrackCell.swift in Sources */,
 				AF319EF123DC828A00CFDCEF /* SwLabelCell.swift in Sources */,
@@ -681,6 +664,7 @@
 				AFAAAA312406F4F000544545 /* AudioPlayerState.swift in Sources */,
 				AF1D90F223DC862D0040E7CB /* Playlists.swift in Sources */,
 				AF7513C22409922A009242A2 /* ContentPlaylistsScreen.swift in Sources */,
+				AF3EB1F3240C639800E3DAC3 /* TimeInterval+Extensions.swift in Sources */,
 				AF7513C4240993D6009242A2 /* ContentPlaylistCell.swift in Sources */,
 				AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */,
 				AFCE098A1F57321800A1D0EE /* AudioBooksVC.swift in Sources */,

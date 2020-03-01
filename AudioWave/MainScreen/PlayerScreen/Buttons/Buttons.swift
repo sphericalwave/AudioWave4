@@ -8,23 +8,11 @@
 
 import UIKit
 
-protocol ButtonDelegate: AnyObject
-{
-    func play()
-    func next()
-    func previous()
-    func loop()
-    func speed(rate: Float)
-}
-
 class Buttons: UIViewController
 {
-    //FIXME: This Class is BIG
     @IBOutlet weak var playButton: PlayButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
-
-    //weak var delegate: ButtonDelegate?
     let player: AudioPlayer
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
@@ -50,44 +38,7 @@ class Buttons: UIViewController
         playButton.nextState()  //FIXME: Update playButton API
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        speedButton.delegate = self
-//        loopButton.delegate = self
-//        //playButton.delegate = self
-//       // guard delegate != nil else { fatalError() }
-//    }
-    
     @IBAction func previous(_ sender: AnyObject) { player.previous() }
     
     @IBAction func next(_ sender: AnyObject) { player.next() }
 }
-
-extension Buttons: SpeedButtonDelegate
-{
-    func update(speed: Float) {
-        print("Update the Player's speed!")
-        player.speed(speed) //FIXME: Weird Naming
-    }
-}
-
-extension Buttons: LoopButtonDelegate
-{
-    func update(mode: IdeaMode) {
-        print("Update the Player's speed!")
-    }
-}
-
-//extension Buttons: PlayButtonDelegate
-//{
-//    func update(mode: PlayMode) {
-//        if mode == .play {
-//            player.play()
-//            return
-//        }
-//        if mode == .pause {
-//            player.pause()
-//            return
-//        }
-//    }
-//}

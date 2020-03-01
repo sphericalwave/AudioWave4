@@ -65,10 +65,42 @@ class MusicPlayer: AudioPlayer
     func album() -> String { return "FIXME" }
     func playback(mode: PlayMode) { fatalError() }
     
-    func artwork() -> MPMediaItemArtwork? {
-        return mediaItem?.artwork
+    func artwork() -> MPMediaItemArtwork? { return mediaItem?.artwork }
+    
+    func elapsedTime() -> String {
+        guard let cT = player?.currentTime else { fatalError() }
+        return humanReadableTimeInterval(cT)
     }
     
+    //FIXME: Move to Extension?
+    func humanReadableTimeInterval(_ timeInterval: TimeInterval) -> String {
+        let timeInt = Int(round(timeInterval))
+        let (hh, mm, ss) = (timeInt / 3600, (timeInt % 3600) / 60, (timeInt % 3600) % 60)
+        
+        let hhString: String? = hh > 0 ? String(hh) : nil
+        let mmString = (hh > 0 && mm < 10 ? "0" : "") + String(mm)
+        let ssString = (ss < 10 ? "0" : "") + String(ss)
+        
+        return (hhString != nil ? (hhString! + ":") : "") + mmString + ":" + ssString
+    }
+    
+    func remainingTime() -> String {
+        guard let cT = player?.currentTime else { fatalError() }
+        guard let dur = player?.duration else { fatalError() }
+        return humanReadableTimeInterval(dur - cT)
+    }
+    
+    func seekTo(percentage: Float) {
+        guard let dur = player?.duration else { fatalError() }
+        let time = dur * Double(percentage)
+        player?.currentTime = time
+    }
+    
+    func percentage() -> Float {
+        guard let cT = player?.currentTime else { fatalError() }
+        guard let dur = player?.duration else { fatalError() }
+        return Float( cT / dur )
+    }
     
     //FIXME: Volume
     

@@ -57,4 +57,13 @@ class ContentPlayer: AudioPlayer
     func artwork() -> MPMediaItemArtwork? {
         return mediaItem?.artwork
     }
+    
+    func elapsedTime() -> String { return "FIXME" }
+    func remainingTime() -> String { return "FIXME" }
+    func seekTo(percentage: Float) { fatalError() }
+    
+    func percentage() -> Float {
+        return 0.5 //FIXME: 
+    }
+
 }
