@@ -12,8 +12,6 @@ import MediaPlayer
 
 class MusicPlayer: AudioPlayer
 {
-
-    let commandCenter = MPRemoteCommandCenter.shared() //FIXME: Hidden Dependency
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
@@ -22,7 +20,6 @@ class MusicPlayer: AudioPlayer
     init(state: AudioPlayerState) {
         self.state = state
         observeAudioSession()
-        setupRemoteControl()
     }
     
     func load(_ mediaItem: MPMediaItem) {
@@ -108,25 +105,6 @@ class MusicPlayer: AudioPlayer
     
     func observeAudioSession() {
         notifications.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
-    }
-    
-    func setupRemoteControl() {
-        commandCenter.playCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.play()
-            return .success
-        })
-        commandCenter.pauseCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.pause()
-            return .success
-        })
-        commandCenter.nextTrackCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.next()
-            return .success
-        })
-        commandCenter.previousTrackCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.previous()
-            return .success
-        })
     }
     
     //FIXME: This is gnarly

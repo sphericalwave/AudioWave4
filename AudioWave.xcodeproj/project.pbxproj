@@ -37,6 +37,7 @@
 		AF3EB1EE240B214E00E3DAC3 /* SecondaryButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */; };
 		AF3EB1F0240B217700E3DAC3 /* SecondaryButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */; };
 		AF3EB1F3240C639800E3DAC3 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */; };
+		AF3EB1F5240C6DD900E3DAC3 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */; };
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerScreen.swift */; };
 		AF51159723D65670005FFC34 /* PlayerScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* PlayerScreen.xib */; };
@@ -119,6 +120,7 @@
 		AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtons.swift; sourceTree = "<group>"; };
 		AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryButtons.xib; sourceTree = "<group>"; };
 		AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
 		AF51159623D65670005FFC34 /* PlayerScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerScreen.xib; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */,
 				AF7513BC240988BD009242A2 /* ContentPlayer.swift */,
 				AF7513BE240988C9009242A2 /* MusicPlayer.swift */,
+				AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */,
 				AF8809C623DCF8570081C400 /* Notifications.swift */,
 			);
 			path = AudioPlayer;
@@ -673,6 +676,7 @@
 				AF7513BF240988C9009242A2 /* MusicPlayer.swift in Sources */,
 				AF319EFD23DC828A00CFDCEF /* SwQuadLabelImageCell.swift in Sources */,
 				AFCE09821F57311500A1D0EE /* AudioHardware.swift in Sources */,
+				AF3EB1F5240C6DD900E3DAC3 /* Remote.swift in Sources */,
 				AF3EB1EE240B214E00E3DAC3 /* SecondaryButtons.swift in Sources */,
 				AFCE09A61F57332A00A1D0EE /* PlaylistDetailsVC.swift in Sources */,
 			);

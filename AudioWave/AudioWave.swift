@@ -10,6 +10,8 @@ import UIKit
 
 class AudioWave: UINavigationController
 {
+    let remote: Remote
+    
     init() {
         let mPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
         let aPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
@@ -25,6 +27,7 @@ class AudioWave: UINavigationController
         let cF = CrossFader(player1: musicPlayer, player2: contentPlayer)
         let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF, musicPlayer: musicPlayer, contentPlayer: contentPlayer)
         
+        self.remote = Remote(audioPlayer1: musicPlayer, audioPlayer2: contentPlayer)
         super.init(rootViewController: mainScreen)
         navigationBar.barStyle = .black
     }
