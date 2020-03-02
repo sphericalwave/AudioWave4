@@ -6,7 +6,6 @@
 //  Copyright © 2020 SphericalWave. All rights reserved.
 //
 
-import UIKit
 import AVFoundation
 import MediaPlayer
 
@@ -19,7 +18,6 @@ class MusicPlayer: AudioPlayer
     
     init(state: AudioPlayerState) {
         self.state = state
-        observeAudioSession()
     }
     
     func load(_ mediaItem: MPMediaItem) {
@@ -43,12 +41,14 @@ class MusicPlayer: AudioPlayer
         //FIXME: load the next one from the playlist
         //FIXME: play if previously playing
         notifications.post(name: .didSkip, object: self)
+        fatalError()
     }
     
     func previous() {
         //FIXME: load the previous one from the playlist
         //FIXME: play if previously playing
         notifications.post(name: .didPrevious, object: self)
+        fatalError()
     }
     
     func speed(_ speed: Float) {
@@ -60,31 +60,21 @@ class MusicPlayer: AudioPlayer
     func artist() -> String { return mediaItem?.artist ?? "No Artist Name" }
     
     func album() -> String { return "FIXME" }
+    
     func playback(mode: PlayMode) { fatalError() }
     
     func artwork() -> MPMediaItemArtwork? { return mediaItem?.artwork }
     
     func elapsedTime() -> String {
-        guard let cT = player?.currentTime else { fatalError() }
-        return humanReadableTimeInterval(cT)
-    }
-    
-    //FIXME: Move to Extension?
-    func humanReadableTimeInterval(_ timeInterval: TimeInterval) -> String {
-        let timeInt = Int(round(timeInterval))
-        let (hh, mm, ss) = (timeInt / 3600, (timeInt % 3600) / 60, (timeInt % 3600) % 60)
-        
-        let hhString: String? = hh > 0 ? String(hh) : nil
-        let mmString = (hh > 0 && mm < 10 ? "0" : "") + String(mm)
-        let ssString = (ss < 10 ? "0" : "") + String(ss)
-        
-        return (hhString != nil ? (hhString! + ":") : "") + mmString + ":" + ssString
+        guard var cT = player?.currentTime else { fatalError() }    //FIXME: Var
+        return cT.readable() //humanReadableTimeInterval(cT)
     }
     
     func remainingTime() -> String {
         guard let cT = player?.currentTime else { fatalError() }
         guard let dur = player?.duration else { fatalError() }
-        return humanReadableTimeInterval(dur - cT)
+        var remaining = (dur - cT)  //FIXME: Var
+        return remaining.readable()
     }
     
     func seekTo(percentage: Float) {
@@ -102,30 +92,4 @@ class MusicPlayer: AudioPlayer
     func isPlaying() -> Bool { return player?.isPlaying ?? false }
     
     //FIXME: Volume
-    
-    func observeAudioSession() {
-        notifications.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
-    }
-    
-    //FIXME: This is gnarly
-    @objc func handleInterruption(notification: Notification) {
-        guard let userInfo = notification.userInfo,
-            let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
-            let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
-                return
-        }
-        if type == .began {
-            // Interruption began, take appropriate actions
-        }
-        else if type == .ended {
-            if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
-                let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
-                if options.contains(.shouldResume) {
-                    // Interruption Ended - playback should resume
-                } else {
-                    // Interruption Ended - playback should NOT resume
-                }
-            }
-        }
-    }
 }

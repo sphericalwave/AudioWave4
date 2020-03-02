@@ -23,39 +23,42 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="653"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-yh-cSe">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-yh-cSe">
                     <rect key="frame" x="9" y="9" width="357" height="635"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fj9-of-y4k">
-                            <rect key="frame" x="0.0" y="0.0" width="357" height="279"/>
+                            <rect key="frame" x="0.0" y="0.0" width="357" height="357"/>
                             <color key="backgroundColor" red="0.81896320690000002" green="1" blue="0.80647660590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Fj9-of-y4k" secondAttribute="height" multiplier="1:1" id="vWO-a7-ICq"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-wG-ZuH">
-                            <rect key="frame" x="0.0" y="287" width="357" height="81"/>
+                            <rect key="frame" x="0.0" y="365" width="357" height="62.5"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="81" id="7be-51-QbL"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="7be-51-QbL"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-YN-Qb3">
-                            <rect key="frame" x="0.0" y="376" width="357" height="81"/>
+                            <rect key="frame" x="0.0" y="435.5" width="357" height="52.5"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="81" id="CV4-Qk-Xyf"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="CV4-Qk-Xyf"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOL-uB-FTB">
-                            <rect key="frame" x="0.0" y="465" width="357" height="81"/>
+                            <rect key="frame" x="0.0" y="496" width="357" height="81"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="81" id="6LI-jP-twn"/>
+                                <constraint firstAttribute="height" constant="81" id="7Qq-rY-KaU"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVG-zl-dmb">
-                            <rect key="frame" x="0.0" y="554" width="357" height="81"/>
+                            <rect key="frame" x="0.0" y="585" width="357" height="50"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="81" id="UbC-6Z-O7w"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="UbC-6Z-O7w"/>
                             </constraints>
                         </view>
                     </subviews>

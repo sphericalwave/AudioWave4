@@ -322,6 +322,8 @@
 			children = (
 				AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */,
 				AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */,
+				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
+				AFCE098C1F57328300A1D0EE /* LoopButton.swift */,
 			);
 			path = SecondaryButtons;
 			sourceTree = "<group>";
@@ -373,9 +375,7 @@
 			children = (
 				AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */,
 				AF62B1BD23D65E47002CD561 /* Buttons.xib */,
-				AFCE099D1F57332900A1D0EE /* SpeedButton.swift */,
 				AF2BEF8C23DE4FB5008E4B64 /* PlayButton.swift */,
-				AFCE098C1F57328300A1D0EE /* LoopButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -397,6 +397,7 @@
 				AF7513BC240988BD009242A2 /* ContentPlayer.swift */,
 				AF7513BE240988C9009242A2 /* MusicPlayer.swift */,
 				AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */,
+				AFCE09811F57311500A1D0EE /* AudioHardware.swift */,
 				AF8809C623DCF8570081C400 /* Notifications.swift */,
 			);
 			path = AudioPlayer;
@@ -447,7 +448,6 @@
 				AF1D90F123DC862D0040E7CB /* Playlists.swift */,
 				AF8809C023DC948F0081C400 /* Playlist.swift */,
 				AFD8F37223CF3B1800BF6FE6 /* NowPlaying.swift */,
-				AFCE09811F57311500A1D0EE /* AudioHardware.swift */,
 			);
 			path = Obsolete;
 			sourceTree = "<group>";

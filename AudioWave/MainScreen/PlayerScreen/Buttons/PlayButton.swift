@@ -27,11 +27,12 @@ class PlayButton: UIButton
     required init?(coder: NSCoder) {
         self.mode = .play
 
-        guard let pause = UIImage(systemName: "pause.fill") else { fatalError() } //FIXME: Fragile
-        guard let play = UIImage(systemName: "play.fill") else { fatalError() } //FIXME: Fragile
+        guard let pause = UIImage(systemName: "pause") else { fatalError() } //FIXME: Fragile
+        guard let play = UIImage(systemName: "play") else { fatalError() } //FIXME: Fragile
         self.pauseIcon = pause
         self.playIcon = play
         super.init(coder: coder)
+        setImage(playIcon, for: .normal)
         //self.addTarget(self, action: #selector(nextState), for: .touchUpInside)
     }
     

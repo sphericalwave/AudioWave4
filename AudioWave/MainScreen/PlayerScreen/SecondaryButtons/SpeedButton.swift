@@ -30,7 +30,7 @@ class SpeedButton: UIButton
         self.speed = .normal
         super.init(coder: coder)
         self.addTarget(self, action: #selector(nextState), for: .touchUpInside)
-        self.setTitle("1x", for: .normal)
+        //self.setTitle("1x", for: .normal)
     }
     
     @objc func nextState() {
