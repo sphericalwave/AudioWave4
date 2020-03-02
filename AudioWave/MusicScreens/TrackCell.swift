@@ -13,7 +13,7 @@ class TrackCell: SwCell
 {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var musicArt: UIImageView!
+    @IBOutlet weak var artwork: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
     let mediaItem: MPMediaItem
     let musicPlayer: AudioSource
@@ -32,8 +32,8 @@ class TrackCell: SwCell
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicArt.layer.cornerRadius = 10.0
-        musicArt.clipsToBounds = true
+        artwork.layer.cornerRadius = 10.0   //FIXME: New Class RoundedImage
+        artwork.clipsToBounds = true
         titleLabel.text = mediaItem.title ?? "FIXME"
         detailLabel.text = mediaItem.artist ?? "FIXME"
         updateArt()
@@ -45,13 +45,11 @@ class TrackCell: SwCell
         musicPlayer.play()
     }
 
-    //FIXME: Create Extension for UIImageView
     func updateArt() {
-        let size = musicArt.bounds.size
-        guard let sizedArt = mediaItem.artwork?.image(at: size) else {
-            musicArt.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
+        guard let art = musicPlayer.artwork() else {
+            artwork.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
             return
         }
-        musicArt.image = sizedArt
+        artwork.refresh(with: art)
     }
 }

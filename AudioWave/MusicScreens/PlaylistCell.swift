@@ -9,11 +9,11 @@
 import UIKit
 import MediaPlayer
 
-class PlaylistCell: SwCell
+class PlaylistCell: SwCell      //FIXME: SwiftUI, Crashed Because only one owner in XIB and two Classes are using it
 {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var musicArt: UIImageView!
+    @IBOutlet weak var artwork: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
     let playlist: Playlist
     let musicPlayer: AudioSource
@@ -27,8 +27,8 @@ class PlaylistCell: SwCell
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicArt.layer.cornerRadius = 10.0
-        musicArt.clipsToBounds = true
+        artwork.layer.cornerRadius = 10.0   //FIXME: RoundedImage
+        artwork.clipsToBounds = true
         titleLabel.text = playlist.name()
         detailLabel.text = "Dunno Yet"
         updateArt()
@@ -42,15 +42,12 @@ class PlaylistCell: SwCell
         navigationController?.pushViewController(playlistScreen, animated: true)
     }
 
-    //FIXME: Refactor, Duplicated in TrackCell
     func updateArt() {
-        //guard let song = playlist.representativeItem else { fatalError() }
-        let size = musicArt.bounds.size
-        guard let sizedArt = playlist.artwork()?.image(at: size) else {
-            musicArt.image = #imageLiteral(resourceName: "mediumNote") //FIXME: Use SFSymbol
+        guard let art = musicPlayer.artwork() else {
+            artwork.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
             return
         }
-        musicArt.image = sizedArt
+        artwork.refresh(with: art)
     }
 }
     

@@ -18,7 +18,6 @@ class Artwork: UIViewController
         self.player = player
         let a = UIImageView(frame: .zero)
         a.image = art
-        print(a.frame)
         self.artwork = a
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .blue
@@ -31,23 +30,21 @@ class Artwork: UIViewController
     required init?(coder: NSCoder) { fatalError() }
     
     @objc func playerDidLoad(notification: Notification) {
-        //FIXME: Extension on UIImageView perhaps? Duplicated in itemCell, artwork, playlistCell
-        let size = artwork.bounds.size
-        guard let sizedArt = player.artwork()?.image(at: size) else {
+        guard let art = player.artwork() else {
             artwork.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
             return
         }
-        artwork.image = sizedArt
+        artwork.refresh(with: art)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(artwork.frame)
-        let frame = CGRect(x: 0, y: 0, width: 375, height: 375)
-        artwork.frame = frame //view.bounds
-        print(artwork.frame)
+        //print(artwork.frame)
+        let frame = CGRect(x: 0, y: 0, width: 375, height: 375)  //FIXME: SwiftUI removes autolayout issues
+        artwork.frame = frame
+        //print(artwork.frame)
         artwork.backgroundColor = .green
-        artwork.contentMode = .scaleAspectFit  //FIXME: Scale is misbehaving
+        artwork.contentMode = .scaleAspectFit
         view.addSubview(artwork)
     }
 }

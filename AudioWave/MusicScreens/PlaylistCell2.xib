@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistCell" customModule="AudioWave" customModuleProvider="target">
             <connections>
+                <outlet property="artwork" destination="Tp9-Ty-TYG" id="7Rd-eo-6fd"/>
                 <outlet property="detailLabel" destination="2wa-Bj-Lct" id="Gv0-Vw-MoU"/>
                 <outlet property="indicator" destination="J03-4c-1ap" id="XJU-xS-hUd"/>
-                <outlet property="musicArt" destination="Tp9-Ty-TYG" id="bqS-I0-R6p"/>
                 <outlet property="titleLabel" destination="BSb-TY-FM2" id="e8P-Fi-l47"/>
                 <outlet property="view" destination="yx0-4p-Cu1" id="3AQ-UG-UDi"/>
             </connections>
