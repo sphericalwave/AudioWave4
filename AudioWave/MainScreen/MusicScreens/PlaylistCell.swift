@@ -15,10 +15,10 @@ class PlaylistCell: SwCell
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
-    let playlist: MPMediaPlaylist
+    let playlist: Playlist
     let musicPlayer: MusicPlayer
     
-    init(playlist: MPMediaPlaylist, musicPlayer: MusicPlayer) {
+    init(playlist: Playlist, musicPlayer: MusicPlayer) {
         self.playlist = playlist
         self.musicPlayer = musicPlayer
         super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Scrap XIB
@@ -29,7 +29,7 @@ class PlaylistCell: SwCell
         super.viewDidLoad()
         musicArt.layer.cornerRadius = 10.0
         musicArt.clipsToBounds = true
-        titleLabel.text = playlist.name
+        titleLabel.text = playlist.name()
         detailLabel.text = "Dunno Yet"
         updateArt()
     }
@@ -44,9 +44,9 @@ class PlaylistCell: SwCell
 
     //FIXME: Refactor, Duplicated in TrackCell
     func updateArt() {
-        guard let song = playlist.representativeItem else { fatalError() }
+        //guard let song = playlist.representativeItem else { fatalError() }
         let size = musicArt.bounds.size
-        guard let sizedArt = song.artwork?.image(at: size) else {
+        guard let sizedArt = playlist.artwork()?.image(at: size) else {
             musicArt.image = #imageLiteral(resourceName: "mediumNote") //FIXME: Use SFSymbol
             return
         }

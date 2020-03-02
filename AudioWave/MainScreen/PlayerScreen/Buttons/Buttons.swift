@@ -13,10 +13,10 @@ class Buttons: UIViewController
     @IBOutlet weak var playButton: PlayButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
-    let player: AudioPlayer
+    let player: MusicPlayer //FIXME: Naming
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init(player: AudioPlayer) {
+    init(player: MusicPlayer) {
         self.player = player
         super.init(nibName: "Buttons", bundle: nil)
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)

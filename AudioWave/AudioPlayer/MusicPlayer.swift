@@ -9,21 +9,27 @@
 import AVFoundation
 import MediaPlayer
 
-class MusicPlayer: AudioPlayer
+class MusicPlayer //: AudioPlayer
 {
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
-    var mediaItem: MPMediaItem?
+    //var mediaItem: MPMediaItem?
+    var playlist: Playlist? //FIXME: Be Immutable
     
     init(state: AudioPlayerState) {
         self.state = state
     }
     
+    func load(_ playlist: Playlist) {
+        self.playlist = playlist
+    }
+    
     func load(_ mediaItem: MPMediaItem) {
+        playlist?.play(mediaItem)    //FIXME: Don't Like This, Keeps Playlist State in Sync
         self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
         player?.prepareToPlay()
-        self.mediaItem = mediaItem
+//        self.mediaItem = mediaItem
         notifications.post(name: .didLoad, object: self)
     }
 
@@ -55,15 +61,24 @@ class MusicPlayer: AudioPlayer
         //FIXME:
         fatalError()
     }
-    func track() -> String { return mediaItem?.title ?? "No Track Name" }
+    func track() -> String {
+        //return mediaItem?.title ?? "No Track Name"
+        return "FIXME"
+    }
     
-    func artist() -> String { return mediaItem?.artist ?? "No Artist Name" }
+    func artist() -> String {
+        //return mediaItem?.artist ?? "No Artist Name"
+        return "FIXME"
+    }
     
     func album() -> String { return "FIXME" }
     
     func playback(mode: PlayMode) { fatalError() }
     
-    func artwork() -> MPMediaItemArtwork? { return mediaItem?.artwork }
+    func artwork() -> MPMediaItemArtwork? {
+        //return mediaItem?.artwork
+        return nil
+    }
     
     func elapsedTime() -> String {
         guard var cT = player?.currentTime else { fatalError() }    //FIXME: Var

@@ -12,9 +12,9 @@ class Artwork: UIViewController
 {
     let artwork: UIImageView!
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
-    let player: AudioPlayer
+    let player: MusicPlayer
 
-    init(art: UIImage, player: AudioPlayer) {
+    init(art: UIImage, player: MusicPlayer) {
         self.player = player
         let a = UIImageView()
         a.image = art

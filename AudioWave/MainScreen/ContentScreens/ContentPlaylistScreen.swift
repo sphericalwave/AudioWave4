@@ -23,9 +23,9 @@ class ContentPlaylistScreen: SwStaticTable
 class ContentPlaylistScreenData: SwStaticTableData
 {
     let playlist: MPMediaItemCollection
-    let contentPlayer: ContentPlayer
+    let contentPlayer: MusicPlayer //FIXME: Naming
     
-    init(playlist: MPMediaItemCollection, contentPlayer: ContentPlayer) {
+    init(playlist: MPMediaItemCollection, contentPlayer: MusicPlayer) {
         self.playlist = playlist
         self.contentPlayer = contentPlayer
         var trackCells = [ContentCell]()

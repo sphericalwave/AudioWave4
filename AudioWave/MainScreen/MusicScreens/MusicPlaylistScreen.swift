@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class MusicPlaylistScreen: SwStaticTable
 {
@@ -18,21 +19,19 @@ class MusicPlaylistScreen: SwStaticTable
     required init?(coder aDecoder: NSCoder) { fatalError() }
 }
 
-import MediaPlayer
-
 class MusicPlaylistScreenData: SwStaticTableData
 {
-    let playlist: MPMediaPlaylist
+    let playlist: Playlist
     
-    init(playlist: MPMediaPlaylist, musicPlayer: MusicPlayer) {
+    init(playlist: Playlist, musicPlayer: MusicPlayer) {
         self.playlist = playlist
         var trackCells = [TrackCell]()
-        for track in playlist.items {
-            let trackCell = TrackCell(mediaItem: track, musicPlayer: musicPlayer)
+        for track in playlist.mediaItems() {
+            let trackCell = TrackCell(mediaItem: track, musicPlayer: musicPlayer, playlist: playlist)
             trackCells.append(trackCell)
         }
         super.init(sections: [trackCells])
     }
     
-    func name() -> String { return playlist.name ?? "FIXME" }
+    func name() -> String { return playlist.name() }
 }

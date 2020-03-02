@@ -12,10 +12,10 @@ import MediaPlayer
 class Remote
 {
     let commandCenter = MPRemoteCommandCenter.shared() //FIXME: Hidden Dependency
-    let audioPlayer1: AudioPlayer
-    let audioPlayer2: AudioPlayer
+    let audioPlayer1: MusicPlayer
+    let audioPlayer2: MusicPlayer //FIXME: Naming
     
-    init(audioPlayer1: AudioPlayer, audioPlayer2: AudioPlayer) {
+    init(audioPlayer1: MusicPlayer, audioPlayer2: MusicPlayer) {
         self.audioPlayer1 = audioPlayer1
         self.audioPlayer2 = audioPlayer2
         setupRemoteControl()

@@ -15,9 +15,9 @@ class MainScreen: UIViewController
     let scrollScreen: Scroller
     let crossFader: CrossFader
     let musicPlayer: MusicPlayer
-    let contentPlayer: ContentPlayer
+    let contentPlayer: MusicPlayer
     
-    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: MusicPlayer, contentPlayer: ContentPlayer) {
+    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: MusicPlayer, contentPlayer: MusicPlayer) {
         self.scrollScreen = scrollScreen
         self.crossFader = crossFader
         self.musicPlayer = musicPlayer
@@ -28,7 +28,7 @@ class MainScreen: UIViewController
         
         let audioLibrary = AudioLibrary()
         
-        guard let musicPlaylists = audioLibrary.musicPlaylists() else { fatalError() } //FIXME: Fragile
+        let musicPlaylists = audioLibrary.playlists()
         guard let note = UIImage(systemName: "music.note.list") else { fatalError() }
         let musicPlaylistsScreenData = MusicPlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: musicPlayer)
         let musicPlaylistsScreen = MusicPlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: musicPlayer)

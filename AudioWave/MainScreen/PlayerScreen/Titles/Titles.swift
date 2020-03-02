@@ -13,9 +13,9 @@ class Titles: UIViewController
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
-    let player: AudioPlayer
+    let player: MusicPlayer
     
-    init(player: AudioPlayer) {
+    init(player: MusicPlayer) {
         self.player = player
         super.init(nibName: "Titles", bundle: nil)
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)

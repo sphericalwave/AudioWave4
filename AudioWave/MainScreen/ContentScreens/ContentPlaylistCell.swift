@@ -16,9 +16,9 @@ class ContentPlaylistCell: SwCell
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
     let playlist: MPMediaItemCollection
-    let contentPlayer: ContentPlayer //FIXME:
+    let contentPlayer: MusicPlayer //FIXME: Naming
     
-    init(playlist: MPMediaItemCollection, contentPlayer: ContentPlayer) {
+    init(playlist: MPMediaItemCollection, contentPlayer: MusicPlayer) {
         self.playlist = playlist
         self.contentPlayer = contentPlayer
         super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Scrap XIB
@@ -38,7 +38,7 @@ class ContentPlaylistCell: SwCell
     
     override func didSelect() {
         let data = ContentPlaylistScreenData(playlist: playlist, contentPlayer: contentPlayer)
-        let contentScreen = ContentPlaylistScreen(data: data)
+        let contentScreen = ContentPlaylistScreen(data: data)   //FIXME: Hidden Dependency
         navigationController?.pushViewController(contentScreen, animated: true)
     }
 

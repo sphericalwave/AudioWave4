@@ -17,11 +17,13 @@ class TrackCell: SwCell
     @IBOutlet weak var indicator: UIImageView!
     let mediaItem: MPMediaItem
     let musicPlayer: MusicPlayer
+    let playlist: Playlist
     override func height() -> CGFloat { return 81 }     //FIXME: What's the cleanest way to do this?
     
-    init(mediaItem: MPMediaItem, musicPlayer: MusicPlayer) {
+    init(mediaItem: MPMediaItem, musicPlayer: MusicPlayer, playlist: Playlist) {
         self.mediaItem = mediaItem
         self.musicPlayer = musicPlayer
+        self.playlist = playlist
         super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Remove XIB
         accessoryType = .none
         selectionStyle = .default
@@ -38,7 +40,8 @@ class TrackCell: SwCell
     }
     
     override func didSelect() {
-        musicPlayer.load(mediaItem)
+        musicPlayer.load(playlist)      //FIXME: Redundant after the initial load
+        musicPlayer.load(mediaItem)     //FIXME: Could use an index to be more direct
         musicPlayer.play()
     }
 

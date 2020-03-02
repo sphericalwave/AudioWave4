@@ -11,9 +11,9 @@ import MediaPlayer
 
 class MusicPlaylistsScreen: SwStaticTable
 {
-    let audioPlayer: AudioPlayer
+    let audioPlayer: MusicPlayer    //FIXME: Naming
     
-    init(data: SwStaticTableData, audioPlayer: AudioPlayer) {
+    init(data: SwStaticTableData, audioPlayer: MusicPlayer) {
         self.audioPlayer = audioPlayer
         super.init(data: data, hideBottomBar: false)
         self.title = "Music Playlists"
@@ -24,7 +24,7 @@ class MusicPlaylistsScreen: SwStaticTable
 
 class MusicPlaylistsScreenData: SwStaticTableData
 {
-    init(musicPlaylists: [MPMediaPlaylist], musicPlayer: MusicPlayer) {   //FIXME: Code in Constructor
+    init(musicPlaylists: [Playlist], musicPlayer: MusicPlayer) {   //FIXME: Code in Constructor
         var cells = [SwCell]()
         for playlist in musicPlaylists {
             let playlistCell = PlaylistCell(playlist: playlist, musicPlayer: musicPlayer)
