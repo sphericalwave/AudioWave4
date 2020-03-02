@@ -22,22 +22,25 @@ class Buttons: UIViewController
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
         notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: player)
         notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: player)
-
     }
     required init?(coder: NSCoder) { fatalError() }
     
-    @objc func playerDidLoad(notification: Notification) {
-        //FIXME: enable buttons?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        enable(false)
     }
     
+    func enable(_ bool: Bool) {
+        playButton.isEnabled = bool
+        nextButton.isEnabled = bool
+        previousButton.isEnabled = bool
+    }
+    
+    @objc func playerDidLoad(notification: Notification) { enable(true) }
     @objc func playerDidPlay(notification: Notification) { playButton.pause() }
-    
     @objc func playerDidPause(notification: Notification) { playButton.play() }
-    
     @IBAction func previous() { player.previous() }
-    
     @IBAction func next() { player.next() }
-    
     @IBAction func play() {
         if player.isPlaying() { player.pause() }
         else { player.play() }
