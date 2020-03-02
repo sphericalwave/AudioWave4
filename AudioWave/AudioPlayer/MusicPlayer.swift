@@ -9,18 +9,18 @@
 import AVFoundation
 import MediaPlayer
 
-class MusicPlayer //: AudioPlayer
+class MusicPlayer
 {
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
-    //var mediaItem: MPMediaItem?
     var playlist: Playlist? //FIXME: Be Immutable
     
     init(state: AudioPlayerState) {
         self.state = state
     }
     
+    //MARK: - Cells
     func load(_ playlist: Playlist) {
         self.playlist = playlist
     }
@@ -29,10 +29,10 @@ class MusicPlayer //: AudioPlayer
         playlist?.play(mediaItem)    //FIXME: Don't Like This, Keeps Playlist State in Sync
         self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
         player?.prepareToPlay()
-//        self.mediaItem = mediaItem
         notifications.post(name: .didLoad, object: self)
     }
-
+    
+    //MARK: - Buttons
     func play() {
         player?.play()
         notifications.post(name: .didPlay, object: self)
@@ -57,10 +57,18 @@ class MusicPlayer //: AudioPlayer
         fatalError()
     }
     
+    func isPlaying() -> Bool { return player?.isPlaying ?? false }
+
+    //MARK: - Secondary Buttons
     func speed(_ speed: Float) {
         //FIXME:
         fatalError()
     }
+    
+    func clock() {}
+    func loop() {}
+    
+    //MARK: - Titles
     func track() -> String {
         //return mediaItem?.title ?? "No Track Name"
         return "FIXME"
@@ -75,11 +83,13 @@ class MusicPlayer //: AudioPlayer
     
     func playback(mode: PlayMode) { fatalError() }
     
+    //MARK: - Artwork
     func artwork() -> MPMediaItemArtwork? {
         //return mediaItem?.artwork
         return nil
     }
     
+    //MARK: - Progress
     func elapsedTime() -> String {
         guard var cT = player?.currentTime else { fatalError() }    //FIXME: Var
         return cT.readable()
@@ -103,11 +113,16 @@ class MusicPlayer //: AudioPlayer
         guard let dur = player?.duration else { fatalError() }
         return Float( cT / dur )
     }
-    
-    func isPlaying() -> Bool { return player?.isPlaying ?? false }
-    
+        
+    //MARK: - Fader
     func volume(_ volume: Float) {
-        //player?.averagePower(forChannel: <#T##Int#>)  //FIXME: Interesting
-        player?.volume = volume
+        if let player = player {
+            player.isMeteringEnabled = true
+            player.updateMeters()
+            let left = player.averagePower(forChannel: 0)
+            let right = player.averagePower(forChannel: 1)
+            print("\(self)left: \(left) right: \(right)")
+            player.volume = volume
+        }
     }
 }

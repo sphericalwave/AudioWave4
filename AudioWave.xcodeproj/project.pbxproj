@@ -44,12 +44,7 @@
 		AF5F5EC923D65964005589E3 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
 		AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
 		AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
-		AF7513BD240988BD009242A2 /* ContentPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513BC240988BD009242A2 /* ContentPlayer.swift */; };
 		AF7513BF240988C9009242A2 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513BE240988C9009242A2 /* MusicPlayer.swift */; };
-		AF7513C22409922A009242A2 /* ContentPlaylistsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513C12409922A009242A2 /* ContentPlaylistsScreen.swift */; };
-		AF7513C4240993D6009242A2 /* ContentPlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513C3240993D6009242A2 /* ContentPlaylistCell.swift */; };
-		AF7513C624099462009242A2 /* ContentPlaylistScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513C524099462009242A2 /* ContentPlaylistScreen.swift */; };
-		AF7513CA24099503009242A2 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513C924099503009242A2 /* ContentCell.swift */; };
 		AF8809C123DC948F0081C400 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C023DC948F0081C400 /* Playlist.swift */; };
 		AF8809C323DC95C80081C400 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C223DC95C80081C400 /* TrackCell.swift */; };
 		AF8809C723DCF8570081C400 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C623DCF8570081C400 /* Notifications.swift */; };
@@ -58,7 +53,6 @@
 		AFA009A423D08EC700026DB6 /* CrossFader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA009A323D08EC700026DB6 /* CrossFader.xib */; };
 		AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB821731F69B6BE00E394BE /* Icons.xcassets */; };
 		AFAAAA2C24059DD000544545 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA2B24059DD000544545 /* ContentButton.swift */; };
-		AFAAAA2F2405A9EC00544545 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */; };
 		AFAAAA312406F4F000544545 /* AudioPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA302406F4F000544545 /* AudioPlayerState.swift */; };
 		AFAAAA332406F5AF00544545 /* AudioWaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA322406F5AF00544545 /* AudioWaveState.swift */; };
 		AFCBDB0823DC90DC002F6060 /* PlaylistCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCBDB0723DC90DC002F6060 /* PlaylistCell2.xib */; };
@@ -119,12 +113,7 @@
 		AF5F5EC823D65964005589E3 /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		AF62B1BD23D65E47002CD561 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
 		AF62B1C023D65FA0002CD561 /* Titles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Titles.xib; sourceTree = "<group>"; };
-		AF7513BC240988BD009242A2 /* ContentPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPlayer.swift; sourceTree = "<group>"; };
 		AF7513BE240988C9009242A2 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
-		AF7513C12409922A009242A2 /* ContentPlaylistsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPlaylistsScreen.swift; sourceTree = "<group>"; };
-		AF7513C3240993D6009242A2 /* ContentPlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPlaylistCell.swift; sourceTree = "<group>"; };
-		AF7513C524099462009242A2 /* ContentPlaylistScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPlaylistScreen.swift; sourceTree = "<group>"; };
-		AF7513C924099503009242A2 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		AF8809C023DC948F0081C400 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		AF8809C223DC95C80081C400 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		AF8809C623DCF8570081C400 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -132,7 +121,6 @@
 		AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		AFA009A323D08EC700026DB6 /* CrossFader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrossFader.xib; sourceTree = "<group>"; };
 		AFAAAA2B24059DD000544545 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
-		AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		AFAAAA302406F4F000544545 /* AudioPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerState.swift; sourceTree = "<group>"; };
 		AFAAAA322406F5AF00544545 /* AudioWaveState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWaveState.swift; sourceTree = "<group>"; };
 		AFB821731F69B6BE00E394BE /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -186,11 +174,6 @@
 				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
 				AF319EB623DC823700CFDCEF /* MusicButton.swift */,
 				AFAAAA2B24059DD000544545 /* ContentButton.swift */,
-				AF7513C7240994E1009242A2 /* MusicScreens */,
-				AF7513C8240994EF009242A2 /* ContentScreens */,
-				AF5F5EC723D65931005589E3 /* PlayerScreen */,
-				AF2490A823D65C5A00B66B70 /* CrossFader */,
-				AFF00CF423D662A0000BB3EB /* Scroller */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -331,7 +314,7 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		AF5F5EC723D65931005589E3 /* PlayerScreen */ = {
+		AF5F5EC723D65931005589E3 /* MusicPlayerUI */ = {
 			isa = PBXGroup;
 			children = (
 				AF51159423D655FA005FFC34 /* PlayerScreen.swift */,
@@ -342,7 +325,7 @@
 				AF62B1BF23D65E5A002CD561 /* Buttons */,
 				AF62B1BC23D65E36002CD561 /* Progress */,
 			);
-			path = PlayerScreen;
+			path = MusicPlayerUI;
 			sourceTree = "<group>";
 		};
 		AF62B1BC23D65E36002CD561 /* Progress */ = {
@@ -377,8 +360,6 @@
 		AF7513C024098F40009242A2 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				AFAAAA2E2405A9EC00544545 /* AudioPlayer.swift */,
-				AF7513BC240988BD009242A2 /* ContentPlayer.swift */,
 				AF7513BE240988C9009242A2 /* MusicPlayer.swift */,
 				AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */,
 				AF51E9F9240D948C00FC3F67 /* NowPlaying.swift */,
@@ -399,17 +380,6 @@
 				AF8809C223DC95C80081C400 /* TrackCell.swift */,
 			);
 			path = MusicScreens;
-			sourceTree = "<group>";
-		};
-		AF7513C8240994EF009242A2 /* ContentScreens */ = {
-			isa = PBXGroup;
-			children = (
-				AF7513C12409922A009242A2 /* ContentPlaylistsScreen.swift */,
-				AF7513C3240993D6009242A2 /* ContentPlaylistCell.swift */,
-				AF7513C524099462009242A2 /* ContentPlaylistScreen.swift */,
-				AF7513C924099503009242A2 /* ContentCell.swift */,
-			);
-			path = ContentScreens;
 			sourceTree = "<group>";
 		};
 		AFAAAA2D2405A90D00544545 /* SphericalWave */ = {
@@ -450,6 +420,10 @@
 				AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */,
 				AF7513C024098F40009242A2 /* AudioPlayer */,
 				AF2490A923D65C6E00B66B70 /* MainScreen */,
+				AF7513C7240994E1009242A2 /* MusicScreens */,
+				AF5F5EC723D65931005589E3 /* MusicPlayerUI */,
+				AF2490A823D65C5A00B66B70 /* CrossFader */,
+				AFF00CF423D662A0000BB3EB /* Scroller */,
 				AF51E3AC24070B4A00FE81D9 /* Data */,
 				AFAAAA2D2405A90D00544545 /* SphericalWave */,
 				AFB821731F69B6BE00E394BE /* Icons.xcassets */,
@@ -571,7 +545,6 @@
 				AF319EE923DC828A00CFDCEF /* SwDynamicTableData.swift in Sources */,
 				AF319EFB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift in Sources */,
 				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
-				AF7513BD240988BD009242A2 /* ContentPlayer.swift in Sources */,
 				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
 				AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */,
@@ -590,23 +563,18 @@
 				AF319EF223DC828A00CFDCEF /* SWImageCell.swift in Sources */,
 				AF8809C723DCF8570081C400 /* Notifications.swift in Sources */,
 				AFCE098D1F57328300A1D0EE /* LoopButton.swift in Sources */,
-				AF7513C624099462009242A2 /* ContentPlaylistScreen.swift in Sources */,
 				AFD8F36F23CE6FAB00BF6FE6 /* Scroller.swift in Sources */,
-				AFAAAA2F2405A9EC00544545 /* AudioPlayer.swift in Sources */,
 				AF319EF823DC828A00CFDCEF /* SwImageLabelCell.swift in Sources */,
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,
 				AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */,
 				AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */,
 				AFD8F36723CE69DC00BF6FE6 /* Progress.swift in Sources */,
 				AF319EEA23DC828A00CFDCEF /* SWEmptyTable.swift in Sources */,
-				AF7513CA24099503009242A2 /* ContentCell.swift in Sources */,
 				AFD8F36923CE6A2900BF6FE6 /* Buttons.swift in Sources */,
 				AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */,
 				AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */,
 				AFAAAA312406F4F000544545 /* AudioPlayerState.swift in Sources */,
-				AF7513C22409922A009242A2 /* ContentPlaylistsScreen.swift in Sources */,
 				AF3EB1F3240C639800E3DAC3 /* TimeInterval+Extensions.swift in Sources */,
-				AF7513C4240993D6009242A2 /* ContentPlaylistCell.swift in Sources */,
 				AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */,
 				AFA009A223D08DE000026DB6 /* UIViewController+Extensions.swift in Sources */,
 				AFD8F36B23CE6A5500BF6FE6 /* Artwork.swift in Sources */,

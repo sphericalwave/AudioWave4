@@ -25,8 +25,6 @@ class CrossFader: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.setThumbImage(#imageLiteral(resourceName: "Fader3"), for: .normal)
-        //slider.setMaximumTrackImage(#imageLiteral(resourceName: "transparentSlider"), for: .normal)
-        //slider.setMinimumTrackImage(#imageLiteral(resourceName: "transparentSlider"), for: .normal)
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
