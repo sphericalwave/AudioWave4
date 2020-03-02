@@ -82,7 +82,7 @@ class MusicPlayer //: AudioPlayer
     
     func elapsedTime() -> String {
         guard var cT = player?.currentTime else { fatalError() }    //FIXME: Var
-        return cT.readable() //humanReadableTimeInterval(cT)
+        return cT.readable()
     }
     
     func remainingTime() -> String {
@@ -106,5 +106,8 @@ class MusicPlayer //: AudioPlayer
     
     func isPlaying() -> Bool { return player?.isPlaying ?? false }
     
-    //FIXME: Volume
+    func volume(_ volume: Float) {
+        //player?.averagePower(forChannel: <#T##Int#>)  //FIXME: Interesting
+        player?.volume = volume
+    }
 }

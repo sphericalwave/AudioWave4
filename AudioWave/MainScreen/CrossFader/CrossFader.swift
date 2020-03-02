@@ -39,52 +39,28 @@ class CrossFader: UIViewController
          when t = 1, volumes[0] = 1, volumes[1] = 0
          */
         
-//        var contentVol: Float = 0
-//        var musicVol: Float = 0
-//        let s = sender.value
+        var leftPlayerVolume: Float = 0
+        var rightPlayerVolume: Float = 0
+        let s = sender.value
         
         //Log Cross Fader
-        //        let musicVol = (0.5 * (0.9 + s) ).squareRoot()  //Not Necessarily Ideal
-        //        let contentVol = (0.5 * (1 - s) ).squareRoot()
+        //let rightPlayerVolume = (0.5 * (0.9 + s) ).squareRoot()  //Not Necessarily Ideal
+        //let leftPlayerVolume = (0.5 * (1 - s) ).squareRoot()
         
-//        if s < -0.0414 {
-//            contentVol = 1
-//            musicVol = 0.707 + 0.707 * s
-//        }
-//        if s > -0.0414, s < 0.0414 {
-//            contentVol = 0.707 - 0.707 * s
-//            musicVol = 0.707 + 0.707 * s
-//        }
-//        if s > 0.0414 {
-//            contentVol = 0.707 - 0.707 * s
-//            musicVol = 1
-//        }
+        if s < -0.0414 {
+            leftPlayerVolume = 1
+            rightPlayerVolume = 0.707 + 0.707 * s
+        }
+        if s > -0.0414, s < 0.0414 {
+            leftPlayerVolume = 0.707 - 0.707 * s
+            rightPlayerVolume = 0.707 + 0.707 * s
+        }
+        if s > 0.0414 {
+            leftPlayerVolume = 0.707 - 0.707 * s
+            rightPlayerVolume = 1
+        }
         
-        //        audioBookPlayerVC.volume = contentVol
-        //        musicPlayerVC.volume = musicVol
+        player1.volume(leftPlayerVolume)
+        player2.volume(rightPlayerVolume)
     }
 }
-
-//let documentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-//let sliderURL = URL(fileURLWithPath: "slider", relativeTo: documentsDirectory)
-
-
-//    // MARK: - Archiving
-
-//    func save(_ notification: Notification) {
-
-// NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: .main, using: save)
-
-//        let saveSucceeded = NSKeyedArchiver.archiveRootObject(fader.value, toFile: SWCrossFaderVC.sliderURL.path)
-//        if !saveSucceeded {
-//            fatalError("Failed to save musicPlayer state...")
-//        }
-//    }
-//
-//    func restore() {
-//        guard let value = NSKeyedUnarchiver.unarchiveObject(withFile: SWCrossFaderVC.sliderURL.path) as? Float else {
-//            return
-//        }
-//        fader.value = value
-//        self.faderChanged(fader)
-//    }
