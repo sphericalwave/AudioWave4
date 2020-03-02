@@ -44,7 +44,7 @@
 		AF5F5EC923D65964005589E3 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
 		AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
 		AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
-		AF7513BF240988C9009242A2 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513BE240988C9009242A2 /* MusicPlayer.swift */; };
+		AF7513BF240988C9009242A2 /* AudioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513BE240988C9009242A2 /* AudioSource.swift */; };
 		AF8809C123DC948F0081C400 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C023DC948F0081C400 /* Playlist.swift */; };
 		AF8809C323DC95C80081C400 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C223DC95C80081C400 /* TrackCell.swift */; };
 		AF8809C723DCF8570081C400 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C623DCF8570081C400 /* Notifications.swift */; };
@@ -113,7 +113,7 @@
 		AF5F5EC823D65964005589E3 /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		AF62B1BD23D65E47002CD561 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
 		AF62B1C023D65FA0002CD561 /* Titles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Titles.xib; sourceTree = "<group>"; };
-		AF7513BE240988C9009242A2 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		AF7513BE240988C9009242A2 /* AudioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSource.swift; sourceTree = "<group>"; };
 		AF8809C023DC948F0081C400 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		AF8809C223DC95C80081C400 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		AF8809C623DCF8570081C400 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		AF7513C024098F40009242A2 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				AF7513BE240988C9009242A2 /* MusicPlayer.swift */,
+				AF7513BE240988C9009242A2 /* AudioSource.swift */,
 				AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */,
 				AF51E9F9240D948C00FC3F67 /* NowPlaying.swift */,
 				AFCE09811F57311500A1D0EE /* AudioHardware.swift */,
@@ -578,7 +578,7 @@
 				AF319EFE23DC828A00CFDCEF /* SwCell.swift in Sources */,
 				AFA009A223D08DE000026DB6 /* UIViewController+Extensions.swift in Sources */,
 				AFD8F36B23CE6A5500BF6FE6 /* Artwork.swift in Sources */,
-				AF7513BF240988C9009242A2 /* MusicPlayer.swift in Sources */,
+				AF7513BF240988C9009242A2 /* AudioSource.swift in Sources */,
 				AF319EFD23DC828A00CFDCEF /* SwQuadLabelImageCell.swift in Sources */,
 				AFCE09821F57311500A1D0EE /* AudioHardware.swift in Sources */,
 				AF3EB1F5240C6DD900E3DAC3 /* Remote.swift in Sources */,

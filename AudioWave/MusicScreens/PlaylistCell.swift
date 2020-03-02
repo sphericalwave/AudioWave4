@@ -16,9 +16,9 @@ class PlaylistCell: SwCell
     @IBOutlet weak var musicArt: UIImageView!
     @IBOutlet weak var indicator: UIImageView!
     let playlist: Playlist
-    let musicPlayer: MusicPlayer
+    let musicPlayer: AudioSource
     
-    init(playlist: Playlist, musicPlayer: MusicPlayer) {
+    init(playlist: Playlist, musicPlayer: AudioSource) {
         self.playlist = playlist
         self.musicPlayer = musicPlayer
         super.init(nibName: "PlaylistCell2", bundle: nil)   //FIXME: Scrap XIB

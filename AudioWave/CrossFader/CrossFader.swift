@@ -11,10 +11,10 @@ import UIKit
 class CrossFader: UIViewController
 {
     @IBOutlet weak var slider: UISlider!
-    let player1: MusicPlayer    //FIXME: Naming
-    let player2: MusicPlayer
+    let player1: AudioSource    //FIXME: Naming
+    let player2: AudioSource
     
-    init(player1: MusicPlayer, player2: MusicPlayer) {
+    init(player1: AudioSource, player2: AudioSource) {
         self.player1 = player1
         self.player2 = player2
         super.init(nibName: "CrossFader", bundle: nil)

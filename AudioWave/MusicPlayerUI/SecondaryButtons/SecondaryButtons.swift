@@ -14,10 +14,10 @@ class SecondaryButtons: UIViewController
     @IBOutlet weak var speedButton: SpeedButton!
     @IBOutlet weak var clockButton: UIButton!
     
-    let player: MusicPlayer
+    let player: AudioSource
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init(player: MusicPlayer) {
+    init(player: AudioSource) {
         self.player = player
         super.init(nibName: "SecondaryButtons", bundle: nil)
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)

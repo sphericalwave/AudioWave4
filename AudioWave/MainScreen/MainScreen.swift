@@ -14,10 +14,10 @@ class MainScreen: UIViewController
     @IBOutlet weak var scrollPageContainer: UIView!
     let scrollScreen: Scroller
     let crossFader: CrossFader
-    let musicPlayer: MusicPlayer
-    let contentPlayer: MusicPlayer
+    let musicPlayer: AudioSource
+    let contentPlayer: AudioSource
     
-    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: MusicPlayer, contentPlayer: MusicPlayer) {
+    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: AudioSource, contentPlayer: AudioSource) {
         self.scrollScreen = scrollScreen
         self.crossFader = crossFader
         self.musicPlayer = musicPlayer

@@ -14,10 +14,10 @@ class Progress: UIViewController
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var remainingTimeLabel: UILabel!
     var timer: Timer?   //FIXME: Nil & Hidden Dependency
-    let player: MusicPlayer //FIXME: Naming
+    let player: AudioSource //FIXME: Naming
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init(player: MusicPlayer) {
+    init(player: AudioSource) {
         self.player = player
         super.init(nibName: "Progress", bundle: nil)
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)

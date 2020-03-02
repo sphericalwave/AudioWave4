@@ -17,10 +17,10 @@ class AudioWave: UINavigationController
         let aPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
         let state = AudioWaveState(musicPlayerState: mPS, audioPlayerState: aPS, crossFader: 0.5, activeScreen: 0)
         
-        let musicPlayer = MusicPlayer(state: mPS)
+        let musicPlayer = AudioSource(state: mPS)
         let p1 = PlayerScreen(player: musicPlayer)
         
-        let contentPlayer = MusicPlayer(state: aPS) //FIXME: Naming
+        let contentPlayer = AudioSource(state: aPS) //FIXME: Naming
         let p22 = PlayerScreen(player: contentPlayer)
         
         let sS = Scroller(playbackScreen1: p1, playbackScreen2: p22, state: state)

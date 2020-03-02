@@ -10,14 +10,15 @@ import UIKit
 
 class Artwork: UIViewController
 {
-    let artwork: UIImageView!
+    let artwork: UIImageView
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
-    let player: MusicPlayer
+    let player: AudioSource
 
-    init(art: UIImage, player: MusicPlayer) {
+    init(art: UIImage, player: AudioSource) {
         self.player = player
-        let a = UIImageView()
+        let a = UIImageView(frame: .zero)
         a.image = art
+        print(a.frame)
         self.artwork = a
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .blue
@@ -30,6 +31,7 @@ class Artwork: UIViewController
     required init?(coder: NSCoder) { fatalError() }
     
     @objc func playerDidLoad(notification: Notification) {
+        //FIXME: Extension on UIImageView perhaps? Duplicated in itemCell, artwork, playlistCell
         let size = artwork.bounds.size
         guard let sizedArt = player.artwork()?.image(at: size) else {
             artwork.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
@@ -40,7 +42,10 @@ class Artwork: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        artwork.frame = view.frame
+        print(artwork.frame)
+        let frame = CGRect(x: 0, y: 0, width: 375, height: 375)
+        artwork.frame = frame //view.bounds
+        print(artwork.frame)
         artwork.backgroundColor = .green
         artwork.contentMode = .scaleAspectFit  //FIXME: Scale is misbehaving
         view.addSubview(artwork)

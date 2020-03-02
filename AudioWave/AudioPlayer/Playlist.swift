@@ -9,7 +9,7 @@
 import UIKit
 import MediaPlayer
 
-class Playlist //: Codable
+class Playlist //FIXME: Codable
 {
     let mediaItemCollection: MPMediaItemCollection
     var index: Int  //FIXME: Be Immutable
@@ -40,17 +40,16 @@ class Playlist //: Codable
         return mediaItemCollection.items[index]
     }
     
-    func mediaItems() -> [MPMediaItem] {
-        return mediaItemCollection.items
-    }
+    func mediaItems() -> [MPMediaItem] { return mediaItemCollection.items }
     
-    func artwork() -> MPMediaItemArtwork? {
-        return mediaItemCollection.representativeItem?.artwork
-    }
+    func artwork() -> MPMediaItemArtwork? { return mediaItemCollection.representativeItem?.artwork }
+    //FIXME: Handle MPMediaPlaylist condition
     
     func play(_ mediaItem: MPMediaItem) {   //FIXME: To Keep Playlist in Sync
         guard let newIndex = mediaItemCollection.items.firstIndex(of: mediaItem) else { fatalError() }
         index = newIndex
     }
+    
+    func currentItem() -> MPMediaItem { return mediaItemCollection.items[index] }
 }
 

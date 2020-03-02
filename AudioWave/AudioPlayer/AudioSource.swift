@@ -9,7 +9,7 @@
 import AVFoundation
 import MediaPlayer
 
-class MusicPlayer
+class AudioSource
 {
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
@@ -85,8 +85,8 @@ class MusicPlayer
     
     //MARK: - Artwork
     func artwork() -> MPMediaItemArtwork? {
-        //return mediaItem?.artwork
-        return nil
+        guard let artwork = playlist?.currentItem().artwork else { return nil }
+        return artwork
     }
     
     //MARK: - Progress

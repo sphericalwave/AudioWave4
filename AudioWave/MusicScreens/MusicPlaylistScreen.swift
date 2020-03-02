@@ -23,7 +23,7 @@ class MusicPlaylistScreenData: SwStaticTableData
 {
     let playlist: Playlist
     
-    init(playlist: Playlist, musicPlayer: MusicPlayer) {
+    init(playlist: Playlist, musicPlayer: AudioSource) {
         self.playlist = playlist
         var trackCells = [TrackCell]()
         for track in playlist.mediaItems() {
