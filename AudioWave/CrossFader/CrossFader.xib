@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CrossFader" customModule="AudioWave" customModuleProvider="target">
             <connections>
+                <outlet property="meterOne" destination="QUa-P6-IpF" id="F5N-8O-sIg"/>
+                <outlet property="meterTwo" destination="skE-Cl-RIh" id="7AB-lj-o5R"/>
                 <outlet property="slider" destination="QUU-Lv-YG3" id="Evz-sd-dfu"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lSB-QE-KcI"/>
             </connections>
@@ -18,18 +20,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QUU-Lv-YG3">
-                    <rect key="frame" x="43" y="18" width="289" height="37"/>
+                    <rect key="frame" x="40" y="18" width="295" height="37"/>
                     <connections>
                         <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="oeZ-bU-NTB"/>
                     </connections>
                 </slider>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skE-Cl-RIh" customClass="UIImageView">
+                    <rect key="frame" x="342" y="18" width="24" height="36"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="twP-Qu-qSH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-P6-IpF" customClass="UIImageView">
+                    <rect key="frame" x="9" y="18" width="24" height="36"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="SgO-mU-Ssd"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="QUU-Lv-YG3" secondAttribute="trailing" constant="45" id="6L4-YD-k4U"/>
                 <constraint firstAttribute="bottom" secondItem="QUU-Lv-YG3" secondAttribute="bottom" constant="45" id="Gmy-CO-NlO"/>
+                <constraint firstItem="QUa-P6-IpF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="RQu-2w-KaI"/>
+                <constraint firstItem="skE-Cl-RIh" firstAttribute="leading" secondItem="QUU-Lv-YG3" secondAttribute="trailing" constant="9" id="U9o-Dc-1Ap"/>
+                <constraint firstAttribute="trailing" secondItem="skE-Cl-RIh" secondAttribute="trailing" constant="9" id="XTJ-eY-hYv"/>
+                <constraint firstItem="skE-Cl-RIh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="bgk-Zg-NqZ"/>
+                <constraint firstItem="QUU-Lv-YG3" firstAttribute="leading" secondItem="QUa-P6-IpF" secondAttribute="trailing" constant="9" id="ecr-Ft-Zhn"/>
                 <constraint firstItem="QUU-Lv-YG3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="ed1-Pb-Q5r"/>
-                <constraint firstItem="QUU-Lv-YG3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="p6k-Ez-vLW"/>
+                <constraint firstAttribute="bottom" secondItem="skE-Cl-RIh" secondAttribute="bottom" constant="45" id="fhk-Oh-e4Y"/>
+                <constraint firstItem="QUa-P6-IpF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="iEo-bP-0XB"/>
+                <constraint firstAttribute="bottom" secondItem="QUa-P6-IpF" secondAttribute="bottom" constant="45" id="pai-8G-7Tp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-60.14492753623189" y="-25.111607142857142"/>

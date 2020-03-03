@@ -23,11 +23,11 @@ class AudioSourceUI: UIViewController
     let secondaryButtons: SecondaryButtons
     
     convenience init(player: AudioSource) {
-        let t2 = Titles(player: player)
+        let t2 = Titles(audioSource: player)
         let p2 = Progress(player: player)
         let b2 = Buttons(player: player)
         let secondaryBtns = SecondaryButtons(player: player)
-        guard let book = UIImage(systemName: "music.note") else { fatalError() }
+        guard let book = UIImage(systemName: "command") else { fatalError() }
         let a2 = Artwork(art: book, player: player)
         self.init(player: player, titles: t2, buttons: b2, progress: p2, artwork: a2, secondaryButtons: secondaryBtns)
     }

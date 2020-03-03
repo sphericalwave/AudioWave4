@@ -31,6 +31,8 @@ class MediaCell: AudioWaveCell
         audioSource.load(playlist)      //FIXME: Redundant after the initial load
         audioSource.load(mediaItem)     //FIXME: Could use an index to be more direct
         audioSource.play()
+        //self.navigationController?.popToRootViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     override func updateArt() {

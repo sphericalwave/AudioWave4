@@ -72,12 +72,14 @@ class AudioSource
     //MARK: - Titles
     func track() -> String {
         //return mediaItem?.title ?? "No Track Name"
-        return "FIXME"
+        guard let mediaItem = playlist?.currentItem() else { return "FIXME track()" }
+        return mediaItem.title ?? "FIXME track() 2"
     }
     
     func artist() -> String {
         //return mediaItem?.artist ?? "No Artist Name"
-        return "FIXME"
+        guard let mediaItem = playlist?.currentItem() else { return "FIXME artist()" }
+        return mediaItem.artist ?? "FIXME artist() 2"
     }
     
     func album() -> String { return "FIXME" }

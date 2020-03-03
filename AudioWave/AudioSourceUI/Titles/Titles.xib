@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-DL-WtC">
-                    <rect key="frame" x="114.5" y="7.5" width="185" height="66"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-DL-WtC">
+                    <rect key="frame" x="114.5" y="10" width="185" height="61"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-j2-fiJ" customClass="MarqueeLabel" customModule="AudioWave" customModuleProvider="target">
                             <rect key="frame" x="44" y="0.0" width="97" height="29"/>
@@ -35,7 +35,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Please Tap Rectangle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-7g-Tj6" customClass="MarqueeLabel" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="37" width="185" height="29"/>
+                            <rect key="frame" x="0.0" y="37" width="185" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="wIa-DL-WtC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2dP-mr-ot9"/>
                 <constraint firstItem="wIa-DL-WtC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K38-Uk-jla"/>

@@ -31,7 +31,8 @@ class Artwork: UIViewController
     
     @objc func playerDidLoad(notification: Notification) {
         guard let art = player.artwork() else {
-            artwork.image = #imageLiteral(resourceName: "mediumNote")  //FIXME: Use SFSymbol
+            guard let playCircle = UIImage(systemName: "play.circle") else { fatalError() }
+            artwork.image = playCircle
             return
         }
         artwork.refresh(with: art)

@@ -11,6 +11,8 @@ import UIKit
 class CrossFader: UIViewController
 {
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var meterOne: UIImageView!
+    @IBOutlet weak var meterTwo: UIImageView!
     let player1: AudioSource    //FIXME: Naming
     let player2: AudioSource
     
@@ -25,40 +27,47 @@ class CrossFader: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.setThumbImage(#imageLiteral(resourceName: "Fader3"), for: .normal)
+        meterOne.image = #imageLiteral(resourceName: "volume_meter")
+        meterTwo.image = #imageLiteral(resourceName: "volume_meter")
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
+        phiFade(position: sender.value)
+    }
+    
+    func phiFade(position: Float) {
+        var vol1: Float = 1
+        var vol2: Float = 2
         
-        //TODO: Change Player1 and PLayer2 Volumes
-        /*
-         returns a float array with two indexes representing the volumes of the left (index 0) and right (index 1) channels
-         when t is -1, volumes[0] = 0, volumes[1] = 1
-         when t = 0, volumes[0] = 0.707, volumes[1] = 0.707 (equal-power cross fade)
-         when t = 1, volumes[0] = 1, volumes[1] = 0
-         */
-        
-        var leftPlayerVolume: Float = 0
-        var rightPlayerVolume: Float = 0
-        let s = sender.value
-        
+        if position < 0.5 {
+            vol1 = 2 * position
+            vol2 = 1
+        }
+        if position >= 0.5 {
+            vol1 = 1
+            vol2 = -2 * position + 2
+        }
+        player1.volume(vol2)   //FIXME: These are swapped the wrong way as written but actually correct
+        player2.volume(vol1)
+    }
+    
+    func logFade(position: Float) {
         //Log Cross Fader
         //let rightPlayerVolume = (0.5 * (0.9 + s) ).squareRoot()  //Not Necessarily Ideal
         //let leftPlayerVolume = (0.5 * (1 - s) ).squareRoot()
         
-        if s < -0.0414 {
-            leftPlayerVolume = 1
-            rightPlayerVolume = 0.707 + 0.707 * s
-        }
-        if s > -0.0414, s < 0.0414 {
-            leftPlayerVolume = 0.707 - 0.707 * s
-            rightPlayerVolume = 0.707 + 0.707 * s
-        }
-        if s > 0.0414 {
-            leftPlayerVolume = 0.707 - 0.707 * s
-            rightPlayerVolume = 1
-        }
-        
-        player1.volume(leftPlayerVolume)
-        player2.volume(rightPlayerVolume)
+//        if s < -0.0414 {
+//            leftPlayerVolume = 1
+//            rightPlayerVolume = 0.707 + 0.707 * s
+//        }
+//        if s > -0.0414, s < 0.0414 {
+//            leftPlayerVolume = 0.707 - 0.707 * s
+//            rightPlayerVolume = 0.707 + 0.707 * s
+//        }
+//        if s > 0.0414 {
+//            leftPlayerVolume = 0.707 - 0.707 * s
+//            rightPlayerVolume = 1
+//        }
     }
+    
 }

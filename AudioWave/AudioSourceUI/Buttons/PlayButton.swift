@@ -33,6 +33,7 @@ class PlayButton: UIButton
         self.playIcon = play
         super.init(coder: coder)
         setImage(playIcon, for: .normal)
+        //self.imageView?.contentMode = .scaleAspectFill //Scale Icons
         //self.addTarget(self, action: #selector(nextState), for: .touchUpInside)
     }
     
