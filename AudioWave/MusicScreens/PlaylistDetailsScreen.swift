@@ -9,9 +9,9 @@
 import UIKit
 import MediaPlayer
 
-class MusicPlaylistScreen: SwStaticTable
+class PlaylistDetailsScreen: SwStaticTable  //FIXME: Lists
 {
-    init(data: MusicPlaylistScreenData) {
+    init(data: PlaylistDetailsData) {
         super.init(data: data, hideBottomBar: false)
         self.title = data.name()
         navigationItem.rightBarButtonItem = SwDismissButton(parentScreen: self)
@@ -19,15 +19,15 @@ class MusicPlaylistScreen: SwStaticTable
     required init?(coder aDecoder: NSCoder) { fatalError() }
 }
 
-class MusicPlaylistScreenData: SwStaticTableData
+class PlaylistDetailsData: SwStaticTableData
 {
     let playlist: Playlist
     
     init(playlist: Playlist, musicPlayer: AudioSource) {
         self.playlist = playlist
-        var trackCells = [TrackCell]()
+        var trackCells = [MediaCell]()
         for track in playlist.mediaItems() {
-            let trackCell = TrackCell(mediaItem: track, musicPlayer: musicPlayer, playlist: playlist)
+            let trackCell = MediaCell(mediaItem: track, musicPlayer: musicPlayer, playlist: playlist)
             trackCells.append(trackCell)
         }
         super.init(sections: [trackCells])

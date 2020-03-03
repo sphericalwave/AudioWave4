@@ -9,7 +9,7 @@
 import UIKit
 import MediaPlayer
 
-class MusicPlaylistsScreen: SwStaticTable
+class PlaylistsScreen: SwStaticTable    //FIXME: Lists
 {
     let audioPlayer: AudioSource    //FIXME: Naming
     
@@ -22,7 +22,7 @@ class MusicPlaylistsScreen: SwStaticTable
     required init?(coder aDecoder: NSCoder) { fatalError() }
 }
 
-class MusicPlaylistsScreenData: SwStaticTableData
+class PlaylistsScreenData: SwStaticTableData
 {
     init(musicPlaylists: [Playlist], musicPlayer: AudioSource) {   //FIXME: Code in Constructor
         var cells = [SwCell]()

@@ -31,15 +31,15 @@ class MainScreen: UIViewController
         //FIXME: Refactor into Buttons
         let musicPlaylists = audioLibrary.playlists()
         guard let note = UIImage(systemName: "music.note.list") else { fatalError() }
-        let musicPlaylistsScreenData = MusicPlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: musicPlayer)
-        let musicPlaylistsScreen = MusicPlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: musicPlayer)
+        let musicPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: musicPlayer)
+        let musicPlaylistsScreen = PlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: musicPlayer)
         let musicPlaylistsButton = SwModalButton(image: note, destinationScreen: musicPlaylistsScreen, parentScreen: self)
         navigationItem.leftBarButtonItem = musicPlaylistsButton
         
         //FIXME: Refactor into Buttons
         guard let book = UIImage(systemName: "book") else { fatalError() }
-        let contentPlaylistsScreenData = MusicPlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: contentPlayer)
-        let contentPlaylistsScreen = MusicPlaylistsScreen(data: contentPlaylistsScreenData, audioPlayer: contentPlayer)
+        let contentPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: contentPlayer)
+        let contentPlaylistsScreen = PlaylistsScreen(data: contentPlaylistsScreenData, audioPlayer: contentPlayer)
         let contentPlaylistsButton = SwModalButton(image: book, destinationScreen: contentPlaylistsScreen, parentScreen: self)
         navigationItem.rightBarButtonItem = contentPlaylistsButton
     }

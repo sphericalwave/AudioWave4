@@ -27,7 +27,8 @@ class AudioSource
     
     func load(_ mediaItem: MPMediaItem) {
         playlist?.play(mediaItem)    //FIXME: Don't Like This, Keeps Playlist State in Sync
-        self.player = try! AVAudioPlayer(contentsOf: mediaItem.assetURL!)   //FIXME: Fragile
+        guard let url = mediaItem.assetURL else { fatalError() }
+        self.player = try! AVAudioPlayer(contentsOf: url)   //FIXME: Fragile
         player?.prepareToPlay()
         notifications.post(name: .didLoad, object: self)
     }
@@ -85,7 +86,9 @@ class AudioSource
     
     //MARK: - Artwork
     func artwork() -> MPMediaItemArtwork? {
-        guard let artwork = playlist?.currentItem().artwork else { return nil }
+        guard let artwork = playlist?.currentItem().artwork else {
+            return nil
+        }
         return artwork
     }
     

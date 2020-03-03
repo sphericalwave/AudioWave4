@@ -39,11 +39,8 @@ class Artwork: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(artwork.frame)
         let frame = CGRect(x: 0, y: 0, width: 375, height: 375)  //FIXME: SwiftUI removes autolayout issues
         artwork.frame = frame
-        //print(artwork.frame)
-        artwork.backgroundColor = .green
         artwork.contentMode = .scaleAspectFit
         view.addSubview(artwork)
     }

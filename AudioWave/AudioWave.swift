@@ -18,10 +18,10 @@ class AudioWave: UINavigationController
         let state = AudioWaveState(musicPlayerState: mPS, audioPlayerState: aPS, crossFader: 0.5, activeScreen: 0)
         
         let musicPlayer = AudioSource(state: mPS)
-        let p1 = PlayerScreen(player: musicPlayer)
+        let p1 = AudioSourceUI(player: musicPlayer)
         
         let contentPlayer = AudioSource(state: aPS) //FIXME: Naming
-        let p22 = PlayerScreen(player: contentPlayer)
+        let p22 = AudioSourceUI(player: contentPlayer)
         
         let sS = Scroller(playbackScreen1: p1, playbackScreen2: p22, state: state)
         let cF = CrossFader(player1: musicPlayer, player2: contentPlayer)

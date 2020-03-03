@@ -19,9 +19,18 @@ class Playlist //FIXME: Codable
         self.index = 0
     }
     
-    func name() -> String {
-        //if mediaItemCollection is MPMediaPlaylist {  }
-        return "FIXME"
+    func name() -> String { //FIXME: Naming, mainText() -> String
+        if let playlist = mediaItemCollection as? MPMediaPlaylist {
+            return playlist.name ?? "Unnamed Playlist"
+        }
+        return mediaItemCollection.representativeItem?.albumTitle ?? "Unnamed Audiobook"
+    }
+    
+    func details() -> String {  //FIXME: Extend MPMediaItemCollection
+        if let playlist = mediaItemCollection as? MPMediaPlaylist {
+            return playlist.name ?? "Unnamed Playlist Details"
+        }
+        return mediaItemCollection.representativeItem?.albumTitle ?? "Unnamed Audiobook Details"
     }
     
     func random() -> MPMediaItem {
@@ -50,6 +59,9 @@ class Playlist //FIXME: Codable
         index = newIndex
     }
     
-    func currentItem() -> MPMediaItem { return mediaItemCollection.items[index] }
+    func currentItem() -> MPMediaItem {
+        let item = mediaItemCollection.items[index]
+        return item
+    }
 }
 

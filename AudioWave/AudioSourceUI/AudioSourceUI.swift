@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlayerScreen: UIViewController
+class AudioSourceUI: UIViewController
 {
     @IBOutlet weak var progressContainer: UIView!
     @IBOutlet weak var artworkContainer: UIView!
@@ -39,7 +39,7 @@ class PlayerScreen: UIViewController
         self.buttons = buttons
         self.player = player
         self.secondaryButtons = secondaryButtons
-        super.init(nibName: "PlayerScreen", bundle: nil)
+        super.init(nibName: "AudioSourceUI", bundle: nil)
         view.backgroundColor = .white
         view.layer.cornerRadius = 10.0
         view.clipsToBounds = true
