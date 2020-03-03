@@ -14,15 +14,15 @@ class Progress: UIViewController
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var remainingTimeLabel: UILabel!
     var timer: Timer?   //FIXME: Nil & Hidden Dependency
-    let player: AudioSource //FIXME: Naming
+    let audioSource: AudioSource //FIXME: Naming
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init(player: AudioSource) {
-        self.player = player
+    init(audioSource: AudioSource) {
+        self.audioSource = audioSource
         super.init(nibName: "Progress", bundle: nil)
-        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
-        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: player)
-        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: player)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: audioSource)
+        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: audioSource)
+        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: audioSource)
     }
     required init?(coder: NSCoder) { fatalError() }
     
@@ -38,15 +38,15 @@ class Progress: UIViewController
     @objc func playerDidPause(notification: Notification) { timer?.invalidate() }
     
     func startTimer() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.elapsedTimeLabel.text = self.player.elapsedTime()
-            self.remainingTimeLabel.text = self.player.remainingTime()
-            self.slider.value = self.player.percentage()
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { _ in
+            self.elapsedTimeLabel.text = self.audioSource.elapsedTime()
+            self.remainingTimeLabel.text = self.audioSource.remainingTime()
+            self.slider.value = self.audioSource.percentage()
         }
     }
     
     @IBAction func sliderChanged(_ sender: AnyObject) {
-        player.seekTo(percentage: slider.value)
+        audioSource.seekTo(percentage: slider.value)
     }
 }
 

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Titles" customModule="AudioWave" customModuleProvider="target">
             <connections>
-                <outlet property="descriptionLabel" destination="2dI-7g-Tj6" id="uaj-cl-ezQ"/>
-                <outlet property="titleLabel" destination="yOC-j2-fiJ" id="4IJ-h1-Af3"/>
+                <outlet property="descriptionContainer" destination="XbQ-Ge-MA1" id="WW8-8P-tOA"/>
+                <outlet property="titleContainer" destination="9vO-m2-ogP" id="fki-4m-s8r"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1nM-e9-i0C"/>
             </connections>
         </placeholder>
@@ -20,41 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-DL-WtC">
-                    <rect key="frame" x="114.5" y="10" width="185" height="61"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-DL-WtC">
+                    <rect key="frame" x="9" y="0.0" width="396" height="81"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-j2-fiJ" customClass="MarqueeLabel" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="44" y="0.0" width="97" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
-                                    <real key="value" value="21"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Please Tap Rectangle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-7g-Tj6" customClass="MarqueeLabel" customModule="AudioWave" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="37" width="185" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
-                                    <real key="value" value="21"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vO-m2-ogP">
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="36.5"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbQ-Ge-MA1">
+                            <rect key="frame" x="0.0" y="44.5" width="396" height="36.5"/>
+                            <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="wIa-DL-WtC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2dP-mr-ot9"/>
+                <constraint firstAttribute="trailing" secondItem="wIa-DL-WtC" secondAttribute="trailing" constant="9" id="DPX-P6-aNO"/>
                 <constraint firstItem="wIa-DL-WtC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K38-Uk-jla"/>
+                <constraint firstAttribute="bottom" secondItem="wIa-DL-WtC" secondAttribute="bottom" id="PTf-Qd-qm4"/>
+                <constraint firstItem="wIa-DL-WtC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dI5-gl-RMc"/>
+                <constraint firstItem="wIa-DL-WtC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="ztL-JH-evU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="178" y="89"/>
         </view>
     </objects>

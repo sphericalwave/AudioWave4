@@ -13,15 +13,15 @@ class Buttons: UIViewController
     @IBOutlet weak var playButton: PlayButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
-    let player: AudioSource //FIXME: Naming
+    let audioSource: AudioSource //FIXME: Naming
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init(player: AudioSource) {
-        self.player = player
+    init(audioSource: AudioSource) {
+        self.audioSource = audioSource
         super.init(nibName: "Buttons", bundle: nil)
-        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
-        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: player)
-        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: player)
+        notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: audioSource)
+        notifications.addObserver(self, selector: #selector(playerDidPlay), name: .didPlay, object: audioSource)
+        notifications.addObserver(self, selector: #selector(playerDidPause), name: .didPause, object: audioSource)
     }
     required init?(coder: NSCoder) { fatalError() }
     
@@ -39,10 +39,10 @@ class Buttons: UIViewController
     @objc func playerDidLoad(notification: Notification) { enable(true) }
     @objc func playerDidPlay(notification: Notification) { playButton.pause() }
     @objc func playerDidPause(notification: Notification) { playButton.play() }
-    @IBAction func previous() { player.previous() }
-    @IBAction func next() { player.next() }
+    @IBAction func previous() { audioSource.previous() }
+    @IBAction func next() { audioSource.next() }
     @IBAction func play() {
-        if player.isPlaying() { player.pause() }
-        else { player.play() }
+        if audioSource.isPlaying() { audioSource.pause() }
+        else { audioSource.play() }
     }
 }

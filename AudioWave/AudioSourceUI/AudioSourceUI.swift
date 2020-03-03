@@ -15,29 +15,29 @@ class AudioSourceUI: UIViewController
     @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var secondaryButtonContainer: UIView!
     @IBOutlet weak var textContainer: UIView!
-    let player: AudioSource //FIXME: Naming
+    let audioSource: AudioSource //FIXME: Naming
     let titles: Titles
     let progress: Progress
     let artwork: Artwork
     let buttons: Buttons
     let secondaryButtons: SecondaryButtons
     
-    convenience init(player: AudioSource) {
-        let t2 = Titles(audioSource: player)
-        let p2 = Progress(player: player)
-        let b2 = Buttons(player: player)
-        let secondaryBtns = SecondaryButtons(player: player)
+    convenience init(audioSource: AudioSource) {
+        let t2 = Titles(audioSource: audioSource)
+        let p2 = Progress(audioSource: audioSource)
+        let b2 = Buttons(audioSource: audioSource)
+        let secondaryBtns = SecondaryButtons(audioSource: audioSource)
         guard let book = UIImage(systemName: "command") else { fatalError() }
-        let a2 = Artwork(art: book, player: player)
-        self.init(player: player, titles: t2, buttons: b2, progress: p2, artwork: a2, secondaryButtons: secondaryBtns)
+        let a2 = Artwork(art: book, player: audioSource)
+        self.init(audioSource: audioSource, titles: t2, buttons: b2, progress: p2, artwork: a2, secondaryButtons: secondaryBtns)
     }
 
-    init(player: AudioSource, titles: Titles, buttons: Buttons, progress: Progress, artwork: Artwork, secondaryButtons: SecondaryButtons) {
+    init(audioSource: AudioSource, titles: Titles, buttons: Buttons, progress: Progress, artwork: Artwork, secondaryButtons: SecondaryButtons) {
         self.titles = titles
         self.progress = progress
         self.artwork = artwork
         self.buttons = buttons
-        self.player = player
+        self.audioSource = audioSource
         self.secondaryButtons = secondaryButtons
         super.init(nibName: "AudioSourceUI", bundle: nil)
         view.backgroundColor = .white

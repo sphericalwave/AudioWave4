@@ -39,13 +39,15 @@ class Playlist //FIXME: Codable
         return mediaItemCollection.items[index]
     }
     
-    func next() -> MPMediaItem {
+    func next() -> MPMediaItem {    //FIXME: Loop Back Around
         index += 1
+        if index == mediaItemCollection.items.count { index = 0 }
         return mediaItemCollection.items[index]
     }
     
-    func previous() -> MPMediaItem {
+    func previous() -> MPMediaItem { //FIXME: Loop Back Around
         index -= 1
+        if index <= 0 { index = mediaItemCollection.items.count - 1 }
         return mediaItemCollection.items[index]
     }
     

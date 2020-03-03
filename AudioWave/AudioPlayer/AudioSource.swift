@@ -9,7 +9,7 @@
 import AVFoundation
 import MediaPlayer
 
-class AudioSource
+class AudioSource: NSObject
 {
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
@@ -18,6 +18,7 @@ class AudioSource
     
     init(state: AudioPlayerState) {
         self.state = state
+        super.init()
     }
     
     //MARK: - Cells
@@ -29,6 +30,7 @@ class AudioSource
         playlist?.play(mediaItem)    //FIXME: Don't Like This, Keeps Playlist State in Sync
         guard let url = mediaItem.assetURL else { fatalError() }
         self.player = try! AVAudioPlayer(contentsOf: url)   //FIXME: Fragile
+        player?.delegate = self
         player?.prepareToPlay()
         notifications.post(name: .didLoad, object: self)
     }
@@ -44,18 +46,18 @@ class AudioSource
         notifications.post(name: .didPause, object: self)
     }
     
-    func next() {
-        //FIXME: load the next one from the playlist
-        //FIXME: play if previously playing
+    func next() {   //FIXME: Repetition
+        guard let item = playlist?.next() else { fatalError("playlist should loop") }
+        load(item)
+        play()
         notifications.post(name: .didSkip, object: self)
-        fatalError()
     }
     
-    func previous() {
-        //FIXME: load the previous one from the playlist
-        //FIXME: play if previously playing
+    func previous() {   //FIXME: Repetition
+        guard let item = playlist?.previous() else { fatalError("playlist should loop") }
+        load(item)
+        play()
         notifications.post(name: .didPrevious, object: self)
-        fatalError()
     }
     
     func isPlaying() -> Bool { return player?.isPlaying ?? false }
@@ -129,5 +131,14 @@ class AudioSource
             print("\(self)left: \(left) right: \(right)")
             player.volume = volume
         }
+    }
+}
+
+extension AudioSource: AVAudioPlayerDelegate
+{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        guard let item = playlist?.next() else { fatalError("playlist should loop") }   //FIXME: Repetition
+        load(item)
+        play()
     }
 }

@@ -13,18 +13,28 @@ class SecondaryButtons: UIViewController
     @IBOutlet weak var loopButton: LoopButton!
     @IBOutlet weak var speedButton: SpeedButton!
     @IBOutlet weak var clockButton: UIButton!
-    
-    let player: AudioSource
+    let audioSource: AudioSource
     let notifications = NotificationCenter.default  //FIXME: Hidden Dependency
     
-    init(player: AudioSource) {
-        self.player = player
+    init(audioSource: AudioSource) {
+        self.audioSource = audioSource
         super.init(nibName: "SecondaryButtons", bundle: nil)
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: nil)
     }
     required init?(coder: NSCoder) { fatalError() }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        enable(false)
+    }
+    
     @objc func playerDidLoad(notification: Notification) {
-        //FIXME: enable buttons?
+        enable(true)
+    }
+    
+    func enable(_ bool: Bool) {
+        loopButton.isEnabled = bool
+        speedButton.isEnabled = bool
+        clockButton.isEnabled = bool
     }
 }
