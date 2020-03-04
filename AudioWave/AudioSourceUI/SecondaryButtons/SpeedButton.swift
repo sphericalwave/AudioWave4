@@ -51,7 +51,6 @@ class SpeedButton: UIButton
             speed = .normal
             self.setTitle("1x", for: .normal)
         }
-      //  guard delegate != nil else { fatalError("Connect Delegate") }
         delegate?.update(speed: speed.rawValue)
     }
 }

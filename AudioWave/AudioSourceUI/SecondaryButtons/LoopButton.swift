@@ -14,9 +14,7 @@ enum IdeaMode {
     case random
 }
 
-protocol LoopButtonDelegate: AnyObject {
-    func update(mode: IdeaMode)
-}
+protocol LoopButtonDelegate: AnyObject { func update(mode: IdeaMode) }
 
 class LoopButton: UIButton
 {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//FIXME: SwiftUI
 class Artwork: UIViewController
 {
     let artwork: UIImageView
@@ -50,7 +51,7 @@ class Artwork: UIViewController
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(false)
 //        print("\nArtwork: viewDidAppear")
 //        print("Artwork.view bounds: \(view.bounds) frame: \(view.frame)")
 //        print("Artwork.artwork bounds: \(artwork.bounds) frame: \(artwork.frame)\n")
