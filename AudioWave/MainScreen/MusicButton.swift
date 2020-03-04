@@ -8,19 +8,21 @@
 
 import UIKit
 
-//class MusicButton: SwModalButton
-//{
-////    convenience init?(parentScreen: UIViewController) {
-////        let audioLibrary = AudioLibrary()
-////        let mp = Playlists(audioLibrary: audioLibrary)
-////        let playlistScreen = MusicPlaylistsScreen(musicPlaylists: mp)         //FIXME: Inject
-////        self.init(destinationScreen: playlistScreen, parentScreen: parentScreen)
-////    }
-//    
-//    init?(destinationScreen: UIViewController, parentScreen: UIViewController) {
-//        guard let note = UIImage(systemName: "music.note") else { return nil }
-//        super.init(image: note, destinationScreen: destinationScreen, parentScreen: parentScreen)
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) { fatalError() }
-//}
+class PlaylistsButton: SwModalButton
+{
+    init(audioSource: AudioSource, audioLibrary: AudioLibrary, parent: UIViewController) {
+        //FIXME: Refactor into Buttons
+        let musicPlaylists = audioLibrary.playlists()
+        guard let note = UIImage(systemName: "music.note.list") else { fatalError() }
+        let musicPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: audioSource)
+        let musicPlaylistsScreen = PlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: audioSource)
+        super.init(image: note, destinationScreen: musicPlaylistsScreen, parentScreen: parent)
+    }
+    required init?(coder aDecoder: NSCoder) { fatalError("Don't") }
+    
+    @objc override func didTap(_ sender: Any) { //FIXME: sender is redundant
+        //let nav = UINavigationController(rootViewController: destinationScreen)
+        //parentScreen.present(nav, animated: true, completion: nil)
+        super.didTap(sender)
+    }
+}

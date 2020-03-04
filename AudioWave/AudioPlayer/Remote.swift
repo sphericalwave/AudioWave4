@@ -12,35 +12,49 @@ import MediaPlayer
 class Remote
 {
     let commandCenter = MPRemoteCommandCenter.shared() //FIXME: Hidden Dependency
-    let audioPlayer1: AudioSource
-    let audioPlayer2: AudioSource //FIXME: Naming
+    let audioSource1: AudioSource
+    let audioSource2: AudioSource //FIXME: Naming
+    let notifications = NotificationCenter.default //FIXME: Hidden Dependency
+    let nowPlaying = MPNowPlayingInfoCenter.default //FIXME: Hidden Dependency
     
-    init(audioPlayer1: AudioSource, audioPlayer2: AudioSource) {
-        self.audioPlayer1 = audioPlayer1
-        self.audioPlayer2 = audioPlayer2
+    init(audioSource1: AudioSource, audioSource2: AudioSource) {
+        self.audioSource1 = audioSource1
+        self.audioSource2 = audioSource2
         setupRemoteControl()
+        notifications.addObserver(self, selector: #selector(refreshInfo), name: .didLoad, object: nil)
     }
     
     func setupRemoteControl() {
         commandCenter.playCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.audioPlayer1.play()
-            self?.audioPlayer2.play()
+            self?.audioSource1.play()
+            self?.audioSource2.play()
             return .success
         })
         commandCenter.pauseCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.audioPlayer1.pause()
-            self?.audioPlayer2.pause()
+            self?.audioSource1.pause()
+            self?.audioSource2.pause()
             return .success
         })
         commandCenter.nextTrackCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.audioPlayer1.next()
-            self?.audioPlayer2.next()
+            self?.audioSource1.next()
+            self?.audioSource2.next()
             return .success
         })
         commandCenter.previousTrackCommand.addTarget (handler: { [weak self] event -> MPRemoteCommandHandlerStatus in
-            self?.audioPlayer1.previous()
-            self?.audioPlayer2.previous()
+            self?.audioSource1.previous()
+            self?.audioSource2.previous()
             return .success
         })
+    }
+    
+    @objc func refreshInfo() {
+        let track1 = audioSource1.track()
+        let track2 = audioSource2.track()
+        //FIXME: Not great
+        guard let artwork = audioSource1.artwork() ?? audioSource2.artwork() else {
+            nowPlaying().nowPlayingInfo = [ MPMediaItemPropertyTitle : track1, MPMediaItemPropertyArtist : track2]
+            return
+        }
+        nowPlaying().nowPlayingInfo = [ MPMediaItemPropertyTitle : track1, MPMediaItemPropertyArtist : track2, MPMediaItemPropertyArtwork : artwork]
     }
 }

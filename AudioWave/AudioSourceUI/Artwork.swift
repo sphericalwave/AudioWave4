@@ -40,9 +40,17 @@ class Artwork: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Artwork view bounds: \(view.bounds) frame: \(view.frame)")
+
         let frame = CGRect(x: 0, y: 0, width: 375, height: 375)  //FIXME: SwiftUI removes autolayout issues
         artwork.frame = frame
         artwork.contentMode = .scaleAspectFit
         view.addSubview(artwork)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("Artwork view bounds: \(view.bounds) frame: \(view.frame)")
+        print("Artwork artwork bounds: \(artwork.bounds) frame: \(artwork.frame)")
     }
 }

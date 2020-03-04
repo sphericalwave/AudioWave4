@@ -21,29 +21,34 @@ class Titles: UIViewController
         self.audioSource = audioSource
         super.init(nibName: "Titles", bundle: nil)
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: audioSource)
-        
     }
     required init?(coder: NSCoder) { fatalError() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
         
         self.titleLabel = MarqueeLabel(frame: titleContainer.bounds, duration: 8, fadeLength: 10)
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
-        titleLabel.restartLabel()
+        titleLabel.backgroundColor = .gray
         titleContainer.addSubview(titleLabel)
         
         self.descriptionLabel = MarqueeLabel(frame: titleContainer.bounds, duration: 8, fadeLength: 10)
         descriptionLabel.textAlignment = .center
         descriptionLabel.textColor = .black
-        descriptionLabel.restartLabel()
+        titleLabel.backgroundColor = .gray
         descriptionContainer.addSubview(descriptionLabel)
     }
     
     @objc func playerDidLoad(notification: Notification) {
         descriptionLabel.text = audioSource.artist()
+        descriptionLabel.restartLabel()
         titleLabel.text = audioSource.track()
+        titleLabel.restartLabel()   //FIXME: Unpleasant API on MarqueeLabel
+        
+        print("Titles >> bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
+
     }
 }
 

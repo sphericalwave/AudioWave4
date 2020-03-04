@@ -26,9 +26,9 @@ class AudioWave: UINavigationController
         
         let sS = Scroller(playbackScreen1: p1, playbackScreen2: p22, state: state)
         let cF = CrossFader(player1: musicPlayer, player2: contentPlayer)
-        let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF, musicPlayer: musicPlayer, contentPlayer: contentPlayer)
+        let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF, musicPlayer: musicPlayer, contentPlayer: contentPlayer, audioLibrary: AudioLibrary())
         
-        self.remote = Remote(audioPlayer1: musicPlayer, audioPlayer2: contentPlayer)
+        self.remote = Remote(audioSource1: musicPlayer, audioSource2: contentPlayer)
         super.init(rootViewController: mainScreen)
         navigationBar.barStyle = .black
         audioHardware.activate()

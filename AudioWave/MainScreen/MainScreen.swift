@@ -17,7 +17,7 @@ class MainScreen: UIViewController
     let musicPlayer: AudioSource
     let contentPlayer: AudioSource
     
-    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: AudioSource, contentPlayer: AudioSource) {
+    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: AudioSource, contentPlayer: AudioSource, audioLibrary: AudioLibrary) {
         self.scrollScreen = scrollScreen
         self.crossFader = crossFader
         self.musicPlayer = musicPlayer
@@ -25,8 +25,6 @@ class MainScreen: UIViewController
         super.init(nibName: "MainScreen", bundle: nil)
         self.title = "AudioWave"
         edgesForExtendedLayout = [] //no content under nav bar
-        
-        let audioLibrary = AudioLibrary()
         
         //FIXME: Refactor into Buttons
         let musicPlaylists = audioLibrary.playlists()

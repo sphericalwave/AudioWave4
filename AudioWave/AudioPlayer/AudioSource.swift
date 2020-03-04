@@ -15,9 +15,11 @@ class AudioSource: NSObject
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
     var playlist: Playlist? //FIXME: Be Immutable
+    var volume: Float  //FIXME: Be Immutable
     
     init(state: AudioPlayerState) {
         self.state = state
+        self.volume = 1
         super.init()
     }
     
@@ -37,6 +39,7 @@ class AudioSource: NSObject
     
     //MARK: - Buttons
     func play() {
+        player?.volume = volume
         player?.play()
         notifications.post(name: .didPlay, object: self)
     }
@@ -123,6 +126,7 @@ class AudioSource: NSObject
         
     //MARK: - Fader
     func volume(_ volume: Float) {
+        self.volume = volume
         if let player = player {
             player.isMeteringEnabled = true
             player.updateMeters()
