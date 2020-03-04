@@ -11,7 +11,6 @@ import UIKit
 class PlaylistsButton: SwModalButton
 {
     init(audioSource: AudioSource, audioLibrary: AudioLibrary, parent: UIViewController) {
-        //FIXME: Refactor into Buttons
         let musicPlaylists = audioLibrary.playlists()
         guard let note = UIImage(systemName: "music.note.list") else { fatalError() }
         let musicPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: audioSource)
@@ -21,8 +20,6 @@ class PlaylistsButton: SwModalButton
     required init?(coder aDecoder: NSCoder) { fatalError("Don't") }
     
     @objc override func didTap(_ sender: Any) { //FIXME: sender is redundant
-        //let nav = UINavigationController(rootViewController: destinationScreen)
-        //parentScreen.present(nav, animated: true, completion: nil)
         super.didTap(sender)
     }
 }

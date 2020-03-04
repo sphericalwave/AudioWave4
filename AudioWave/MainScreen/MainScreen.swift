@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class MainScreen: UIViewController
 {
@@ -14,40 +15,33 @@ class MainScreen: UIViewController
     @IBOutlet weak var scrollPageContainer: UIView!
     let scrollScreen: Scroller
     let crossFader: CrossFader
-    let musicPlayer: AudioSource
-    let contentPlayer: AudioSource
+    let audioSource1: AudioSource
+    let audioSource2: AudioSource
+    let audioLibrary: AudioLibrary
+    var mediaPermission: MediaPermission?   //FIXME: Nil
     
-    init(scrollScreen: Scroller, crossFader: CrossFader, musicPlayer: AudioSource, contentPlayer: AudioSource, audioLibrary: AudioLibrary) {
+    //FIXME: Shouldn't need to inject AudioSources
+    init(scrollScreen: Scroller, crossFader: CrossFader, audioSource1: AudioSource, audioSource2: AudioSource, audioLibrary: AudioLibrary) {
         self.scrollScreen = scrollScreen
         self.crossFader = crossFader
-        self.musicPlayer = musicPlayer
-        self.contentPlayer = contentPlayer
+        self.audioSource1 = audioSource1
+        self.audioSource2 = audioSource2
+        self.audioLibrary = audioLibrary
         super.init(nibName: "MainScreen", bundle: nil)
         self.title = "AudioWave"
         edgesForExtendedLayout = [] //no content under nav bar
-        
-        //FIXME: Refactor into Buttons
-        let musicPlaylists = audioLibrary.playlists()
-        guard let note = UIImage(systemName: "music.note.list") else { fatalError() }
-        let musicPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: musicPlayer)
-        let musicPlaylistsScreen = PlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: musicPlayer)
-        let musicPlaylistsButton = SwModalButton(image: note, destinationScreen: musicPlaylistsScreen, parentScreen: self)
-        navigationItem.leftBarButtonItem = musicPlaylistsButton
-        
-        //FIXME: Refactor into Buttons
-        guard let book = UIImage(systemName: "book") else { fatalError() }
-        let contentPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: contentPlayer)
-        let contentPlaylistsScreen = PlaylistsScreen(data: contentPlaylistsScreenData, audioPlayer: contentPlayer)
-        let contentPlaylistsButton = SwModalButton(image: book, destinationScreen: contentPlaylistsScreen, parentScreen: self)
-        navigationItem.rightBarButtonItem = contentPlaylistsButton
     }
     required init?(coder aDecoder: NSCoder) { fatalError() }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         crossFaderContainer.backgroundColor = .gray
         scrollPageContainer.backgroundColor = .black
         self.embed(viewController: crossFader, inContainerView: crossFaderContainer)
         self.embed(viewController: scrollScreen, inContainerView: scrollPageContainer)
+        self.mediaPermission = MediaPermission(audioSource1: audioSource1, audioSource2: audioSource2, mediaLibrary: audioLibrary, parent: self)  //FIXME: Refference Cycle!
+        mediaPermission?.requestLibraryPermissions()    //FIXME: Refference Cycle!
     }
 }
+
+

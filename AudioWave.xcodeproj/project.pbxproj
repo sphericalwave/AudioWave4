@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF015D192294D6F4004BBED4 /* MainScreen.swift */; };
 		AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D90F323DC89290040E7CB /* SwDismissButton.swift */; };
+		AF2887EB24101323002F06D4 /* MediaPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2887EA24101323002F06D4 /* MediaPermission.swift */; };
 		AF2BEF8D23DE4FB5008E4B64 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2BEF8C23DE4FB5008E4B64 /* PlayButton.swift */; };
 		AF2C437E23DD053C0031CCF8 /* AudioWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C437D23DD053C0031CCF8 /* AudioWave.swift */; };
-		AF319EB723DC823700CFDCEF /* MusicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB623DC823700CFDCEF /* MusicButton.swift */; };
+		AF319EB723DC823700CFDCEF /* PlaylistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB623DC823700CFDCEF /* PlaylistsButton.swift */; };
 		AF319EB923DC825000CFDCEF /* PlaylistsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB823DC825000CFDCEF /* PlaylistsScreen.swift */; };
 		AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */; };
 		AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBD23DC828A00CFDCEF /* SwStaticTable.swift */; };
@@ -40,7 +41,6 @@
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* AudioSourceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* AudioSourceUI.swift */; };
 		AF51159723D65670005FFC34 /* AudioSourceUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* AudioSourceUI.xib */; };
-		AF51E9FA240D948C00FC3F67 /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51E9F9240D948C00FC3F67 /* NowPlaying.swift */; };
 		AF5F5EC923D65964005589E3 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
 		AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
 		AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
@@ -80,9 +80,10 @@
 /* Begin PBXFileReference section */
 		AF015D192294D6F4004BBED4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		AF1D90F323DC89290040E7CB /* SwDismissButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwDismissButton.swift; sourceTree = "<group>"; };
+		AF2887EA24101323002F06D4 /* MediaPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPermission.swift; sourceTree = "<group>"; };
 		AF2BEF8C23DE4FB5008E4B64 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		AF2C437D23DD053C0031CCF8 /* AudioWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWave.swift; sourceTree = "<group>"; };
-		AF319EB623DC823700CFDCEF /* MusicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicButton.swift; sourceTree = "<group>"; };
+		AF319EB623DC823700CFDCEF /* PlaylistsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsButton.swift; sourceTree = "<group>"; };
 		AF319EB823DC825000CFDCEF /* PlaylistsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsScreen.swift; sourceTree = "<group>"; };
 		AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwStaticTableData.swift; sourceTree = "<group>"; };
 		AF319EBD23DC828A00CFDCEF /* SwStaticTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwStaticTable.swift; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* AudioSourceUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSourceUI.swift; sourceTree = "<group>"; };
 		AF51159623D65670005FFC34 /* AudioSourceUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSourceUI.xib; sourceTree = "<group>"; };
-		AF51E9F9240D948C00FC3F67 /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
 		AF5F5EC823D65964005589E3 /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		AF62B1BD23D65E47002CD561 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
 		AF62B1C023D65FA0002CD561 /* Titles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Titles.xib; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			children = (
 				AF95F8222294B70400C81959 /* MainScreen.xib */,
 				AF015D192294D6F4004BBED4 /* MainScreen.swift */,
-				AF319EB623DC823700CFDCEF /* MusicButton.swift */,
+				AF319EB623DC823700CFDCEF /* PlaylistsButton.swift */,
 				AFAAAA2B24059DD000544545 /* ContentButton.swift */,
 			);
 			path = MainScreen;
@@ -377,10 +377,10 @@
 			children = (
 				AF7513BE240988C9009242A2 /* AudioSource.swift */,
 				AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */,
-				AF51E9F9240D948C00FC3F67 /* NowPlaying.swift */,
 				AFCE09811F57311500A1D0EE /* AudioHardware.swift */,
 				AF8809C623DCF8570081C400 /* Notifications.swift */,
 				AF8809C023DC948F0081C400 /* Playlist.swift */,
+				AF2887EA24101323002F06D4 /* MediaPermission.swift */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -551,7 +551,7 @@
 			files = (
 				AF51159523D655FA005FFC34 /* AudioSourceUI.swift in Sources */,
 				AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */,
-				AF319EB723DC823700CFDCEF /* MusicButton.swift in Sources */,
+				AF319EB723DC823700CFDCEF /* PlaylistsButton.swift in Sources */,
 				AFAAAA332406F5AF00544545 /* AudioWaveState.swift in Sources */,
 				AF319EE823DC828A00CFDCEF /* SwDynamicTable.swift in Sources */,
 				AFCBDB0A23DC92B4002F6060 /* PlaylistDetailsScreen.swift in Sources */,
@@ -564,12 +564,12 @@
 				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
 				AFCE09A41F57332A00A1D0EE /* PlaylistCell.swift in Sources */,
 				AF319EE723DC828A00CFDCEF /* SwStaticTable.swift in Sources */,
+				AF2887EB24101323002F06D4 /* MediaPermission.swift in Sources */,
 				AFAAAA2C24059DD000544545 /* ContentButton.swift in Sources */,
 				AF8809C123DC948F0081C400 /* Playlist.swift in Sources */,
 				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
 				AFD8F37123CF3A5400BF6FE6 /* CrossFader.swift in Sources */,
 				AF319EB923DC825000CFDCEF /* PlaylistsScreen.swift in Sources */,
-				AF51E9FA240D948C00FC3F67 /* NowPlaying.swift in Sources */,
 				AF2C437E23DD053C0031CCF8 /* AudioWave.swift in Sources */,
 				AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */,
 				AF2BEF8D23DE4FB5008E4B64 /* PlayButton.swift in Sources */,

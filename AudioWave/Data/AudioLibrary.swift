@@ -11,12 +11,6 @@ import MediaPlayer
 
 class AudioLibrary
 {
-    init() {
-        MPMediaLibrary.requestAuthorization() { status in   //FIXME: Fragile
-            if status != .authorized { fatalError() }
-        }
-    }
-    
     //FIXME: Gnarly
     func playlists() -> [Playlist] {
         var everything = [Playlist]()
