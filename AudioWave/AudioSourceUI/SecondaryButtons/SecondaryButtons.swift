@@ -29,7 +29,7 @@ class SecondaryButtons: UIViewController
     }
     
     @objc func playerDidLoad(notification: Notification) {
-        enable(true)
+        enable(false)   //FIXME: Implement Features
     }
     
     func enable(_ bool: Bool) {

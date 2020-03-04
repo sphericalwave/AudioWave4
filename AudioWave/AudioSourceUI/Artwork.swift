@@ -25,6 +25,7 @@ class Artwork: UIViewController
         view.clipsToBounds = true
         artwork.layer.cornerRadius = 10.0
         artwork.clipsToBounds = true
+        artwork.contentMode = .scaleAspectFit
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
     }
     required init?(coder: NSCoder) { fatalError() }
@@ -36,21 +37,23 @@ class Artwork: UIViewController
             return
         }
         artwork.refresh(with: art)
+//        print("\nArtwork: playerDidLoad")
+//        print("Artwork.view bounds: \(view.bounds) frame: \(view.frame)")
+//        print("Artwork.artwork bounds: \(artwork.bounds) frame: \(artwork.frame)\n")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Artwork view bounds: \(view.bounds) frame: \(view.frame)")
-
-        let frame = CGRect(x: 0, y: 0, width: 375, height: 375)  //FIXME: SwiftUI removes autolayout issues
-        artwork.frame = frame
-        artwork.contentMode = .scaleAspectFit
+//        print("\nArtwork: viewDidLoad")
+//        print("Artwork.artwork bounds: \(artwork.bounds) frame: \(artwork.frame)\n")
         view.addSubview(artwork)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print("Artwork view bounds: \(view.bounds) frame: \(view.frame)")
-        print("Artwork artwork bounds: \(artwork.bounds) frame: \(artwork.frame)")
+//        print("\nArtwork: viewDidAppear")
+//        print("Artwork.view bounds: \(view.bounds) frame: \(view.frame)")
+//        print("Artwork.artwork bounds: \(artwork.bounds) frame: \(artwork.frame)\n")
+        artwork.frame = view.bounds
     }
 }

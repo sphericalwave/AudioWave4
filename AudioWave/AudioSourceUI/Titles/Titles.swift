@@ -26,19 +26,29 @@ class Titles: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
+        //print("Titles: titleContainer bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
         
         self.titleLabel = MarqueeLabel(frame: titleContainer.bounds, duration: 8, fadeLength: 10)
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
-        titleLabel.backgroundColor = .gray
+        //titleLabel.backgroundColor = .gray
         titleContainer.addSubview(titleLabel)
+        titleContainer.backgroundColor = .clear //FIXME: Remove
         
         self.descriptionLabel = MarqueeLabel(frame: titleContainer.bounds, duration: 8, fadeLength: 10)
         descriptionLabel.textAlignment = .center
         descriptionLabel.textColor = .black
-        titleLabel.backgroundColor = .gray
+        //descriptionLabel.backgroundColor = .gray
         descriptionContainer.addSubview(descriptionLabel)
+        descriptionContainer.backgroundColor = .clear //FIXME: Remove
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        print("\nTitles: viewDidAppear")
+//        print("Titles: titleContainer bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
+//        print("Titles: titleLabel bounds: \(titleLabel.bounds) frame: \(titleLabel.frame)\n")
+        titleLabel.frame = titleContainer.frame
     }
     
     @objc func playerDidLoad(notification: Notification) {
@@ -46,9 +56,11 @@ class Titles: UIViewController
         descriptionLabel.restartLabel()
         titleLabel.text = audioSource.track()
         titleLabel.restartLabel()   //FIXME: Unpleasant API on MarqueeLabel
-        
-        print("Titles >> bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
-
+//        print("\nTitles: playerDidLoad")
+//        print("Titles: titleContainer bounds: \(titleContainer.bounds) frame: \(titleContainer.frame)")
+//        print("Titles: titleLabel bounds: \(titleLabel.bounds) frame: \(titleLabel.frame)\n")
+        titleLabel.frame = titleContainer.bounds
+        descriptionLabel.frame = descriptionContainer.bounds
     }
 }
 

@@ -14,7 +14,7 @@ class MediaPermission
     let audioSource1: AudioSource
     let audioSource2: AudioSource
     let mediaLibrary: AudioLibrary
-    let parent: UIViewController    //FIXME: Concerned about refference cycle
+    let parent: UIViewController    //FIXME: Refference cycle
     
     //FIXME : inject a closure to remove refference to parent?
     init(audioSource1: AudioSource, audioSource2: AudioSource, mediaLibrary: AudioLibrary, parent: UIViewController) {
@@ -24,7 +24,6 @@ class MediaPermission
         self.parent = parent
     }
     
-    //FIXME: Move into a Permission object
     func requestLibraryPermissions() {
         MPMediaLibrary.requestAuthorization() { status in   //FIXME: Fragile
             if status == .authorized {
@@ -37,7 +36,6 @@ class MediaPermission
                 }
             }
             else {
-                //FIXEM: present alert
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Red Alert", message: "To use this app your permission to access your media library on device is required. Go to AudioWave in the settings app to give permission", preferredStyle: .alert)
                     let action = UIAlertAction(title: "Permit", style: .default) { _ in
