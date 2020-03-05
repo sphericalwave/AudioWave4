@@ -26,7 +26,7 @@ class Artwork: UIViewController
         view.clipsToBounds = true
         artwork.layer.cornerRadius = 10.0
         artwork.clipsToBounds = true
-        artwork.contentMode = .scaleAspectFit
+        artwork.contentMode = .scaleAspectFill
         notifications.addObserver(self, selector: #selector(playerDidLoad), name: .didLoad, object: player)
     }
     required init?(coder: NSCoder) { fatalError() }
@@ -48,6 +48,14 @@ class Artwork: UIViewController
 //        print("\nArtwork: viewDidLoad")
 //        print("Artwork.artwork bounds: \(artwork.bounds) frame: \(artwork.frame)\n")
         view.addSubview(artwork)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("\nArtwork: viewWillAppear")
+        print("Artwork.view bounds: \(view.bounds) frame: \(view.frame)")
+        print("Artwork.artwork bounds: \(artwork.bounds) frame: \(artwork.frame)\n")
+        artwork.frame = view.bounds
     }
     
     override func viewDidAppear(_ animated: Bool) {

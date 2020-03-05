@@ -41,7 +41,7 @@
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
 		AF51159523D655FA005FFC34 /* AudioSourceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* AudioSourceUI.swift */; };
 		AF51159723D65670005FFC34 /* AudioSourceUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* AudioSourceUI.xib */; };
-		AF5F5EC923D65964005589E3 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
+		AF5F5EC923D65964005589E3 /* ProgressUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* ProgressUI.xib */; };
 		AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
 		AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
 		AF67FAC3240DC33900002BFF /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67FAC2240DC33900002BFF /* UIImage+Extensions.swift */; };
@@ -69,7 +69,7 @@
 		AFCE09AB1F57332A00A1D0EE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */; };
 		AFCE09B31F57352600A1D0EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */; };
 		AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */; };
-		AFD8F36723CE69DC00BF6FE6 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36623CE69DC00BF6FE6 /* Progress.swift */; };
+		AFD8F36723CE69DC00BF6FE6 /* ProgressUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36623CE69DC00BF6FE6 /* ProgressUI.swift */; };
 		AFD8F36923CE6A2900BF6FE6 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */; };
 		AFD8F36B23CE6A5500BF6FE6 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */; };
 		AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */; };
@@ -112,7 +112,7 @@
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
 		AF51159423D655FA005FFC34 /* AudioSourceUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSourceUI.swift; sourceTree = "<group>"; };
 		AF51159623D65670005FFC34 /* AudioSourceUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSourceUI.xib; sourceTree = "<group>"; };
-		AF5F5EC823D65964005589E3 /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
+		AF5F5EC823D65964005589E3 /* ProgressUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressUI.xib; sourceTree = "<group>"; };
 		AF62B1BD23D65E47002CD561 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
 		AF62B1C023D65FA0002CD561 /* Titles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Titles.xib; sourceTree = "<group>"; };
 		AF67FAC2240DC33900002BFF /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		AFCE099D1F57332900A1D0EE /* SpeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedButton.swift; sourceTree = "<group>"; };
 		AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		AFD8F36623CE69DC00BF6FE6 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		AFD8F36623CE69DC00BF6FE6 /* ProgressUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUI.swift; sourceTree = "<group>"; };
 		AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
@@ -335,8 +335,8 @@
 		AF62B1BC23D65E36002CD561 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				AFD8F36623CE69DC00BF6FE6 /* Progress.swift */,
-				AF5F5EC823D65964005589E3 /* Progress.xib */,
+				AFD8F36623CE69DC00BF6FE6 /* ProgressUI.swift */,
+				AF5F5EC823D65964005589E3 /* ProgressUI.xib */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -528,7 +528,7 @@
 				AFA7BF111F6AA71C0087D1EA /* Icons.xcassets in Resources */,
 				AFA009A423D08EC700026DB6 /* CrossFader.xib in Resources */,
 				AF319EF323DC828A00CFDCEF /* ImageCell.xib in Resources */,
-				AF5F5EC923D65964005589E3 /* Progress.xib in Resources */,
+				AF5F5EC923D65964005589E3 /* ProgressUI.xib in Resources */,
 				AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */,
 				AFCBDB0823DC90DC002F6060 /* AudioWaveCell.xib in Resources */,
 				AF95F8232294B70400C81959 /* MainScreen.xib in Resources */,
@@ -584,7 +584,7 @@
 				AFD8F36D23CE6B5100BF6FE6 /* Titles.swift in Sources */,
 				AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */,
 				AFCE09941F5732DC00A1D0EE /* MarqueeLabel.swift in Sources */,
-				AFD8F36723CE69DC00BF6FE6 /* Progress.swift in Sources */,
+				AFD8F36723CE69DC00BF6FE6 /* ProgressUI.swift in Sources */,
 				AF319EEA23DC828A00CFDCEF /* SWEmptyTable.swift in Sources */,
 				AFD8F36923CE6A2900BF6FE6 /* Buttons.swift in Sources */,
 				AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */,
