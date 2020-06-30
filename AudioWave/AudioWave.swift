@@ -11,27 +11,23 @@ import UIKit
 class AudioWave: UINavigationController
 {
     let remote: Remote
-    let audioHardware = AudioHardware()
+    let audioHardware: AudioHardware
     
     init() {
-        let mPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
-        let aPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
-        let state = AudioWaveState(musicPlayerState: mPS, audioPlayerState: aPS, crossFader: 0.5, activeScreen: 0)
+        self.remote = Remote()
+        self.audioHardware = AudioHardware()
+        let p1 = AudioSourceUI(audioSource: AudioSource())
+        let p22 = AudioSourceUI(audioSource: AudioSource())
+    
+        let mainScreen = MainScreen(scrollScreen: Scroller(playerOneUI: p1, playerTwoUI: p22),
+                                    crossFader: CrossFader())
         
-        let audioSource1 = AudioSource(state: mPS)
-        let p1 = AudioSourceUI(audioSource: audioSource1)
-        
-        let audioSource2 = AudioSource(state: aPS) //FIXME: Naming
-        let p22 = AudioSourceUI(audioSource: audioSource2)
-        
-        let sS = Scroller(playbackScreen1: p1, playbackScreen2: p22, state: state)
-        let cF = CrossFader(player1: audioSource1, player2: audioSource2)
-        let mainScreen = MainScreen(scrollScreen: sS, crossFader: cF, audioSource1: audioSource1, audioSource2: audioSource2, audioLibrary: AudioLibrary())
-        
-        self.remote = Remote(audioSource1: audioSource1, audioSource2: audioSource2)
         super.init(rootViewController: mainScreen)
         navigationBar.barStyle = .black
-        audioHardware.activate()
+        audioHardware.activate()  //FIXME: activate when you press play
+        
+//        let mp = MediaPermission(audioSource1: audioSource1, audioSource2: audioSource2, mediaLibrary: audioLibrary, parent: self)  //FIXME: Refference Cycle!
+//        mediaPermission?.requestLibraryPermissions()    //FIXME: Refference Cycle!
     }
     required init?(coder aDecoder: NSCoder) { fatalError("Ne Pas") }
 }

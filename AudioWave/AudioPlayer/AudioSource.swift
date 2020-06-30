@@ -11,17 +11,10 @@ import MediaPlayer
 
 class AudioSource: NSObject
 {
-    var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
     var playlist: Playlist? //FIXME: Be Immutable
-    var volume: Float  //FIXME: Be Immutable
-    
-    init(state: AudioPlayerState) {
-        self.state = state
-        self.volume = 1
-        super.init()
-    }
+    var volume: Float = 1  //FIXME: Be Immutable
     
     //MARK: - Cells
     func load(_ playlist: Playlist) {
