@@ -15,5 +15,4 @@ extension Notification.Name
     static let didPause = Notification.Name("didPause")
     static let didLoad = Notification.Name("didLoad")
     static let didPlay = Notification.Name("didPlay")
-    static let faderChanged = Notification.Name("faderChanged")
 }
