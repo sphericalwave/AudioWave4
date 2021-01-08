@@ -40,7 +40,7 @@ class AudioSourceUI: UIViewController
         self.audioSource = audioSource
         self.secondaryButtons = secondaryButtons
         super.init(nibName: "AudioSourceUI", bundle: nil)
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.layer.cornerRadius = 10.0
         view.clipsToBounds = true
     }

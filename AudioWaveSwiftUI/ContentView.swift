@@ -12,15 +12,25 @@ struct ContentView: View {
     @EnvironmentObject var audioWave: AudioWave
 
     var body: some View {
+        container
+    }
+
+    private var container: some View {
+        NavigationView {
+            content
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+
+    private var content: some View {
         VStack {
             ScrollerView(audioWave: audioWave)
             CrossFader(value: $audioWave.currentFade)
                 .padding()
                 .frame(height: 100, alignment: .top)
-                .background(Color.black)
         }
-            .ignoresSafeArea(edges: .bottom)
-            .navigationTitle("Audio Wave")
+        .ignoresSafeArea(edges: .bottom)
+        .navigationTitle("Audio Wave")
     }
 }
 
@@ -28,10 +38,12 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(AppModel())
+            .colorScheme(.dark)
     }
 }
 
 private struct ScrollerView: UIViewControllerRepresentable {
+    @Environment(\.colorScheme) var colorScheme
     let audioWave: AudioWave
 
     func makeUIViewController(context: Context) -> Scroller {
@@ -42,14 +54,16 @@ private struct ScrollerView: UIViewControllerRepresentable {
             activeScreen: 0
         )
 
-        return Scroller(
+        let scroller = Scroller(
             playbackScreen1: AudioSourceUI(audioSource: audioWave.musicSource),
             playbackScreen2: AudioSourceUI(audioSource: audioWave.bookSource),
             state: state
         )
+        scroller.overrideUserInterfaceStyle = .init(colorScheme)
+        return scroller
     }
 
-    func updateUIViewController(_ uiViewController: Scroller, context: Context) {
-
+    func updateUIViewController(_ scroller: Scroller, context: Context) {
+        scroller.overrideUserInterfaceStyle = .init(colorScheme)
     }
 }

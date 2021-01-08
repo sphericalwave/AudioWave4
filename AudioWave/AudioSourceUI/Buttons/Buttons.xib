@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,7 +27,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="9lM-bY-iM2"/>
                             </constraints>
-                            <state key="normal" image="backward.end.alt" catalog="system"/>
+                            <state key="normal" image="backward.end.alt" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                            </state>
                             <connections>
                                 <action selector="previous" destination="-1" eventType="touchUpInside" id="3Nt-FO-MnG"/>
                             </connections>
@@ -38,7 +40,7 @@
                                 <constraint firstAttribute="height" constant="45" id="G14-ql-LyY"/>
                             </constraints>
                             <state key="normal" image="play" catalog="system">
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
                             </state>
                             <connections>
                                 <action selector="play" destination="-1" eventType="touchUpInside" id="TBU-cL-2vM"/>
@@ -49,7 +51,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="sPN-L7-t4R"/>
                             </constraints>
-                            <state key="normal" image="forward.end.alt" catalog="system"/>
+                            <state key="normal" image="forward.end.alt" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                            </state>
                             <connections>
                                 <action selector="next" destination="-1" eventType="touchUpInside" id="DYT-21-7jh"/>
                             </connections>
@@ -57,7 +61,6 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ILz-gz-mU2" secondAttribute="bottom" constant="3" id="bhX-tY-N93"/>
                 <constraint firstItem="ILz-gz-mU2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="eqn-W3-Hp8"/>
@@ -70,8 +73,8 @@
         </view>
     </objects>
     <resources>
-        <image name="backward.end.alt" catalog="system" width="64" height="34"/>
-        <image name="forward.end.alt" catalog="system" width="64" height="34"/>
-        <image name="play" catalog="system" width="60" height="64"/>
+        <image name="backward.end.alt" catalog="system" width="128" height="71"/>
+        <image name="forward.end.alt" catalog="system" width="128" height="71"/>
+        <image name="play" catalog="system" width="120" height="128"/>
     </resources>
 </document>

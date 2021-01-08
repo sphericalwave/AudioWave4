@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,6 +30,7 @@
                             </constraints>
                             <state key="normal" image="clock" catalog="system">
                                 <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-vi-QTc" customClass="SpeedButton" customModule="AudioWave" customModuleProvider="target">
@@ -39,6 +40,7 @@
                             </constraints>
                             <state key="normal" image="speedometer" catalog="system">
                                 <color key="titleColor" red="0.060002863410000003" green="0.09637437016" blue="0.27125707269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-sk-EU9" customClass="LoopButton" customModule="AudioWave" customModuleProvider="target">
@@ -46,12 +48,14 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="hWw-d2-m1R"/>
                             </constraints>
-                            <state key="normal" image="repeat" catalog="system"/>
+                            <state key="normal" image="repeat" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                            </state>
                         </button>
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="gHY-sa-Cfx"/>
             <constraints>
                 <constraint firstItem="gHY-sa-Cfx" firstAttribute="bottom" secondItem="ptY-NN-xib" secondAttribute="bottom" constant="3" id="Gd2-7L-i8e"/>
                 <constraint firstItem="gHY-sa-Cfx" firstAttribute="trailing" secondItem="ptY-NN-xib" secondAttribute="trailing" constant="9" id="Sj8-82-UxN"/>
@@ -60,13 +64,12 @@
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="gHY-sa-Cfx"/>
             <point key="canvasLocation" x="37.681159420289859" y="161.04910714285714"/>
         </view>
     </objects>
     <resources>
-        <image name="clock" catalog="system" width="64" height="60"/>
-        <image name="repeat" catalog="system" width="64" height="48"/>
-        <image name="speedometer" catalog="system" width="64" height="60"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="repeat" catalog="system" width="128" height="99"/>
+        <image name="speedometer" catalog="system" width="128" height="121"/>
     </resources>
 </document>
