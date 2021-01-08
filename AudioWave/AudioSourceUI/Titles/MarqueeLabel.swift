@@ -238,32 +238,6 @@ open class MarqueeLabel: UILabel, CAAnimationDelegate {
         }
     }
     
-    @available(*, deprecated : 2.6, message : "Use speed property instead")
-    @IBInspectable open var scrollDuration: CGFloat {
-        get {
-            switch speed {
-            case .duration(let duration): return duration
-            case .rate(_): return 0.0
-            }
-        }
-        set {
-            speed = .duration(newValue)
-        }
-    }
-    
-    @available(*, deprecated : 2.6, message : "Use speed property instead")
-    @IBInspectable open var scrollRate: CGFloat {
-        get {
-            switch speed {
-            case .duration(_): return 0.0
-            case .rate(let rate): return rate
-            }
-        }
-        set {
-            speed = .rate(newValue)
-        }
-    }
-    
     /**
      A buffer (offset) between the leading edge of the label text and the label frame.
      
@@ -611,7 +585,7 @@ open class MarqueeLabel: UILabel, CAAnimationDelegate {
         animationDuration = {
             switch self.speed {
             case .rate(let rate):
-                return CGFloat(fabs(self.awayOffset) / rate)
+                return CGFloat(abs(self.awayOffset) / rate)
             case .duration(let duration):
                 return duration
             }
@@ -636,7 +610,7 @@ open class MarqueeLabel: UILabel, CAAnimationDelegate {
             // Find when the lead label will be totally offscreen
             let offsetDistance = awayOffset
             let offscreenAmount = homeLabelFrame.size.width
-            let startFadeFraction = fabs(offscreenAmount / offsetDistance)
+            let startFadeFraction = abs(offscreenAmount / offsetDistance)
             // Find when the animation will hit that point
             let startFadeTimeFraction = timingFunctionForAnimationCurve(animationCurve).durationPercentageForPositionPercentage(startFadeFraction, duration: (animationDelay + animationDuration))
             let startFadeTime = startFadeTimeFraction * animationDuration
@@ -1764,14 +1738,14 @@ fileprivate extension CAMediaTimingFunction {
             // Calculate f(t0)
             f0 = YforCurveAt(t0, controlPoints:controlPoints) - y_0
             // Check if this is close (enough)
-            if (fabs(f0) < epsilon) {
+            if (abs(f0) < epsilon) {
                 // Done!
                 return t0
             }
             // Else continue Newton's Method
             df0 = derivativeCurveYValueAt(t0, controlPoints:controlPoints)
             // Check if derivative is small or zero ( http://en.wikipedia.org/wiki/Newton's_method#Failure_analysis )
-            if (fabs(df0) < 1e-6) {
+            if (abs(df0) < 1e-6) {
                 break
             }
             // Else recalculate t1
