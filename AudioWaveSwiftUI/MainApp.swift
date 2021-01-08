@@ -15,7 +15,7 @@ struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appModel)
+                .environmentObject(appModel.audioWave)
         }
     }
 }

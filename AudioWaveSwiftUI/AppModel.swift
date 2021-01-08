@@ -10,7 +10,7 @@ import Combine
 
 final class AppModel: ObservableObject {
     private let remote: Remote
-    let audioHardware = AudioHardware()
+    private let audioHardware = AudioHardware()
     let audioWave: AudioWave
 
     init() {

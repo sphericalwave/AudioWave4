@@ -9,17 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var appModel: AppModel
-    
-    var body: some View {
-        MainView(audioWave: appModel.audioWave)
-            .ignoresSafeArea(edges: .bottom)
-            .navigationTitle("Audio Wave")
-    }
-}
-
-struct MainView: View {
-    @ObservedObject var audioWave: AudioWave
+    @EnvironmentObject var audioWave: AudioWave
 
     var body: some View {
         VStack {
@@ -29,6 +19,8 @@ struct MainView: View {
                 .frame(height: 100, alignment: .top)
                 .background(Color.black)
         }
+            .ignoresSafeArea(edges: .bottom)
+            .navigationTitle("Audio Wave")
     }
 }
 
@@ -57,7 +49,7 @@ private struct ScrollerView: UIViewControllerRepresentable {
         )
     }
 
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    func updateUIViewController(_ uiViewController: Scroller, context: Context) {
 
     }
 }
