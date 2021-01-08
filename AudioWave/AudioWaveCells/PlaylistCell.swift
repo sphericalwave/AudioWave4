@@ -22,8 +22,8 @@ class PlaylistCell: AudioWaveCell
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = playlist.name()
-        detailLabel.text = playlist.details()
+        titleLabel.text = playlist.name
+        detailLabel.text = playlist.details
     }
     
     override func didSelect() {
@@ -32,7 +32,7 @@ class PlaylistCell: AudioWaveCell
         navigationController?.pushViewController(playlistScreen, animated: true)
     }
     override func updateArt() {
-        guard let art = playlist.artwork() else {
+        guard let art = playlist.artwork else {
             guard let noteList = UIImage(systemName: "music.note.list") else { fatalError() }
             artwork.image = noteList
             return

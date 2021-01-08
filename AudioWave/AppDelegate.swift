@@ -12,13 +12,15 @@ import MediaPlayer
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
+    let appModel = AppModel()
+
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = AudioWave()
+        window?.rootViewController = AudioWave(appModel: appModel)
         return true
     }
     

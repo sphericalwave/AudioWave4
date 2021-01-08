@@ -9,27 +9,26 @@
 import AVFoundation
 import MediaPlayer
 
-class AudioSource: NSObject
+final class AudioSource: NSObject
 {
     var state: AudioPlayerState //FIXME: Be Immutable
     var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
-    var playlist: Playlist? //FIXME: Be Immutable
+    var playlistController: PlaylistController? //FIXME: Be Immutable
     var volume: Float  //FIXME: Be Immutable
     
     init(state: AudioPlayerState) {
         self.state = state
         self.volume = 1
-        super.init()
     }
     
     //MARK: - Cells
     func load(_ playlist: Playlist) {
-        self.playlist = playlist
+        self.playlistController = .init(playlist: playlist)
     }
     
     func load(_ mediaItem: MPMediaItem) {
-        playlist?.play(mediaItem)    //FIXME: Don't Like This, Keeps Playlist State in Sync
+        playlistController?.play(mediaItem)    //FIXME: Don't Like This, Keeps Playlist State in Sync
         guard let url = mediaItem.assetURL else { fatalError() }
         self.player = try! AVAudioPlayer(contentsOf: url)   //FIXME: Fragile
         player?.delegate = self
@@ -50,14 +49,14 @@ class AudioSource: NSObject
     }
     
     func next() {   //FIXME: Repetition
-        guard let item = playlist?.next() else { fatalError("playlist should loop") }
+        let item = playlistController!.next()
         load(item)
         play()
         notifications.post(name: .didSkip, object: self)
     }
     
     func previous() {   //FIXME: Repetition
-        guard let item = playlist?.previous() else { fatalError("playlist should loop") }
+        let item = playlistController!.previous()
         load(item)
         play()
         notifications.post(name: .didPrevious, object: self)
@@ -77,13 +76,13 @@ class AudioSource: NSObject
     //MARK: - Titles
     func track() -> String {
         //return mediaItem?.title ?? "No Track Name"
-        guard let mediaItem = playlist?.currentItem() else { return "FIXME track()" }
+        let mediaItem = playlistController!.currentItem
         return mediaItem.title ?? "FIXME track() 2"
     }
     
     func artist() -> String {
         //return mediaItem?.artist ?? "No Artist Name"
-        guard let mediaItem = playlist?.currentItem() else { return "FIXME artist()" }
+        let mediaItem = playlistController!.currentItem
         return mediaItem.artist ?? "FIXME artist() 2"
     }
     
@@ -92,11 +91,8 @@ class AudioSource: NSObject
     func playback(mode: PlayMode) { fatalError() }
     
     //MARK: - Artwork
-    func artwork() -> MPMediaItemArtwork? {
-        guard let artwork = playlist?.currentItem().artwork else {
-            return nil
-        }
-        return artwork
+    var artwork: MPMediaItemArtwork? {
+        playlistController?.currentItem.artwork
     }
     
     //MARK: - Progress
@@ -141,7 +137,7 @@ class AudioSource: NSObject
 extension AudioSource: AVAudioPlayerDelegate
 {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        guard let item = playlist?.next() else { fatalError("playlist should loop") }   //FIXME: Repetition
+        let item = playlistController!.next() // FIXME: Repetition
         load(item)
         play()
     }

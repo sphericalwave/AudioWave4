@@ -10,8 +10,8 @@ import UIKit
 
 class PlaylistsButton: SwModalButton
 {
-    init(audioSource: AudioSource, audioLibrary: AudioLibrary, parent: UIViewController) {
-        let musicPlaylists = audioLibrary.playlists()
+    init(audioSource: AudioSource, parent: UIViewController) {
+        let musicPlaylists = AudioLibrary.playlists()
         guard let note = UIImage(systemName: "music.note.list") else { fatalError() }
         let musicPlaylistsScreenData = PlaylistsScreenData(musicPlaylists: musicPlaylists, musicPlayer: audioSource)
         let musicPlaylistsScreen = PlaylistsScreen(data: musicPlaylistsScreenData, audioPlayer: audioSource)

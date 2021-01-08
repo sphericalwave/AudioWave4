@@ -26,12 +26,12 @@ class PlaylistDetailsData: SwStaticTableData
     init(playlist: Playlist, musicPlayer: AudioSource) {
         self.playlist = playlist
         var trackCells = [MediaCell]()
-        for track in playlist.mediaItems() {
+        for track in playlist {
             let trackCell = MediaCell(mediaItem: track, musicPlayer: musicPlayer, playlist: playlist)
             trackCells.append(trackCell)
         }
         super.init(sections: [trackCells])
     }
     
-    func name() -> String { return playlist.name() }
+    func name() -> String { playlist.name }
 }

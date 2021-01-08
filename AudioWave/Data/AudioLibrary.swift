@@ -9,46 +9,37 @@
 import Foundation
 import MediaPlayer
 
-class AudioLibrary
-{
-    //FIXME: Gnarly
-    func playlists() -> [Playlist] {
-        var everything = [Playlist]()
-        if let musicPlaylists1 = musicPlaylists() { //FIXME: Naming
-            for m in musicPlaylists1 { everything.append(Playlist(mediaItemCollection:m)) }
-        }
-        if let audioContent = audioBooks() {
-            for a in audioContent { everything.append(Playlist(mediaItemCollection:a)) }
-        }
-        return everything
+enum AudioLibrary {
+    static func playlists() -> [Playlist] {
+        musicPlaylists().map(Playlist.init) + audioBooks().map(Playlist.init)
     }
-    
-    func musicPlaylists() -> [MPMediaPlaylist]? {
+
+    private static func musicPlaylists() -> [MPMediaPlaylist] {
         let query = MPMediaQuery.playlists()
         let predicate = MPMediaPropertyPredicate(value: MPMediaType.music.rawValue, forProperty: MPMediaItemPropertyMediaType)
         query.addFilterPredicate(predicate)
-        return query.collections as? [MPMediaPlaylist]
+        return query.collections as? [MPMediaPlaylist] ?? []
     }
-    
-    func audioBooks() -> [MPMediaItemCollection]? {
+
+    private static func audioBooks() -> [MPMediaItemCollection] {
         let query = MPMediaQuery.audiobooks()
         let audioBooks = query.collections
-        return audioBooks
+        return audioBooks ?? []
     }
-    
-    func findPlaylist(with ID: MPMediaEntityPersistentID) -> MPMediaPlaylist? {
-        let query = MPMediaQuery.playlists()
-        let predicate = MPMediaPropertyPredicate(value: MPMediaType.music.rawValue, forProperty: MPMediaItemPropertyMediaType)
-        query.addFilterPredicate(predicate)
-        return (query.collections as? [MPMediaPlaylist])?.filter({ $0.persistentID == ID }).first
-    }
-    
-    func findAudioBook(with ID: MPMediaEntityPersistentID) -> MPMediaItemCollection? {
-        let query = MPMediaQuery.audiobooks()
-        return query.collections?.filter({ $0.persistentID == ID }).first
-    }
-    
-    func findItem(with ID: MPMediaEntityPersistentID, queue: MPMediaItemCollection) -> MPMediaItem? {
-        return queue.items.filter({ $0.persistentID == ID }).first
-    }
+
+//    static func findPlaylist(with ID: MPMediaEntityPersistentID) -> MPMediaPlaylist? {
+//        let query = MPMediaQuery.playlists()
+//        let predicate = MPMediaPropertyPredicate(value: MPMediaType.music.rawValue, forProperty: MPMediaItemPropertyMediaType)
+//        query.addFilterPredicate(predicate)
+//        return (query.collections as? [MPMediaPlaylist])?.filter({ $0.persistentID == ID }).first
+//    }
+//
+//    static func findAudioBook(with ID: MPMediaEntityPersistentID) -> MPMediaItemCollection? {
+//        let query = MPMediaQuery.audiobooks()
+//        return query.collections?.filter({ $0.persistentID == ID }).first
+//    }
+//
+//    static func findItem(with ID: MPMediaEntityPersistentID, queue: MPMediaItemCollection) -> MPMediaItem? {
+//        return queue.items.filter({ $0.persistentID == ID }).first
+//    }
 }
