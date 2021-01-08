@@ -12,7 +12,7 @@ import MediaPlayer
 final class AudioSource: NSObject
 {
     var state: AudioPlayerState //FIXME: Be Immutable
-    var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
+    private var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
     var playlistController: PlaylistController? //FIXME: Be Immutable
     var volume: Float  //FIXME: Be Immutable

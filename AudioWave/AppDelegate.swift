@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = AudioWave(appModel: appModel)
+        window?.rootViewController = NavigationController(appModel: appModel)
         return true
     }
     

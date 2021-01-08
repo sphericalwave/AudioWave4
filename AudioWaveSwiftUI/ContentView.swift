@@ -12,12 +12,52 @@ struct ContentView: View {
     @EnvironmentObject var appModel: AppModel
     
     var body: some View {
-        Text("Hello, World!")
+        MainView(audioWave: appModel.audioWave)
+            .ignoresSafeArea(edges: .bottom)
+            .navigationTitle("Audio Wave")
+    }
+}
+
+struct MainView: View {
+    @ObservedObject var audioWave: AudioWave
+
+    var body: some View {
+        VStack {
+            ScrollerView(audioWave: audioWave)
+            CrossFader(value: $audioWave.currentFade)
+                .padding()
+                .frame(height: 100, alignment: .top)
+                .background(Color.black)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AppModel())
+    }
+}
+
+private struct ScrollerView: UIViewControllerRepresentable {
+    let audioWave: AudioWave
+
+    func makeUIViewController(context: Context) -> Scroller {
+        let state = AudioWaveState(
+            musicPlayerState: audioWave.musicSource.state,
+            audioPlayerState: audioWave.bookSource.state,
+            crossFader: 0.5,
+            activeScreen: 0
+        )
+
+        return Scroller(
+            playbackScreen1: AudioSourceUI(audioSource: audioWave.musicSource),
+            playbackScreen2: AudioSourceUI(audioSource: audioWave.bookSource),
+            state: state
+        )
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+
     }
 }
