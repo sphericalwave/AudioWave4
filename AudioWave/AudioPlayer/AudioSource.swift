@@ -76,14 +76,12 @@ final class AudioSource: NSObject
     //MARK: - Titles
     func track() -> String {
         //return mediaItem?.title ?? "No Track Name"
-        let mediaItem = playlistController!.currentItem
-        return mediaItem.title ?? "FIXME track() 2"
+        playlistController?.currentItem.title ?? "FIXME track() 2"
     }
     
     func artist() -> String {
         //return mediaItem?.artist ?? "No Artist Name"
-        let mediaItem = playlistController!.currentItem
-        return mediaItem.artist ?? "FIXME artist() 2"
+        playlistController?.currentItem.artist ?? "FIXME artist() 2"
     }
     
     func album() -> String { return "FIXME" }
