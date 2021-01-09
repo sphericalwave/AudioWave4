@@ -8,7 +8,7 @@
 
 import Combine
 
-final class AudioWave: ObservableObject {
+final class PlaylistCombo: ObservableObject {
     let musicSource: AudioSource
     let bookSource: AudioSource
 
@@ -36,7 +36,7 @@ final class AudioWave: ObservableObject {
 
 // MARK: - Cross Fading
 
-extension AudioWave {
+extension PlaylistCombo {
     enum FadeStrategy {
         case phi, log
     }

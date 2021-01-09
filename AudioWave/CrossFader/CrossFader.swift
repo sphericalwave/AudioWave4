@@ -13,9 +13,9 @@ final class CrossFader: UIViewController
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var meterOne: UIImageView!
     @IBOutlet weak var meterTwo: UIImageView!
-    let audioWave: AudioWave
+    let audioWave: PlaylistCombo
 
-    init(audioWave: AudioWave) {
+    init(audioWave: PlaylistCombo) {
         self.audioWave = audioWave
         super.init(nibName: "CrossFader", bundle: nil)
         view.backgroundColor = .black

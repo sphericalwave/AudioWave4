@@ -15,18 +15,18 @@ class MainScreen: UIViewController
     @IBOutlet weak var scrollPageContainer: UIView!
     let scrollScreen: Scroller
     let crossFader: CrossFader
-    let audioWave: AudioWave
+    let playlistCombo: PlaylistCombo
     var mediaPermission: MediaPermission?   //FIXME: Nil
     
     //FIXME: Shouldn't need to inject AudioSources
     init(
         scrollScreen: Scroller,
         crossFader: CrossFader,
-        audioWave: AudioWave
+        playlistCombo: PlaylistCombo
     ) {
         self.scrollScreen = scrollScreen
         self.crossFader = crossFader
-        self.audioWave = audioWave
+        self.playlistCombo = playlistCombo
         super.init(nibName: "MainScreen", bundle: nil)
         self.title = "AudioWave"
         edgesForExtendedLayout = [] //no content under nav bar
@@ -40,8 +40,8 @@ class MainScreen: UIViewController
         self.embed(viewController: crossFader, inContainerView: crossFaderContainer)
         self.embed(viewController: scrollScreen, inContainerView: scrollPageContainer)
         self.mediaPermission = MediaPermission(
-            audioSource1: audioWave.musicSource, 
-            audioSource2: audioWave.bookSource, 
+            audioSource1: playlistCombo.musicSource,
+            audioSource2: playlistCombo.bookSource,
             parent: self
         )  //FIXME: Refference Cycle!
         mediaPermission?.requestLibraryPermissions()    //FIXME: Refference Cycle!

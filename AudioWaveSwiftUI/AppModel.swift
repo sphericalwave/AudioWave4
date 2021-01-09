@@ -11,7 +11,7 @@ import Combine
 final class AppModel: ObservableObject {
     private let remote: Remote
     private let audioHardware = AudioHardware()
-    let audioWave: AudioWave
+    let playlistCombo: PlaylistCombo
 
     init() {
         let mPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
@@ -19,7 +19,7 @@ final class AppModel: ObservableObject {
 
         let aPS = AudioPlayerState(playlistID: 600, trackID: 600, rate: 1.0, volume: 1.0)   //FIXME: IDs are wrong
         let bookSource = AudioSource(state: aPS) //FIXME: Naming
-        self.audioWave = AudioWave(musicSource: musicSource, bookSource: bookSource)
+        self.playlistCombo = PlaylistCombo(musicSource: musicSource, bookSource: bookSource)
         
         self.remote = Remote(audioSource1: musicSource, audioSource2: bookSource)
         audioHardware.activate()
