@@ -15,7 +15,7 @@ final class AudioSource: NSObject
     private var player: AVAudioPlayer?       //FIXME: Be Immutable / Hidden Dependency
     let notifications = NotificationCenter.default
     var playlistController: PlaylistController? //FIXME: Be Immutable
-    var volume: Float  //FIXME: Be Immutable
+    var volume: Float
     
     init(state: AudioPlayerState) {
         self.state = state

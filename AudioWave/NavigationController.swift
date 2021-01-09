@@ -13,11 +13,11 @@ final class NavigationController: UINavigationController {
         let playerUI1 = PlayerUI(audioSource: appModel.playlistCombo.musicSource) //FIXME: Encapsulation
         let playerUI2 = PlayerUI(audioSource: appModel.playlistCombo.bookSource)
 
-        let sS = Scroller(playbackScreen1: playerUI1, playbackScreen2: playerUI2, state: appModel.playlistCombo.state) //FIXME: Encapsulation
-        let cF = CrossFader(audioWave: appModel.playlistCombo)
+        let scroller = Scroller(playbackScreen1: playerUI1, playbackScreen2: playerUI2, state: appModel.playlistCombo.state) //FIXME: Encapsulation
+        let crossFader = CrossFader(audioWave: appModel.playlistCombo)
         let mainScreen = MainScreen(
-            scrollScreen: sS,
-            crossFader: cF,
+            scrollScreen: scroller,
+            crossFader: crossFader,
             playlistCombo: appModel.playlistCombo)
 
         super.init(rootViewController: mainScreen)
