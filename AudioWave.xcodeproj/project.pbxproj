@@ -7,11 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229D39C825A8CA1000022605 /* PlayerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerUI.swift */; };
+		229D39C925A8CA1000022605 /* SwDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D90F323DC89290040E7CB /* SwDismissButton.swift */; };
+		229D39CA25A8CA1000022605 /* PlaylistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB623DC823700CFDCEF /* PlaylistsButton.swift */; };
+		229D39CB25A8CA1000022605 /* AudioWaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA322406F5AF00544545 /* AudioWaveState.swift */; };
+		229D39CC25A8CA1000022605 /* SwDynamicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBF23DC828A00CFDCEF /* SwDynamicTable.swift */; };
+		229D39CD25A8CA1000022605 /* PlaylistDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCBDB0923DC92B4002F6060 /* PlaylistDetailsScreen.swift */; };
+		229D39CE25A8CA1000022605 /* SwTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ED423DC828A00CFDCEF /* SwTextFieldCell.swift */; };
+		229D39CF25A8CA1000022605 /* SwDynamicTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EC023DC828A00CFDCEF /* SwDynamicTableData.swift */; };
+		229D39D025A8CA1000022605 /* SWLabelTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift */; };
+		229D39D225A8CA1000022605 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67FAC2240DC33900002BFF /* UIImage+Extensions.swift */; };
+		229D39D325A8CA1000022605 /* AudioWaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67FAC4240DC61A00002BFF /* AudioWaveCell.swift */; };
+		229D39D425A8CA1000022605 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
+		229D39D525A8CA1000022605 /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09981F57332800A1D0EE /* PlaylistCell.swift */; };
+		229D39D625A8CA1000022605 /* SwStaticTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBD23DC828A00CFDCEF /* SwStaticTable.swift */; };
+		229D39D725A8CA1000022605 /* MediaPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2887EA24101323002F06D4 /* MediaPermission.swift */; };
+		229D39D825A8CA1000022605 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA2B24059DD000544545 /* ContentButton.swift */; };
+		229D39D925A8CA1000022605 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C023DC948F0081C400 /* Playlist.swift */; };
+		229D39DA25A8CA1000022605 /* SpeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE099D1F57332900A1D0EE /* SpeedButton.swift */; };
+		229D39DC25A8CA1000022605 /* PlaylistsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB823DC825000CFDCEF /* PlaylistsScreen.swift */; };
+		229D39DE25A8CA1000022605 /* SWDualLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EE523DC828A00CFDCEF /* SWDualLabelCell.swift */; };
+		229D39DF25A8CA1000022605 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2BEF8C23DE4FB5008E4B64 /* PlayButton.swift */; };
+		229D39E025A8CA1000022605 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C223DC95C80081C400 /* MediaCell.swift */; };
+		229D39E125A8CA1000022605 /* SwLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ECC23DC828A00CFDCEF /* SwLabelCell.swift */; };
+		229D39E225A8CA1000022605 /* AudioLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098F1F5732DB00A1D0EE /* AudioLibrary.swift */; };
+		229D39E325A8CA1000022605 /* SWImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ECE23DC828A00CFDCEF /* SWImageCell.swift */; };
+		229D39E425A8CA1000022605 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8809C623DCF8570081C400 /* Notifications.swift */; };
+		229D39E525A8CA1000022605 /* LoopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE098C1F57328300A1D0EE /* LoopButton.swift */; };
+		229D39E625A8CA1000022605 /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36E23CE6FAB00BF6FE6 /* Scroller.swift */; };
+		229D39E725A8CA1000022605 /* SwImageLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319ED723DC828A00CFDCEF /* SwImageLabelCell.swift */; };
+		229D39E825A8CA1000022605 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36C23CE6B5100BF6FE6 /* Titles.swift */; };
+		229D39EA25A8CA1000022605 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09901F5732DC00A1D0EE /* MarqueeLabel.swift */; };
+		229D39EB25A8CA1000022605 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36623CE69DC00BF6FE6 /* Progress.swift */; };
+		229D39EC25A8CA1000022605 /* SWEmptyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EC123DC828A00CFDCEF /* SWEmptyTable.swift */; };
+		229D39ED25A8CA1000022605 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36823CE6A2900BF6FE6 /* Buttons.swift */; };
+		229D39EE25A8CA1000022605 /* SwStaticTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */; };
+		229D39EF25A8CA1000022605 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09A01F57332A00A1D0EE /* String+Extensions.swift */; };
+		229D39F025A8CA1000022605 /* AudioPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAAA302406F4F000544545 /* AudioPlayerState.swift */; };
+		229D39F125A8CA1000022605 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */; };
+		229D39F225A8CA1000022605 /* SwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDF23DC828A00CFDCEF /* SwCell.swift */; };
+		229D39F325A8CA1000022605 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA009A123D08DE000026DB6 /* UIViewController+Extensions.swift */; };
+		229D39F425A8CA1000022605 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */; };
+		229D39F525A8CA1000022605 /* AudioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7513BE240988C9009242A2 /* AudioSource.swift */; };
+		229D39F625A8CA1000022605 /* SwQuadLabelImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EDE23DC828A00CFDCEF /* SwQuadLabelImageCell.swift */; };
+		229D39F725A8CA1000022605 /* AudioHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE09811F57311500A1D0EE /* AudioHardware.swift */; };
+		229D39F825A8CA1000022605 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */; };
+		229D39F925A8CA1000022605 /* SecondaryButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1ED240B214E00E3DAC3 /* SecondaryButtons.swift */; };
+		229D39FB25A8CA1000022605 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCE09B21F57352600A1D0EE /* MediaPlayer.framework */; };
+		229D39FD25A8CA1000022605 /* SecondaryButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3EB1EF240B217700E3DAC3 /* SecondaryButtons.xib */; };
+		229D39FE25A8CA1000022605 /* VendorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EDA23DC828A00CFDCEF /* VendorCell.xib */; };
+		229D39FF25A8CA1000022605 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
+		229D3A0025A8CA1000022605 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB821731F69B6BE00E394BE /* Icons.xcassets */; };
+		229D3A0125A8CA1000022605 /* CrossFader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA009A323D08EC700026DB6 /* CrossFader.xib */; };
+		229D3A0225A8CA1000022605 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ECF23DC828A00CFDCEF /* ImageCell.xib */; };
+		229D3A0325A8CA1000022605 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
+		229D3A0425A8CA1000022605 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
+		229D3A0525A8CA1000022605 /* AudioWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCBDB0723DC90DC002F6060 /* AudioWaveCell.xib */; };
+		229D3A0625A8CA1000022605 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF95F8222294B70400C81959 /* MainScreen.xib */; };
+		229D3A0725A8CA1000022605 /* SwLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ECB23DC828A00CFDCEF /* SwLabelCell.xib */; };
+		229D3A0825A8CA1000022605 /* SwImageLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ED823DC828A00CFDCEF /* SwImageLabelCell.xib */; };
+		229D3A0925A8CA1000022605 /* PlayerUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* PlayerUI.xib */; };
+		229D3A0A25A8CA1000022605 /* SWDualLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EE423DC828A00CFDCEF /* SWDualLabelCell.xib */; };
+		229D3A0B25A8CA1000022605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */; };
+		229D3A0C25A8CA1000022605 /* SwQuadLabelImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319EDD23DC828A00CFDCEF /* SwQuadLabelImageCell.xib */; };
+		229D3A0D25A8CA1000022605 /* SwTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF319ED523DC828A00CFDCEF /* SwTextFieldCell.xib */; };
+		229D3A1925A8CA6600022605 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A1825A8CA6600022605 /* MainApp.swift */; };
+		229D3A2125A8CC0700022605 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A2025A8CC0700022605 /* ContentView.swift */; };
+		229D3A2625A8CC9F00022605 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A2525A8CC9F00022605 /* AppModel.swift */; };
+		229D3A2D25A8CCBA00022605 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A2525A8CC9F00022605 /* AppModel.swift */; };
+		229D3A3325A8D2CA00022605 /* PlaylistCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A3225A8D2CA00022605 /* PlaylistCombo.swift */; };
+		229D3A3625A8D32400022605 /* PlaylistCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A3225A8D2CA00022605 /* PlaylistCombo.swift */; };
+		229D3A3C25A8D6B300022605 /* CrossFader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A3B25A8D6B300022605 /* CrossFader.swift */; };
+		229D3A4025A8DF8100022605 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D3A3F25A8DF8100022605 /* Slider.swift */; };
 		AF015D1A2294D6F4004BBED4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF015D192294D6F4004BBED4 /* MainScreen.swift */; };
 		AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D90F323DC89290040E7CB /* SwDismissButton.swift */; };
 		AF2887EB24101323002F06D4 /* MediaPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2887EA24101323002F06D4 /* MediaPermission.swift */; };
 		AF2BEF8D23DE4FB5008E4B64 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2BEF8C23DE4FB5008E4B64 /* PlayButton.swift */; };
-		AF2C437E23DD053C0031CCF8 /* AudioWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C437D23DD053C0031CCF8 /* AudioWave.swift */; };
 		AF319EB723DC823700CFDCEF /* PlaylistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB623DC823700CFDCEF /* PlaylistsButton.swift */; };
 		AF319EB923DC825000CFDCEF /* PlaylistsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EB823DC825000CFDCEF /* PlaylistsScreen.swift */; };
 		AF319EE623DC828A00CFDCEF /* SwStaticTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */; };
@@ -39,8 +110,8 @@
 		AF3EB1F3240C639800E3DAC3 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */; };
 		AF3EB1F5240C6DD900E3DAC3 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */; };
 		AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159023D65385005FFC34 /* SWModalButton.swift */; };
-		AF51159523D655FA005FFC34 /* AudioSourceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* AudioSourceUI.swift */; };
-		AF51159723D65670005FFC34 /* AudioSourceUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* AudioSourceUI.xib */; };
+		AF51159523D655FA005FFC34 /* PlayerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51159423D655FA005FFC34 /* PlayerUI.swift */; };
+		AF51159723D65670005FFC34 /* PlayerUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF51159623D65670005FFC34 /* PlayerUI.xib */; };
 		AF5F5EC923D65964005589E3 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5EC823D65964005589E3 /* Progress.xib */; };
 		AF62B1BE23D65E47002CD561 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1BD23D65E47002CD561 /* Buttons.xib */; };
 		AF62B1C123D65FA0002CD561 /* Titles.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF62B1C023D65FA0002CD561 /* Titles.xib */; };
@@ -78,11 +149,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		229D3A1125A8CA1000022605 /* AudioWave SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AudioWave SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		229D3A1225A8CA1000022605 /* AudioWave copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AudioWave copy-Info.plist"; path = "/Users/tank/Developer/AudioWave4/AudioWave copy-Info.plist"; sourceTree = "<absolute>"; };
+		229D3A1825A8CA6600022605 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		229D3A2025A8CC0700022605 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		229D3A2525A8CC9F00022605 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		229D3A3225A8D2CA00022605 /* PlaylistCombo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCombo.swift; sourceTree = "<group>"; };
+		229D3A3B25A8D6B300022605 /* CrossFader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFader.swift; sourceTree = "<group>"; };
+		229D3A3F25A8DF8100022605 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		AF015D192294D6F4004BBED4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		AF1D90F323DC89290040E7CB /* SwDismissButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwDismissButton.swift; sourceTree = "<group>"; };
 		AF2887EA24101323002F06D4 /* MediaPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPermission.swift; sourceTree = "<group>"; };
 		AF2BEF8C23DE4FB5008E4B64 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
-		AF2C437D23DD053C0031CCF8 /* AudioWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWave.swift; sourceTree = "<group>"; };
 		AF319EB623DC823700CFDCEF /* PlaylistsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsButton.swift; sourceTree = "<group>"; };
 		AF319EB823DC825000CFDCEF /* PlaylistsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsScreen.swift; sourceTree = "<group>"; };
 		AF319EBC23DC828A00CFDCEF /* SwStaticTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwStaticTableData.swift; sourceTree = "<group>"; };
@@ -110,8 +188,8 @@
 		AF3EB1F2240C639800E3DAC3 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		AF3EB1F4240C6DD900E3DAC3 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 		AF51159023D65385005FFC34 /* SWModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWModalButton.swift; sourceTree = "<group>"; };
-		AF51159423D655FA005FFC34 /* AudioSourceUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSourceUI.swift; sourceTree = "<group>"; };
-		AF51159623D65670005FFC34 /* AudioSourceUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSourceUI.xib; sourceTree = "<group>"; };
+		AF51159423D655FA005FFC34 /* PlayerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUI.swift; sourceTree = "<group>"; };
+		AF51159623D65670005FFC34 /* PlayerUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerUI.xib; sourceTree = "<group>"; };
 		AF5F5EC823D65964005589E3 /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		AF62B1BD23D65E47002CD561 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
 		AF62B1C023D65FA0002CD561 /* Titles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Titles.xib; sourceTree = "<group>"; };
@@ -151,6 +229,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		229D39FA25A8CA1000022605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229D39FB25A8CA1000022605 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFCE09661F57308C00A1D0EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +248,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229D3A1725A8CA3D00022605 /* AudioWaveSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				229D3A2525A8CC9F00022605 /* AppModel.swift */,
+				229D3A3225A8D2CA00022605 /* PlaylistCombo.swift */,
+				229D3A1825A8CA6600022605 /* MainApp.swift */,
+				229D3A2025A8CC0700022605 /* ContentView.swift */,
+				229D3A3B25A8D6B300022605 /* CrossFader.swift */,
+				229D3A3F25A8DF8100022605 /* Slider.swift */,
+			);
+			path = AudioWaveSwiftUI;
+			sourceTree = "<group>";
+		};
 		AF2490A823D65C5A00B66B70 /* CrossFader */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,18 +417,18 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		AF5F5EC723D65931005589E3 /* AudioSourceUI */ = {
+		AF5F5EC723D65931005589E3 /* PlayerUI */ = {
 			isa = PBXGroup;
 			children = (
-				AF51159423D655FA005FFC34 /* AudioSourceUI.swift */,
-				AF51159623D65670005FFC34 /* AudioSourceUI.xib */,
+				AF51159423D655FA005FFC34 /* PlayerUI.swift */,
+				AF51159623D65670005FFC34 /* PlayerUI.xib */,
 				AF62B1C223D65FA6002CD561 /* Titles */,
 				AFD8F36A23CE6A5500BF6FE6 /* Artwork.swift */,
 				AF3EB1F1240C5D8C00E3DAC3 /* SecondaryButtons */,
 				AF62B1BF23D65E5A002CD561 /* Buttons */,
 				AF62B1BC23D65E36002CD561 /* Progress */,
 			);
-			path = AudioSourceUI;
+			path = PlayerUI;
 			sourceTree = "<group>";
 		};
 		AF62B1BC23D65E36002CD561 /* Progress */ = {
@@ -411,9 +510,11 @@
 		AFCE09601F57308C00A1D0EE = {
 			isa = PBXGroup;
 			children = (
+				229D3A1725A8CA3D00022605 /* AudioWaveSwiftUI */,
 				AFCE096B1F57308C00A1D0EE /* AudioWave */,
 				AFCE096A1F57308C00A1D0EE /* Products */,
 				AFCE09B11F57352600A1D0EE /* Frameworks */,
+				229D3A1225A8CA1000022605 /* AudioWave copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -421,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCE09691F57308C00A1D0EE /* AudioWave.app */,
+				229D3A1125A8CA1000022605 /* AudioWave SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -428,12 +530,11 @@
 		AFCE096B1F57308C00A1D0EE /* AudioWave */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C437D23DD053C0031CCF8 /* AudioWave.swift */,
 				AFCE097F1F5730E800A1D0EE /* AppDelegate.swift */,
 				AFCE09861F5731FE00A1D0EE /* LaunchScreen.storyboard */,
 				AF7513C024098F40009242A2 /* AudioPlayer */,
 				AF2490A923D65C6E00B66B70 /* MainScreen */,
-				AF5F5EC723D65931005589E3 /* AudioSourceUI */,
+				AF5F5EC723D65931005589E3 /* PlayerUI */,
 				AF7513C7240994E1009242A2 /* MusicScreens */,
 				AF67FAC6240DC69500002BFF /* AudioWaveCells */,
 				AF2490A823D65C5A00B66B70 /* CrossFader */,
@@ -465,6 +566,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		229D39C625A8CA1000022605 /* AudioWave SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229D3A0E25A8CA1000022605 /* Build configuration list for PBXNativeTarget "AudioWave SwiftUI" */;
+			buildPhases = (
+				229D39C725A8CA1000022605 /* Sources */,
+				229D39FA25A8CA1000022605 /* Frameworks */,
+				229D39FC25A8CA1000022605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AudioWave SwiftUI";
+			productName = AudioWave;
+			productReference = 229D3A1125A8CA1000022605 /* AudioWave SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AFCE09681F57308C00A1D0EE /* AudioWave */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFCE097B1F57308C00A1D0EE /* Build configuration list for PBXNativeTarget "AudioWave" */;
@@ -492,6 +610,9 @@
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = SphericalWave;
 				TargetAttributes = {
+					229D39C625A8CA1000022605 = {
+						ProvisioningStyle = Automatic;
+					};
 					AFCE09681F57308C00A1D0EE = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1120;
@@ -513,11 +634,36 @@
 			projectRoot = "";
 			targets = (
 				AFCE09681F57308C00A1D0EE /* AudioWave */,
+				229D39C625A8CA1000022605 /* AudioWave SwiftUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		229D39FC25A8CA1000022605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229D39FD25A8CA1000022605 /* SecondaryButtons.xib in Resources */,
+				229D39FE25A8CA1000022605 /* VendorCell.xib in Resources */,
+				229D39FF25A8CA1000022605 /* Titles.xib in Resources */,
+				229D3A0025A8CA1000022605 /* Icons.xcassets in Resources */,
+				229D3A0125A8CA1000022605 /* CrossFader.xib in Resources */,
+				229D3A0225A8CA1000022605 /* ImageCell.xib in Resources */,
+				229D3A0325A8CA1000022605 /* Progress.xib in Resources */,
+				229D3A0425A8CA1000022605 /* Buttons.xib in Resources */,
+				229D3A0525A8CA1000022605 /* AudioWaveCell.xib in Resources */,
+				229D3A0625A8CA1000022605 /* MainScreen.xib in Resources */,
+				229D3A0725A8CA1000022605 /* SwLabelCell.xib in Resources */,
+				229D3A0825A8CA1000022605 /* SwImageLabelCell.xib in Resources */,
+				229D3A0925A8CA1000022605 /* PlayerUI.xib in Resources */,
+				229D3A0A25A8CA1000022605 /* SWDualLabelCell.xib in Resources */,
+				229D3A0B25A8CA1000022605 /* LaunchScreen.storyboard in Resources */,
+				229D3A0C25A8CA1000022605 /* SwQuadLabelImageCell.xib in Resources */,
+				229D3A0D25A8CA1000022605 /* SwTextFieldCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFCE09671F57308C00A1D0EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,7 +680,7 @@
 				AF95F8232294B70400C81959 /* MainScreen.xib in Resources */,
 				AF319EF023DC828A00CFDCEF /* SwLabelCell.xib in Resources */,
 				AF319EF923DC828A00CFDCEF /* SwImageLabelCell.xib in Resources */,
-				AF51159723D65670005FFC34 /* AudioSourceUI.xib in Resources */,
+				AF51159723D65670005FFC34 /* PlayerUI.xib in Resources */,
 				AF319F0123DC828A00CFDCEF /* SWDualLabelCell.xib in Resources */,
 				AFCE09BB1F57365900A1D0EE /* LaunchScreen.storyboard in Resources */,
 				AF319EFC23DC828A00CFDCEF /* SwQuadLabelImageCell.xib in Resources */,
@@ -545,20 +691,81 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		229D39C725A8CA1000022605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229D39C825A8CA1000022605 /* PlayerUI.swift in Sources */,
+				229D39C925A8CA1000022605 /* SwDismissButton.swift in Sources */,
+				229D39CA25A8CA1000022605 /* PlaylistsButton.swift in Sources */,
+				229D39CB25A8CA1000022605 /* AudioWaveState.swift in Sources */,
+				229D3A4025A8DF8100022605 /* Slider.swift in Sources */,
+				229D39CC25A8CA1000022605 /* SwDynamicTable.swift in Sources */,
+				229D39CD25A8CA1000022605 /* PlaylistDetailsScreen.swift in Sources */,
+				229D39CE25A8CA1000022605 /* SwTextFieldCell.swift in Sources */,
+				229D3A3325A8D2CA00022605 /* PlaylistCombo.swift in Sources */,
+				229D3A2625A8CC9F00022605 /* AppModel.swift in Sources */,
+				229D39CF25A8CA1000022605 /* SwDynamicTableData.swift in Sources */,
+				229D39D025A8CA1000022605 /* SWLabelTextFieldCell.swift in Sources */,
+				229D39D225A8CA1000022605 /* UIImage+Extensions.swift in Sources */,
+				229D39D325A8CA1000022605 /* AudioWaveCell.swift in Sources */,
+				229D39D425A8CA1000022605 /* SWModalButton.swift in Sources */,
+				229D39D525A8CA1000022605 /* PlaylistCell.swift in Sources */,
+				229D39D625A8CA1000022605 /* SwStaticTable.swift in Sources */,
+				229D39D725A8CA1000022605 /* MediaPermission.swift in Sources */,
+				229D39D825A8CA1000022605 /* ContentButton.swift in Sources */,
+				229D39D925A8CA1000022605 /* Playlist.swift in Sources */,
+				229D39DA25A8CA1000022605 /* SpeedButton.swift in Sources */,
+				229D39DC25A8CA1000022605 /* PlaylistsScreen.swift in Sources */,
+				229D39DE25A8CA1000022605 /* SWDualLabelCell.swift in Sources */,
+				229D39DF25A8CA1000022605 /* PlayButton.swift in Sources */,
+				229D39E025A8CA1000022605 /* MediaCell.swift in Sources */,
+				229D39E125A8CA1000022605 /* SwLabelCell.swift in Sources */,
+				229D39E225A8CA1000022605 /* AudioLibrary.swift in Sources */,
+				229D39E325A8CA1000022605 /* SWImageCell.swift in Sources */,
+				229D39E425A8CA1000022605 /* Notifications.swift in Sources */,
+				229D39E525A8CA1000022605 /* LoopButton.swift in Sources */,
+				229D39E625A8CA1000022605 /* Scroller.swift in Sources */,
+				229D39E725A8CA1000022605 /* SwImageLabelCell.swift in Sources */,
+				229D39E825A8CA1000022605 /* Titles.swift in Sources */,
+				229D39EA25A8CA1000022605 /* MarqueeLabel.swift in Sources */,
+				229D39EB25A8CA1000022605 /* Progress.swift in Sources */,
+				229D39EC25A8CA1000022605 /* SWEmptyTable.swift in Sources */,
+				229D39ED25A8CA1000022605 /* Buttons.swift in Sources */,
+				229D39EE25A8CA1000022605 /* SwStaticTableData.swift in Sources */,
+				229D39EF25A8CA1000022605 /* String+Extensions.swift in Sources */,
+				229D39F025A8CA1000022605 /* AudioPlayerState.swift in Sources */,
+				229D39F125A8CA1000022605 /* TimeInterval+Extensions.swift in Sources */,
+				229D3A2125A8CC0700022605 /* ContentView.swift in Sources */,
+				229D39F225A8CA1000022605 /* SwCell.swift in Sources */,
+				229D39F325A8CA1000022605 /* UIViewController+Extensions.swift in Sources */,
+				229D39F425A8CA1000022605 /* Artwork.swift in Sources */,
+				229D39F525A8CA1000022605 /* AudioSource.swift in Sources */,
+				229D3A1925A8CA6600022605 /* MainApp.swift in Sources */,
+				229D3A3C25A8D6B300022605 /* CrossFader.swift in Sources */,
+				229D39F625A8CA1000022605 /* SwQuadLabelImageCell.swift in Sources */,
+				229D39F725A8CA1000022605 /* AudioHardware.swift in Sources */,
+				229D39F825A8CA1000022605 /* Remote.swift in Sources */,
+				229D39F925A8CA1000022605 /* SecondaryButtons.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFCE09651F57308C00A1D0EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF51159523D655FA005FFC34 /* AudioSourceUI.swift in Sources */,
+				AF51159523D655FA005FFC34 /* PlayerUI.swift in Sources */,
 				AF1D90F423DC89290040E7CB /* SwDismissButton.swift in Sources */,
 				AF319EB723DC823700CFDCEF /* PlaylistsButton.swift in Sources */,
 				AFAAAA332406F5AF00544545 /* AudioWaveState.swift in Sources */,
 				AF319EE823DC828A00CFDCEF /* SwDynamicTable.swift in Sources */,
 				AFCBDB0A23DC92B4002F6060 /* PlaylistDetailsScreen.swift in Sources */,
 				AF319EF623DC828A00CFDCEF /* SwTextFieldCell.swift in Sources */,
+				229D3A3625A8D32400022605 /* PlaylistCombo.swift in Sources */,
 				AF319EE923DC828A00CFDCEF /* SwDynamicTableData.swift in Sources */,
 				AF319EFB23DC828A00CFDCEF /* SWLabelTextFieldCell.swift in Sources */,
 				AFCE09801F5730E800A1D0EE /* AppDelegate.swift in Sources */,
+				229D3A2D25A8CCBA00022605 /* AppModel.swift in Sources */,
 				AF67FAC3240DC33900002BFF /* UIImage+Extensions.swift in Sources */,
 				AF67FAC5240DC61A00002BFF /* AudioWaveCell.swift in Sources */,
 				AF51159123D65385005FFC34 /* SWModalButton.swift in Sources */,
@@ -570,7 +777,6 @@
 				AFCE09A91F57332A00A1D0EE /* SpeedButton.swift in Sources */,
 				AFD8F37123CF3A5400BF6FE6 /* CrossFader.swift in Sources */,
 				AF319EB923DC825000CFDCEF /* PlaylistsScreen.swift in Sources */,
-				AF2C437E23DD053C0031CCF8 /* AudioWave.swift in Sources */,
 				AF319F0223DC828A00CFDCEF /* SWDualLabelCell.swift in Sources */,
 				AF2BEF8D23DE4FB5008E4B64 /* PlayButton.swift in Sources */,
 				AF8809C323DC95C80081C400 /* MediaCell.swift in Sources */,
@@ -605,6 +811,43 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		229D3A0F25A8CA1000022605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPR24Z5M9G;
+				INFOPLIST_FILE = "AudioWave copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		229D3A1025A8CA1000022605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPR24Z5M9G;
+				INFOPLIST_FILE = "AudioWave copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TPR24Z5M9G.com.sphericalwave.AudioWave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		AFCE09791F57308C00A1D0EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -760,6 +1003,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		229D3A0E25A8CA1000022605 /* Build configuration list for PBXNativeTarget "AudioWave SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				229D3A0F25A8CA1000022605 /* Debug */,
+				229D3A1025A8CA1000022605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AFCE09641F57308C00A1D0EE /* Build configuration list for PBXProject "AudioWave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

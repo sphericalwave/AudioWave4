@@ -43,7 +43,7 @@ class SwTextFieldCell: SwCell {
         let bounds = textfieldView.bounds
         textField.frame = bounds
 
-        //textfieldView.backgroundColor = .white
+        //textfieldView.backgroundColor = nil
         imageView.image = thumbnail
         label.text = name
         

@@ -8,17 +8,9 @@
 
 import MediaPlayer
 
-class AudioPlayerState: Codable
-{
+struct AudioPlayerState: Codable {
     let playlistID: MPMediaEntityPersistentID
     let trackID: MPMediaEntityPersistentID
     let rate: Float
     let volume: Float
-    
-    init(playlistID: MPMediaEntityPersistentID, trackID: MPMediaEntityPersistentID, rate: Float, volume: Float) {
-        self.playlistID = playlistID
-        self.trackID = trackID
-        self.rate = rate
-        self.volume = volume
-    }
 }

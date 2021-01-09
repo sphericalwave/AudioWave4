@@ -28,7 +28,8 @@ class AudioHardware
         catch { fatalError() }
     }
     
-    @objc func interruption(notification: Notification) {
+    @objc
+    private func interruption(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { fatalError() }
         guard let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt else { fatalError() }
         guard let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { fatalError() }

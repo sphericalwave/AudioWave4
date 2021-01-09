@@ -9,61 +9,87 @@
 import UIKit
 import MediaPlayer
 
-class Playlist //FIXME: Codable
+struct PlaylistController {
+    let playlist: Playlist
+    private var currentIndex: Int = 0 //FIXME: Be Immutable
+
+    init(playlist: Playlist) {
+        self.playlist = playlist
+    }
+
+    mutating func next() -> MPMediaItem {    //FIXME: Loop Back Around
+        currentIndex += 1
+        if currentIndex == playlist.endIndex {
+            currentIndex = 0
+        }
+        return playlist[currentIndex]
+    }
+
+    mutating func previous() -> MPMediaItem { //FIXME: Loop Back Around
+        currentIndex -= 1
+        if currentIndex <= playlist.startIndex {
+            currentIndex = playlist.endIndex - 1
+        }
+        return playlist[currentIndex]
+    }
+
+    mutating func play(_ mediaItem: MPMediaItem) {   //FIXME: To Keep Playlist in Sync
+        guard let newIndex = playlist.firstIndex(of: mediaItem) else { fatalError() }
+        currentIndex = newIndex
+    }
+
+    var currentItem: MPMediaItem {
+        playlist[currentIndex]
+    }
+}
+
+struct Playlist //FIXME: Codable
 {
-    let mediaItemCollection: MPMediaItemCollection
-    var index: Int  //FIXME: Be Immutable
-    
+    private let mediaItemCollection: MPMediaItemCollection
+
     init(mediaItemCollection: MPMediaItemCollection) {
         self.mediaItemCollection = mediaItemCollection
-        self.index = 0
     }
     
-    func name() -> String { //FIXME: Naming, mainText() -> String
+    var name: String { //FIXME: Naming, mainText() -> String
         if let playlist = mediaItemCollection as? MPMediaPlaylist {
             return playlist.name ?? "Unnamed Playlist"
         }
         return mediaItemCollection.representativeItem?.albumTitle ?? "Unnamed Audiobook"
     }
     
-    func details() -> String {  //FIXME: Extend MPMediaItemCollection
+    var details: String {  //FIXME: Extend MPMediaItemCollection
         if let playlist = mediaItemCollection as? MPMediaPlaylist {
             return playlist.name ?? "Unnamed Playlist Details"
         }
         return mediaItemCollection.representativeItem?.albumTitle ?? "Unnamed Audiobook Details"
     }
-    
-    func random() -> MPMediaItem {
-        let count = mediaItemCollection.items.count
-        index = Int(arc4random_uniform(UInt32(count)))
-        return mediaItemCollection.items[index]
+
+    var artwork: MPMediaItemArtwork? {
+        mediaItemCollection.representativeItem?.artwork
     }
-    
-    func next() -> MPMediaItem {    //FIXME: Loop Back Around
-        index += 1
-        if index == mediaItemCollection.items.count { index = 0 }
-        return mediaItemCollection.items[index]
-    }
-    
-    func previous() -> MPMediaItem { //FIXME: Loop Back Around
-        index -= 1
-        if index <= 0 { index = mediaItemCollection.items.count - 1 }
-        return mediaItemCollection.items[index]
-    }
-    
-    func mediaItems() -> [MPMediaItem] { return mediaItemCollection.items }
-    
-    func artwork() -> MPMediaItemArtwork? { return mediaItemCollection.representativeItem?.artwork }
     //FIXME: Handle MPMediaPlaylist condition
-    
-    func play(_ mediaItem: MPMediaItem) {   //FIXME: To Keep Playlist in Sync
-        guard let newIndex = mediaItemCollection.items.firstIndex(of: mediaItem) else { fatalError() }
-        index = newIndex
+}
+
+
+extension Playlist: Collection {
+    typealias Index = Int
+    typealias Element = MPMediaItem
+
+    var startIndex: Int {
+        mediaItemCollection.items.startIndex
     }
-    
-    func currentItem() -> MPMediaItem {
-        let item = mediaItemCollection.items[index]
+
+    var endIndex: Int {
+        mediaItemCollection.items.endIndex
+    }
+
+    func index(after i: Int) -> Int {
+        mediaItemCollection.items.index(after: i)
+    }
+
+    subscript(position: Int) -> MPMediaItem {
+        let item = mediaItemCollection.items[position]
         return item
     }
 }
-

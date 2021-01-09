@@ -28,7 +28,7 @@ class SWLabelTextFieldCell: SwCell
         label.text = name
         textField.frame = textfieldView.bounds
         textfieldView.addSubview(textField)
-        textfieldView.backgroundColor = .white
+        textfieldView.backgroundColor = nil
         textField.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         textField.translatesAutoresizingMaskIntoConstraints = true
     }

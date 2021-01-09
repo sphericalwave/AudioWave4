@@ -32,7 +32,7 @@ class Artwork: UIViewController
     required init?(coder: NSCoder) { fatalError() }
     
     @objc func playerDidLoad(notification: Notification) {
-        guard let art = player.artwork() else {
+        guard let art = player.artwork else {
             guard let playCircle = UIImage(systemName: "play.circle") else { fatalError() }
             artwork.image = playCircle
             return

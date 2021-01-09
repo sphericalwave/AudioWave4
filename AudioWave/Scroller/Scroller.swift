@@ -10,12 +10,12 @@ import UIKit
 
 class Scroller: UIPageViewController
 {
-    let playbackScreen1: AudioSourceUI
-    let playbackScreen2: AudioSourceUI
+    let playbackScreen1: PlayerUI
+    let playbackScreen2: PlayerUI
     let state: AudioWaveState
     
     
-    init(playbackScreen1: AudioSourceUI, playbackScreen2: AudioSourceUI, state: AudioWaveState) {
+    init(playbackScreen1: PlayerUI, playbackScreen2: PlayerUI, state: AudioWaveState) {
         self.playbackScreen1 = playbackScreen1
         self.playbackScreen2 = playbackScreen2
         self.state = state
